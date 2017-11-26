@@ -1,7 +1,7 @@
 /* フォント設定 */
 @font-face
 {
-		font-family: "ほにゃ字Re";
+		font-family: 'ほにゃ字Re', 'HonyaJi-Re' sans-serif;
 		src: url('https://cdn.rawgit.com/ryuuta0217/Discord-Theme/546de590/font.ttf');
 }
 
