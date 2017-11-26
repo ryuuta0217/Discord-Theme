@@ -22,6 +22,15 @@
 	height: calc(100% + 150px);
 }
 
+/* 共通 追加オプション - アップロード画面の背景変更 */
+/* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
+/*.backdrop-2ohBEd {
+    		opacity:1 !important;
+    		background: url("https://i.imgur.com/eeDIMtw.jpg") !important;
+    		background-size: cover;
+    		background-position: center;
+}
+
 /* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
 /*.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP.unfocused-3drpf8,
 .typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP
