@@ -61,19 +61,7 @@ body,
 	background:rgba(0,0,0,0.8);
 }
 
-/* 添付画像 */
-.inner-1_1f7b>.modal-image>img
-{
-	width: calc(100% + 150px);
-	height: calc(100% + 150px);
-}
-
 /* New Invite UI texts */
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF
-{
-	width: 250px !important;
-	left: 9px;
-}
 .wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM
  {
  	font-size: 0px;
@@ -94,13 +82,6 @@ body,
 {
 	font-size:13px;
 	content:"サーバーに招待されました";
-}
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM>svg
-{
-	position:absolute;
-	left: 73px;
-	top: 7px;
 }
 
 /* 報告ポップアップ透過 */
