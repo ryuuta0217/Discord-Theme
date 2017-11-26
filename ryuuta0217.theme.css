@@ -7,6 +7,6 @@
 .app,
 .callout-backdrop {
 		/* https://と続いているところに背景画像のURLを貼ろう 1920x1080の画像を推奨しています */
-		background-image: url(https://s-media-cache-ak0.pinimg.com/originals/68/9a/43/689a435bb5381e0e1b144fe4f160848c.png);
+		background-image: url(https://example.com/background-image.png);
 		background-size: cover;
 }
