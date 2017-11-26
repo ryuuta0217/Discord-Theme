@@ -22,13 +22,30 @@
 	height: calc(100% + 150px);
 }
 
+/* 共通 追加オプション - ビデオ通話　背景透過 */
+/* 背景が透過し、会話の文字が見えるようになりますが右クリックや文字選択はサポートされていません。ご了承ください。*/
+/*.ui-video-height.minimum.private-channel-call.animated
+{
+	background: rgba(0,0,0,0.7) !important;
+	height: 50px;
+}
+
 /* 共通 追加オプション - アップロード画面の背景変更 */
 /* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
 /*.backdrop-2ohBEd {
     		opacity:1 !important;
-    		background: url("https://i.imgur.com/eeDIMtw.jpg") !important;
+    		background: url("https://example.com/upload-background-image.png") !important;
     		background-size: cover;
     		background-position: center;
+}
+
+/* 共通 追加オプション - 設定画面の背景変更 */
+/* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
+/*.layer>.ui-standard-sidebar-view
+{
+	background: url("https://example.com/settings-background-image.png") !important;
+	background-size: cover !important;
+	background-position: center !important;
 }
 
 /* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
