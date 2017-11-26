@@ -12,7 +12,15 @@
 		background-size: cover;
 }
 
-/* MacOS向け追加オプション - 有効にする際は . や # の前にある /* を外してください */
+/* 追加オプション - 有効にする際は . や # の前にある /* を外してください */
+
+/* 共通 追加オプション - 添付画像の表示サイズ変更 */
+/* width: 、 height: の 150px の 150の部分を各自変えてください。両方の値はどちらも同一が望ましいです*/
+/*.inner-1_1f7b>.modal-image>img
+{
+	width: calc(100% + 150px);
+	height: calc(100% + 150px);
+}
 
 /* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
 /*.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP.unfocused-3drpf8,
