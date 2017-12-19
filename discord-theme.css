@@ -1058,7 +1058,7 @@ titleWrapper-3Vi_wz.theme-dark {
 /* フレンド/Activity/LFG ボタン部分 */
 .channel.btn-friends.selected
 {
-	background: rgba(207, 113, 118, .6);
+	background: rgba(207, 113, 118, .6) !important;
 	border-radius: 4px
 }
 .channel.btn-friends:hover
