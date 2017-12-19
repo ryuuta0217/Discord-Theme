@@ -55,6 +55,31 @@ body,
 		src: url('https://cdn.rawgit.com/ryuuta0217/Discord-Theme/546de590/font.ttf');
 }
 
+/* 新機能 LFG に関する設定 - 2017/12/19 */
+/* 背景 */
+.lfg-3xoFkI.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR
+{
+	background:rgba(0,0,0,0.7) !important;
+}
+
+/* ゲーム選択 ゲームを選択しているとき */
+.itemSelected-3XxAMf.item-3879bf.selected-eNoxEK.tabBarItem-2YOhcM
+{
+	background:rgba(255,255,255,0.0) !important;
+}
+
+/* ゲーム選択 未選択のゲーム・カーソルを合わせたとき */
+.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa.tabBarItem-2YOhcM:hover
+{
+	background:rgba(255,255,255,0.0) !important;
+}
+
+/* test */
+.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa.tabBarItem-2YOhcM>.gameDefault-2SBp6B.game-3qQlfY:hover
+{
+	background:rgba(255,255,255,0) !important;
+}
+
 /* 入力欄 ぽっぷあっぷ */
 .autocomplete-1TnWNR.autocomplete-1LLKUa
 {
