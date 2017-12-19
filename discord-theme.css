@@ -1033,7 +1033,7 @@ titleWrapper-3Vi_wz.theme-dark {
 		background: rgba(0, 0, 0, 0.7) !important;
 }
 
-/* DM履歴 */
+/* DM履歴画面関連 */
 
 .private-channels {
 		background: rgba(0, 0, 0, 0.29) !important;
@@ -1041,6 +1041,30 @@ titleWrapper-3Vi_wz.theme-dark {
 
 .search-bar {
 		background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.channel.private:hover
+{
+	background: rgba(207, 113, 118,0.28);
+	border-radius: 4px;
+}
+
+.channel.selected.private
+{
+	background: rgba(207, 113, 118, .6);
+	border-radius: 4px
+}
+
+/* フレンド/Activity/LFG ボタン部分 */
+.channel.btn-friends.selected
+{
+	background: rgba(207, 113, 118, .6);
+	border-radius: 4px
+}
+.channel.btn-friends:hover
+{
+	background: rgba(207, 113, 118,0.28);
+	border-radius:4px;
 }
 
 
