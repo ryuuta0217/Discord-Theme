@@ -128,7 +128,7 @@ body,
 .problemsText-3RO4MF:before
 {
 	font-size: 18px;
-	content:"接続に問題が発生しましたか？インターネットにはつながっていますか？( ;?´???`?)";
+	content:"接続に問題が発生しましたか？インターネットにはつながっていますか？( ;⊙´◞౪◟`⊙)";
 }
 
 .twitterLink-235wvR.links-3m0VgL
@@ -139,7 +139,7 @@ body,
 .twitterLink-235wvR.links-3m0VgL:after
 {
 	font-size: 16px;
-	content: "公式Twitterを確認する( ´??ゝ?`)";
+	content: "公式Twitterを確認する( ´◉‿ゝ◉`)";
 }
 
 .statusLink-2eJVdK.links-3m0VgL
@@ -150,7 +150,7 @@ body,
 .statusLink-2eJVdK.links-3m0VgL:after
 {
 	font-size: 16px;
-	content: "サーバーステータスを確認する( ´??ゝ?`)";
+	content: "サーバーステータスを確認する( ´◔‿ゝ◔`)";
 }
 
 /* Chat Right-Click Menu */
@@ -456,6 +456,11 @@ body,
 
 .activityFeed-HeiGwL {
 		background: rgba(0, 0, 0, 0.0) !important;
+}
+
+.scroller-fzNley.feed-3H5oYA
+{
+	background: rgba(0, 0, 0, 0.7);
 }
 
 .scroller-fzNley.feed-2fHzeU {
