@@ -55,6 +55,14 @@ body,
 		src: url('https://cdn.rawgit.com/ryuuta0217/Discord-Theme/546de590/font.ttf');
 }
 
+/* 背景表示されない問題修正 */
+.layers-20RVFW,
+.layer-kosS71,
+.container-2OU7Cz,
+.typing-3eiiL_ {
+  background: transparent !important;
+}
+
 /* 新機能 LFG に関する設定 - 2017/12/19 */
 /* 背景 */
 .lfg-3xoFkI.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR
