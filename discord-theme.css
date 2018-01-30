@@ -596,7 +596,7 @@ background:rgba(0,0,0,0.7) !important;
 
 .title-2mmhgH.margin-bottom-8:before {
 		font-size: 24px;
-		content: "成人向けのチャンネルです！";
+		content: "このチャンネルは成人向けのチャンネルです！";
 }
 
 
@@ -608,7 +608,7 @@ background:rgba(0,0,0,0.7) !important;
 
 .description-15n-1L.margin-bottom-20:before {
 		font-size: 16px;
-		content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを開きますか？";
+		content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを本当に開きますか？";
 }
 
 
@@ -1285,4 +1285,10 @@ background:transparent !important;
 font-size: 12px;
 }
 
-/* Discord Default CSS */
+/* バージョン情報の表示 */
+#bd-settings-sidebar>span>div:last-child:after
+{
+	font-size: 12px;
+	content: "\Aryuuta0217 Theme v3.6.9\A by ryuuta0217";
+	white-space: pre;
+}
