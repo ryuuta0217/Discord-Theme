@@ -1063,6 +1063,6 @@ font-size: 13.2px;
 #bd-settings-sidebar>span>div:last-child:after
 {
 	font-size: 12px;
-	content: "\Aryuuta0217 Theme v3.7.0\A by ryuuta0217\A大型アップデートをしました。テーマファイルを更新してください。";
+	content: "\A\Aryuuta0217 Theme v3.7.0\A by ryuuta0217\A\Aテーマファイル作成者より:\A\A大型アップデートをしました。\A表示がバグっている方は\Aテーマファイルを更新してください。";
 	white-space: pre;
 }
