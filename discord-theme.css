@@ -1,7 +1,7 @@
 /* フォント設定 */
 @font-face
 {
-		font-family: 'ほにゃ字Re', 'HonyaJi-Re' !important;
+		font-family: 'ほにゃ字Re' !important;
 		src: url('https://cdn.rawgit.com/ryuuta0217/Discord-Theme/546de590/font.ttf');
 }
 
@@ -33,7 +33,7 @@ body,
 .userPopout-4pfA0d,
 .friends-table-header,
 .search-bar-inner>input,
-.context-menu.theme-dark,
+.contextMenu-uoJTbz.theme-dark,
 .search-bar.search-bar-light,
 .titleWrapper-3Vi_wz.theme-dark,
 .scroller-NXV0-d.scroller-fzNley,
@@ -42,6 +42,7 @@ body,
 .friends-table-body.scroller>span>div,
 .modal-3HOjGZ.modal-KwRiOq.size-2pbXxj,
 .guilds-wrapper .guilds .friends-online,
+.durationTimeDisplay-z9q8lp.weightMedium-13x9Y8,
 .headerContent-22XGYm.flex-3B1Tl4.alignCenter-3VxkQP,
 .quick-message.quickMessage-28pD5Y.marginBottom8-1mABJ4,
 .innerEnabled-gLHeOL.inner-3if5cm.flex-3B1Tl4.innerNoAutocomplete-kaUXJZ,
@@ -67,7 +68,7 @@ body,
 /* 背景 */
 .lfg-3xoFkI.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR
 {
-	background:rgba(0,0,0,0.7) !important;
+	background: var(--background-cover) !important;
 }
 
 /* ゲーム選択 ゲームを選択しているとき */
@@ -94,29 +95,6 @@ body,
 	background:rgba(0,0,0,0.8);
 }
 
-/* New Invite UI texts */
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM
- {
- 	font-size: 0px;
- }
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM:after
- {
- 	font-size: 16px;
- 	content: "参加済み";
- }
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.h5-3KssQU.title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.header-NUC1Kl.marginBottom8-1mABJ4
-{
-	font-size:0px;
-}
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.h5-3KssQU.title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.header-NUC1Kl.marginBottom8-1mABJ4:after
-{
-	font-size:13px;
-	content:"サーバーへの招待状";
-}
-
 /* 報告ポップアップ透過 */
 .inner-1_1f7b>form {
 		background: rgba(0, 0, 0, 0.7) !important;
@@ -126,278 +104,26 @@ body,
 		background: rgba(0, 0, 0, 0) !important;
 }
 
-/* Loading / 接続失敗 */
+/* 右クリメニュー */
 
-.problemsText-3RO4MF
-{
-	font-size: 0px;
+.contextMenu-uoJTbz {
+		background: var(--background-color) !important;
 }
 
-.problemsText-3RO4MF:before
-{
-	font-size: 18px;
-	content:"接続に問題が発生しましたか？インターネットにはつながっていますか？( ;⊙´◞౪◟`⊙)";
+.itemSubMenu-3ZgIw- {
+	background: var(--invisible-color) !important;
 }
 
-.twitterLink-235wvR.links-3m0VgL
-{
-	font-size: 0px;
+.theme-dark .itemSubMenu-3ZgIw- {
+	background: url(/assets/1988164a7c55346d32117b151f4e319d.svg) no-repeat 155px 50% !important;
+}
+.theme-dark .itemSubMenu-3ZgIw-:hover {
+	background: #25282d url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50% !important;
 }
 
-.twitterLink-235wvR.links-3m0VgL:after
-{
-	font-size: 16px;
-	content: "公式Twitterを確認する( ´◉‿ゝ◉`)";
+.itemSubMenu-3ZgIw-.itemSubMenuHasScroller-P43A40 {
+	background: var(--scroll-bar-background-color)
 }
-
-.statusLink-2eJVdK.links-3m0VgL
-{
-	font-size: 0px;
-}
-
-.statusLink-2eJVdK.links-3m0VgL:after
-{
-	font-size: 16px;
-	content: "サーバーステータスを確認する( ´◔‿ゝ◔`)";
-}
-
-/* Chat Right-Click Menu */
-
-.context-menu {
-		-webkit-box-shadow: 0 4px 7px rgba(255, 255.255, .6);
-		background: rgba(0, 0, 0, 0.7) !important;
-		border-radius: 8px;
-		box-shadow: 0 4px 7px rgba(255, 255.255, .6);
-		cursor: default;
-		display: inline-block;
-		position: fixed;
-		width: 170px;
-}
-
-.context-menu:before {}
-
-.context-menu .item {
-		-webkit-box-sizing: border-box;
-		border-radius: 5px;
-		box-sizing: border-box;
-		color: #99aab5;
-		font-size: 12px;
-		font-weight: 500;
-		line-height: 16px;
-		margin: 2px 0;
-		overflow: hidden;
-		padding: 6px 9px;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		width: 100%
-}
-
-.context-menu .item:hover {
-		background: #f9f9f9;
-		color: #737f8d
-}
-
-.context-menu .item.danger {
-		color: #f04747!important;
-}
-
-.context-menu .item.danger:hover {
-		color: #c73b3b!important;
-}
-
-.context-menu .item.disabled {
-		color: #cdcdcd
-}
-
-.context-menu .item.disabled:hover {
-		background: transparent!important;
-		cursor: default
-}
-
-.context-menu .item .hint {
-		float: right;
-		opacity: .8
-}
-
-.context-menu .item-group {
-		border-color: #f5f5f5;
-		border-top-style: solid
-}
-
-.context-menu .item-group:not(:first-child):not(:empty) {
-		border-top-width: 1px
-}
-
-.context-menu .item-group:empty+.item-group:not(:empty) {
-		border-top-width: 0
-}
-
-.context-menu .item-group:not(:empty)~.item-group:empty+.item-group:not(:empty) {
-		border-top-width: 1px
-}
-
-.context-menu .item-toggle {
-		-ms-flex-align: center;
-		-ms-flex-pack: justify;
-		-webkit-box-align: center;
-		-webkit-box-pack: justify;
-		align-items: center;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		justify-content: space-between;
-		padding: 5px 9px
-}
-
-.context-menu .item-toggle .label {
-		max-width: 200px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap
-}
-
-.context-menu .item-toggle .checkbox {
-		cursor: pointer!important;
-		pointer-events: none
-}
-
-.context-menu .item-toggle .checkbox span {
-		margin: 0
-}
-
-.context-menu .item-image {
-		-ms-flex-align: center;
-		-ms-flex-pack: justify;
-		-webkit-box-align: center;
-		-webkit-box-pack: justify;
-		align-items: center;
-		cursor: pointer!important;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		justify-content: space-between;
-		padding: 5px 9px
-}
-
-.context-menu .item-image .label {
-		max-width: 130px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap
-}
-
-.context-menu .item-image img {
-		cursor: pointer!important;
-		height: 16px
-}
-
-.context-menu.disabled .checkbox,
-.context-menu .item-slider {
-		cursor: default
-}
-
-.context-menu .item-slider .label {
-		margin-bottom: 6px;
-}
-
-.context-menu .item-slider .slider {
-		margin: 10px 0 4px
-}
-
-.context-menu .slider {
-		height: 16px;
-		left: 2px;
-		margin: 0px;
-		margin-top: -3px;
-		top: 6px;
-		width: 145px
-}
-
-.context-menu .slider .slider-bar {
-		height: 6px
-}
-
-.context-menu .slider .slider-handle-track {
-		right: 3px
-}
-
-.context-menu .slider .slider-handle {
-		height: 16px;
-		top: -7px;
-		width: 16px
-}
-
-.context-menu .slider .slider-handle span {
-		width: 42px
-}
-
-.context-menu .context-menu {
-		margin-left: 170px
-}
-
-.context-menu .context-menu .scroller {
-		max-height: 270px
-}
-
-
-/* サブメニューがあるメニュー関連 */
-
-.context-menu .item-subMenu {
-		background: rgba(0, 0, 0, 0.0) url(/assets/1988164a7c55346d32117b151f4e319d.svg) no-repeat 185px 50% !important;
-}
-
-.context-menu .item-subMenu:hover {
-		background: #282b30 url(/assets/48072c077a73774c670f5752a21d2c5b.svg) no-repeat 185px 50% !important;
-}
-
-/* ここまで */
-
-.context-menu.invertChildX .context-menu {
-		margin-left: -170px
-}
-
-.theme-dark.context-menu {
-		-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .82), 0 1px 4px rgba(0, 0, 0, .1);
-		background: #282b30;
-		box-shadow: 0 0 1px rgba(0, 0, 0, .82), 0 1px 4px rgba(0, 0, 0, .1)
-}
-
-.theme-dark.context-menu .item {
-		color: hsla(0, 0%, 100%, .6)
-}
-
-.theme-dark.context-menu .item:hover {
-		background: #25282d;
-		color: #fff
-}
-
-.theme-dark.context-menu .item.disabled {
-		color: grey
-}
-
-.theme-dark.context-menu .item-group {
-		border-color: hsla(0, 0%, 96%, .08)
-}
-
-.theme-dark.context-menu .slider .slider-bar {
-		background: hsla(220, 9%, 87%, .2)
-}
-
-.theme-dark.context-menu .item-subMenu {
-		background: #282b30 url(/assets/1988164a7c55346d32117b151f4e319d.svg) no-repeat 155px 50%
-}
-
-.theme-dark.context-menu .item-subMenu:hover {
-		background: #25282d url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50%
-}
-
-.theme-dark.context-menu .context-menu {
-		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
-		background: #282b30;
-		border: 1px solid #1e2124;
-		box-shadow: 0 1px 4px rgba(0, 0, 0, .1)
-}
-
 
 /*チャンネルタイトル背景*/
 
@@ -405,10 +131,9 @@ body,
 		background: rgba(0, 0, 0, 0.7) !important;
 }
 
-
 /* 絵文字の選択 */
 
-.emoji-picker {
+.emojiPicker-3g68GS {
 		height: 500px;
 		width: 380px;
 		background: rgba(48, 79, 254, 0.5);
@@ -417,8 +142,8 @@ body,
 
 /* 絵文字選択部 */
 
-.scrollerWrap-2uBjct.scroller-wrap.scrollerThemed-19vinI.themeLight-1WK0Av.scrollerFade-28dRsO.scrollerTrack-3hhmU0,
-.scroller-fzNley.scroller,
+.scrollerWrap-2uBjct.scrollerWrap-EC-dSj.scrollerThemed-19vinI.themeLight-1WK0Av.scrollerFade-28dRsO.scrollerTrack-3hhmU0,
+.scroller-fzNley.scroller-2dsok0,
 .no-search-results {
 		height: 401px !important;
 		width: 380px;
@@ -428,12 +153,12 @@ body,
 
 /* 絵文字カテゴリ表示部 */
 
-.sticky-header>div {
+.category-3rCtoh>div {
 		color: white !important;
 }
 
-.sticky-header {
-		background: rgba(40, 53, 147, 1) !important;
+.category-3rCtoh {
+		background: rgba(167, 23, 159, 0.63) !important;
 		color: black !important;
 }
 
@@ -484,15 +209,6 @@ body,
 		background: rgba(0, 0, 0, 0.3);
 }
 
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyEnd-1ceqOU.alignCenter-3VxkQP.noWrap-v6g9vO.actions-2rnqK7>.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.smallGrow-2_7ZaC>.contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM {
-		font-size: 0px;
-}
-
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyEnd-1ceqOU.alignCenter-3VxkQP.noWrap-v6g9vO.actions-2rnqK7>.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.smallGrow-2_7ZaC>.contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM:after {
-		font-size: 16px;
-		content: "メッセージ" !important;
-}
-
 
 /* メインレイヤー(チャット部、チャンネル一覧部) 修正*/
 
@@ -522,7 +238,7 @@ body,
 /* 新しいメッセージ バー */
 
 .new-messages-bar {
-		background: rgba(269, 56, 39, 1) !important; /* メッセージバーの色 */
+		background: var(--new-message-bar) !important; /* メッセージバーの色 */
 }
 
 
@@ -542,9 +258,7 @@ body,
 
 /*アップロード表示いろいろ*/
 
-.backdrop-2ohBEd {
-		background: rgba(0, 0, 0, 0.8) !important;
-}
+
 
 
 /* Ctrl+Q と DM検索ウィンドウ */
@@ -587,92 +301,12 @@ background:rgba(0,0,0,0.7) !important;
 }
 */
 
-
-/* NSFW タイトル日本語化 (NSFW Channel -> 成人向けのチャンネルです！ */
-
-.title-2mmhgH.margin-bottom-8 {
-		font-size: 0px;
-}
-
-.title-2mmhgH.margin-bottom-8:before {
-		font-size: 24px;
-		content: "このチャンネルは成人向けのチャンネルです！";
-}
-
-
-/* NSFW コメント日本語化 */
-
-.description-15n-1L.margin-bottom-20 {
-		font-size: 0px;
-}
-
-.description-15n-1L.margin-bottom-20:before {
-		font-size: 16px;
-		content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを本当に開きますか？";
-}
-
-
-/* NSFW ボタン日本語化 */
-
-
-/* 旧: .contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM */
-
-.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.largeGrow-2_1w2U.actionRed-sT3Bw5.action-2mLTX4 {
-		font-size: 0px;
-}
-
-
-/* 旧: .contentsFilled-3M8HCx.contents-4L4hQM:before -> いろんなボタンがバグるので変更*/
-
-.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.largeGrow-2_1w2U.actionRed-sT3Bw5.action-2mLTX4:before {
-		font-size: 14px;
-		content: "はい(開く)";
-}
-
-.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.largeGrow-2_1w2U.action-2mLTX4 {
-		font-size: 0px;
-}
-
-.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.largeGrow-2_1w2U.action-2mLTX4:before {
-		font-size: 14px;
-		content: "いいえ(開かない)";
-}
-
-
 /* 何もないチャンネルの背景透過修正 */
 
 .noChannel-2EQ0a9 {
 		background: rgba(0, 0, 0, 0.7) !important;
 		width: 900px;
 }
-
-
-/* 何もないチャンネルの文言修正 */
-
-
-/* h4 タイトル */
-
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.title-38OOBL {
-		font-size: 0px;
-}
-
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.title-38OOBL:before {
-		font-size: 17px;
-		content: "テキストチャンネルがありません!";
-}
-
-
-/* div 説明 */
-
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.text-1rLRsh.margin-top-8 {
-		font-size: 0px;
-}
-
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.text-1rLRsh.margin-top-8:before {
-		font-size: 14px;
-		content: "どうやら奇妙な場所に来てしまったようですね。テキストチャンネルを読むための権限がない、または、このサーバーにはテキストチャンネルが存在しません。";
-}
-
 
 
 /* ビデオ通話設定日本語化 */
@@ -703,16 +337,17 @@ textarea {
 
 .scroller-wrap .scroller::-webkit-scrollbar-thumb {
 		border: 4px solid rgba(255, 255, 255, 0) !important;
+		background-color: var(--scroll-bar-color) !important;
 		/*background-color: #03A9F4 !important;*/
 }
 
 .scroller-wrap .scroller::-webkit-scrollbar-track-piece {
 		border: 4px solid rgba(255, 255, 255, 0) !important;
-		background-color: rgba(48, 79, 254, 0) !important;
+		background-color: var(--scroll-bar-background-color) !important;
 }
 
 .ui-standard-sidebar-view {
-		background: rgba(0, 0, 0, 0.0) !important;
+		background: rgba(0, 0, 0, 0) !important;
 }
 
 
@@ -725,6 +360,7 @@ textarea {
 .typing,
 .wordmark-2L03Wr,
 .content,
+.userPopout-4pfA0d,
 .inner-1_1f7b,
 .user-profile-modal .guild-channels,
 .private-channels,
@@ -739,6 +375,8 @@ textarea {
 #voice-connection {
 		background: transparent !important;
 }
+
+
 
 /* ユーザー設定 */
 
@@ -843,7 +481,7 @@ textarea {
 
 .selected-eNoxEK,
 .ui-tab-bar-item.selected {
-		background: rgba(207, 113, 118, 0.7) !important;
+		background: var(--selected-color) !important;
 }
 
 .ui-form-item,
@@ -889,18 +527,18 @@ textarea {
 /* 未読メッセージの白いやつと開いているサーバーの横のやつ */
 
 .unread:before {
-		background: rgba(207, 113, 118, 0.7) !important;
+		background: var(--unread-color) !important;
 }
 
 .guild.selected:before {
-		background: rgba(207, 113, 118, 1) !important;
+		background: var(--accent-color) !important;
 }
 
 
 /* 通話中 */
 
 .container-3lnMWU {
-		background: rgba(207, 113, 118, 0.8) !important;
+		background: var(--vc-color) !important;
 		height: 40px;
 		padding: 14px;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
@@ -914,39 +552,28 @@ textarea {
 }
 
 /* 選択されたチャンネル */
+.containerDefault-7RImuF
+.wrapperHoveredText-1PA_Uk.wrapper-fDmxzK,
+.contentHoveredText-2HYGIY.content-2mSKOj {
+	background-color: rgba(0,0,0,0);
+}
 
-.contentSelectedText-3j5CXt,
-.content-2mSKOj:hover,
+.contentSelectedText-3j5CXt.content-2mSKOj,
+.contentDefaultText-2elG3R.content-2mSKOj:hover,
 .contentHoveredVoice-3qGNKh:active,
 .contentSelectedVoice-gTtYM9:active {
-		background-color: rgba(207, 113, 118, .6) !important;
+		background-color: var(--selected-color) !important;
 }
-
-
-/* ユーザープロフィール */
-
-.theme-dark.popouts {
-		background: rgba(0, 0, 0, 0.6) !important;
-}
-
-
-/* ユーザープロフィール(詳細) */
-
-#user-profile-modern {
-		background: rgba(0, 0, 0, 0.7) !important;
-}
-
 
 /* チャンネルにカーソルを合わした際 */
 
 .content-2mSKOj:hover,
-.contentDefaultText-2elG3R:hover,
-.draggable-3SphXU:hover {
-		background-color: rgba(207, 113, 118, .4);
+.contentDefaultText-2elG3R:hover {
+		background-color: var(--hover-color);
 }
 
 .wrapperDefaultText-3M3F1R.wrapper-fDmxzK {
-		background-color: rgba(207, 113, 118, .0);
+		background-color: rgba(207, 113, 118, 0);
 }
 
 
@@ -975,18 +602,19 @@ textarea {
 /*| 文字色(hex可、color可) |*/
 
 .markup {
-		color: #C6C6C6 !important;
+		color: var(--text-color) !important;
 }
 
 /*|| ``` で囲うやつの透過とか色指定とか ||*/
 
 .scrollbarGhost-K_3Xa9,
-.scrollbar-11WJwo hljs {
+.scrollbar-11WJwo hljs,
+.scrollbarGhost-K_3Xa9.scrollbar-11WJwo hljs {
 		background: rgba(207, 113, 118, 0.4) !important;
 		color: #C9C9C9 !important;
+		border-radius: 8px;
 }
 .markup pre {
-		border-radius: 0 !important;
 		background: transparent !important;
 		border-color: rgba(207, 113, 118, 0) !important;
 }
@@ -1007,7 +635,7 @@ textarea {
 .member.member-status.member-status-idle:hover,
 .member.member-status.member-status-dnd:hover,
 .member.member-status.member-status-offline:hover {
-		background: rgba(0, 0, 0, 0.4) !important;
+		background: var(--hover-color) !important;
 		border-radius: 7px;
 }
 
@@ -1058,28 +686,27 @@ titleWrapper-3Vi_wz.theme-dark {
 
 .channel.private:hover
 {
-	background: rgba(207, 113, 118,0.28);
+	background: var(--hover-color);
 	border-radius: 4px;
 }
 
 .channel.selected.private
 {
-	background: rgba(207, 113, 118, .6);
+	background: var(--selected-color);
 	border-radius: 4px
 }
 
 /* フレンド/Activity/LFG ボタン部分 */
 .channel.btn-friends.selected
 {
-	background: rgba(207, 113, 118, .6) !important;
+	background: var(--selected-color) !important;
 	border-radius: 4px
 }
 .channel.btn-friends:hover
 {
-	background: rgba(207, 113, 118,0.28);
+	background: var(--hover-color);
 	border-radius:4px;
 }
-
 
 /* フレンドのオンライン表示リスト等(フレンド申請承認待ち、ブロックしたひと、オンラインの人、すべてのフレンド、フレンド候補、フレンドを追加) */
 
@@ -1109,7 +736,7 @@ titleWrapper-3Vi_wz.theme-dark {
 		border-top: none !important;
 		width: 240px;
 		margin-left: 0px;
-		background: rgba(207, 113, 118, 0.8) !important;
+		background: var(--accent-color) !important;
 		height: 45px;
 		box-sizing: border-box;
 		border-bottom: 0px solid hsla(0, 6%, 90%, .1) !important;
@@ -1279,16 +906,163 @@ titleWrapper-3Vi_wz.theme-dark {
 #clockPluginClock
 {
 position: relative;
-top: 7.3px;
-left: 52px;
+top: 6px;
+left: -7px;
 background:transparent !important;
-font-size: 12px;
+font-size: 13.2px;
 }
 
-/* バージョン情報の表示 */
+/* 翻訳系 */
+
+/* 何もないチャンネルの文言修正 */
+
+
+/* h4 タイトル */
+
+.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.title-38OOBL {
+	font-size: 0px;
+}
+
+.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.title-38OOBL:before {
+	font-size: 17px;
+	content: "テキストチャンネルがありません!";
+}
+
+
+/* div 説明 */
+
+.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.text-1rLRsh.margin-top-8 {
+	font-size: 0px;
+}
+
+.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.text-1rLRsh.margin-top-8:before {
+	font-size: 14px;
+	content: "どうやら奇妙な場所に来てしまったようですね。テキストチャンネルを読むための権限がない、または、このサーバーにはテキストチャンネルが存在しません。";
+}
+
+
+/* New Invite UI texts */
+.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM
+ {
+ 	font-size: 0px;
+ }
+
+.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM:after
+ {
+ 	font-size: 16px;
+ 	content: "参加済み";
+ }
+
+.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.h5-3KssQU.title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.header-NUC1Kl.marginBottom8-1mABJ4
+{
+	font-size:0px;
+}
+
+.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.h5-3KssQU.title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.header-NUC1Kl.marginBottom8-1mABJ4:after
+{
+	font-size:13px;
+	content: "サーバーに招待されました";
+}
+
+/* NSFW タイトル日本語化 (NSFW Channel -> 成人向けのチャンネルです！ */
+
+.title-2mmhgH.margin-bottom-8 {
+	font-size: 0px;
+}
+
+.title-2mmhgH.margin-bottom-8:before {
+	font-size: 24px;
+	content: "成人向けのチャンネルです！";
+}
+
+
+/* NSFW コメント日本語化 */
+
+.description-15n-1L.margin-bottom-20 {
+	font-size: 0px;
+}
+
+.description-15n-1L.margin-bottom-20:before {
+	font-size: 16px;
+	content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを開きますか？";
+}
+
+
+/* NSFW ボタン日本語化 */
+
+
+/* 旧: .contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM */
+
+.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.largeGrow-2_1w2U.actionRed-sT3Bw5.action-2mLTX4 {
+	font-size: 0px;
+}
+
+
+/* 旧: .contentsFilled-3M8HCx.contents-4L4hQM:before -> いろんなボタンがバグるので変更*/
+
+.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.largeGrow-2_1w2U.actionRed-sT3Bw5.action-2mLTX4:before {
+	font-size: 14px;
+	content: "はい(開く)";
+}
+
+.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.largeGrow-2_1w2U.action-2mLTX4 {
+	font-size: 0px;
+}
+
+.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.largeGrow-2_1w2U.action-2mLTX4:before {
+	font-size: 14px;
+	content: "いいえ(開かない)";
+}
+
+/* Loading / 接続失敗 */
+
+.problemsText-3RO4MF
+{
+	font-size: 0px;
+}
+
+.problemsText-3RO4MF:before
+{
+	font-size: 18px;
+	content:"接続に問題が発生しましたか？インターネットにはつながっていますか？( ;⊙´◞౪◟`⊙)";
+}
+
+.twitterLink-235wvR.links-3m0VgL
+{
+	font-size: 0px;
+}
+
+.twitterLink-235wvR.links-3m0VgL:after
+{
+	font-size: 16px;
+	content: "公式Twitterを確認する( ´◉‿ゝ◉`)";
+}
+
+.statusLink-2eJVdK.links-3m0VgL
+{
+	font-size: 0px;
+}
+
+.statusLink-2eJVdK.links-3m0VgL:after
+{
+	font-size: 16px;
+	content: "サーバーステータスを確認する( ´◔‿ゝ◔`)";
+}
+
+/* Activity */
+.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyEnd-1ceqOU.alignCenter-3VxkQP.noWrap-v6g9vO.actions-2rnqK7>.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.smallGrow-2_7ZaC>.contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM {
+	font-size: 0px;
+}
+
+.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyEnd-1ceqOU.alignCenter-3VxkQP.noWrap-v6g9vO.actions-2rnqK7>.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.smallGrow-2_7ZaC>.contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM:after {
+	font-size: 16px;
+	content: "メッセージ" !important;
+}
+
+/* バージョン表示 */
 #bd-settings-sidebar>span>div:last-child:after
 {
 	font-size: 12px;
-	content: "\Aryuuta0217 Theme v3.6.9\A by ryuuta0217";
+	content: "\Aryuuta0217 Theme v3.7.0\A by ryuuta0217\A大型アップデートをしました。テーマファイルを更新してください。";
 	white-space: pre;
 }
