@@ -8,7 +8,7 @@
 .app,
 .callout-backdrop {
 		/* https://と続いているところに背景画像のURLを貼ろう 1920x1080の画像を推奨しています */
-		background-image: url(https://example.com/background-image.png);
+		background-image: url("https://example.com/background-image.png");
 		background-size: cover;
 }
 
@@ -115,59 +115,4 @@ left: 3px;
 background:transparent !important;
 font-size: 12px;
 z-index: 10000;
-}
-
-/* 追加オプション: Experimental - BetterDiscord 設定 位置変更・テーマバージョン表示 */
-/* ズームレベルは必ず90、 ディスプレイの解像度は1440x900のみサポートしています */
-/* 対応していない環境では、位置が正しくなりません。 */
-/*#bd-settings-sidebar
-{
-	position: absolute;
-	top: 3.9%;
-	left: 22%;
-	width: 35%;
-}
-
-#bd-settings-sidebar>span>div>.ui-tab-bar-separator.margin-top-8.margin-bottom-8
-{
-	visibility : hidden;
-}
-
-#bd-settings-sidebar>span>div>.ui-tab-bar-header
-{
-	font-size: 0px;
-}
-
-#bd-settings-sidebar>span>div>.ui-tab-bar-header:after
-{
-	font-size: 12px;
-	content:"BETTERDISCORD SETTINGS";
-}
-
-#bd-settings-sidebar>span>span>a
-{
-	font-size: 12px;
-	position: absolute;
-	left: 61%;
-	top: 94%;
-	padding-left: 6px;
-	font-size: 0px;
-}
-
-#bd-settings-sidebar>span>span>a:after
-{
-	font-size: 12px;
-	content:"\AJiiks";
-	white-space: pre;
-}
-
-#bd-settings-sidebar>span>span
-{
-	font-size: 0px !important;
-}
-
-#bd-settings-sidebar>span>span:after
-{
-	font-size: 12px;
-	content:"Theme v3.6.2 ryuuta0217\A BD　v0.2.81:1.792";
 }
