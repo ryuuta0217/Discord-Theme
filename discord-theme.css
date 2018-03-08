@@ -1,10 +1,4 @@
 /* フォント設定 */
-@font-face
-{
-		font-family: 'ほにゃ字Re' !important;
-		src: url('https://cdn.rawgit.com/ryuuta0217/Discord-Theme/546de590/font.ttf');
-}
-
 html,
 header,
 body,
@@ -52,8 +46,7 @@ body,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.title-qAcLxz,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.header-3sp3cE,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.headerBar-cxbhPD {
-		font-family: 'ほにゃ字Re', 'HonyaJi-Re' !important;
-		src: url('https://cdn.rawgit.com/ryuuta0217/Discord-Theme/546de590/font.ttf');
+	font-family: var(--font-name), Yu Gothic UI, Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 /* 背景表示されない問題修正 */
@@ -1063,6 +1056,6 @@ font-size: 13.2px;
 #bd-settings-sidebar>span>div:last-child:after
 {
 	font-size: 12px;
-	content: "\A\Aryuuta0217 Theme v3.7.2\A by ryuuta0217\A\Aテーマファイル作成者より:\A\A表示がバグっている方は\Aテーマファイルを更新してください。";
+	content: "\A\Aryuuta0217 Theme v3.8.0\A by ryuuta0217\A\Aテーマファイル作成者より:\A\Aアップデートしました。\Ahttps://github.com/\Aryuuta0217/Discord-Theme\Aから再度テーマファイルを\Aダウンロードしてください。";
 	white-space: pre;
 }
