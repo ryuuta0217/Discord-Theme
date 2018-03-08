@@ -18,5 +18,10 @@ BetterDiscord( https://github.com/rauenzi/BetterDiscordApp/releases ) が導入�
 ### デフォルトで指定されているフォント
 ほにゃ字Reというフォントをデフォルトで指定しています。<br>
 ryuuta0217.theme.css の 18行目で変更することができます。<br>
-ほにゃ字Re-> http://honya.nyanta.jp/ <br>
 ほにゃ字Reのダウンロード-> http://honya.nyanta.jp/1504/font_honyajire.zip <br>
+「ほにゃ。」サイト-> http://honya.nyanta.jp/ <br>
+
+### 連絡先
+質問や機能追加の要望は、以下どれかまで。<br>
+Twitter: @p1kt2 ( https://twitter.com/p1kt2 )<br>
+Discord: https://discord.gg/By9ncpX <br>

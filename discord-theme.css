@@ -1,3 +1,14 @@
+:root {
+	--load1: "テーマを読み込み中";
+	--load2: "アセットを読み込み中";
+	--load3: "✔ 読み込み完了";
+}
+
+.app::after,
+.callout-backdrop {
+		z-index: -9999;
+}
+
 /* フォント設定 */
 html,
 header,
@@ -735,10 +746,13 @@ titleWrapper-3Vi_wz.theme-dark {
 		border-bottom: 0px solid hsla(0, 6%, 90%, .1) !important;
 }
 
-
 /* test */
 
-.channels-3g2vYe.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR {
+.container-3NvGrL {
+	background: var(--background-cover)
+}
+
+.scrollerWrap-2uBjct.scrollerThemed-19vinI.themeGhostHairlineChannels-2lQojW.scrollerFade-28dRsO {
 		background: rgba(0, 0, 0, 0.58) !important;
 }
 
@@ -1052,10 +1066,639 @@ font-size: 13.2px;
 	content: "メッセージ" !important;
 }
 
+
 /* バージョン表示 */
 #bd-settings-sidebar>span>div:last-child:after
 {
-	font-size: 12px;
-	content: "\A\Aryuuta0217 Theme v3.8.0\A by ryuuta0217\A\Aテーマファイル作成者より:\A\Aアップデートしました。\Ahttps://github.com/\Aryuuta0217/Discord-Theme\Aから再度テーマファイルを\Aダウンロードしてください。";
+	font-size: 13px;
+	color: rgba(0, 255, 34, 0.856) !important;
+	content: "\A\Aryuuta0217 Theme v3.8.2\A by ryuuta0217\A\Aテーマファイル作成者より:\A\Aアップデートしました。\Ahttps://github.com/\Aryuuta0217/Discord-Theme\Aから再度テーマファイルを\Aダウンロードしてください。";
 	white-space: pre;
+}
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-th_eam:after {
+	content: "\A- Discord Theme v3.8.2 -\A\Aアップデート内容:\A・設定系のアイコン追加\A・BetterDiscordの日本語化(不完全,調整中)\A・起動時の読み込みアニメーション\A・製作者タグの表示";
+	white-space: pre;
+	color: rgb(0, 255, 30);
+	font-size: 14px;
+}
+
+/* 設定@アイコン */
+.ui-tab-bar-item,
+.itemDefault-3NDwnY {
+	font-size: 13px !important;
+}
+
+.selected,
+.selected-eNoxEK {
+	font-size: 16px !important;
+}
+
+/* 文字がはみ出る設定項目の文字サイズ変更((選択時)) */
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(3) {
+	font-size: 14.9px !important;
+}
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(4) {
+	font-size: 13.1px !important;
+}
+
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(23),
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(22) {
+	font-size: 14.34px !important;
+}
+
+/* 設定日本語化 */
+.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa:nth-child(10) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+.itemSelected-3XxAMf.item-3879bf.selected-eNoxEK:nth-child(10) {
+	font-size: 0px !important;
+	height: 32px;
+}
+.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa:nth-child(10)::before {
+	font-size: 13px;
+	content: "マイク & ビデオ";
+}
+
+.itemSelected-3XxAMf.item-3879bf.selected-eNoxEK:nth-child(10)::before {
+	font-size: 16px;
+	content: "マイク & ビデオ";
+}
+
+/* BD 日本語化 */
+
+/* Core */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(3) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::before {
+	font-size: 13px !important;
+	content: "BD 基本設定";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(3)::before {
+	font-size: 16px !important;
+	content: "BD 基本設定";
+}
+
+/* Zere's Fork 翻訳まだ */
+
+/* Emotes */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(5) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::before {
+	font-size: 13px !important;
+	content: "絵文字";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(5)::before {
+	font-size: 16px !important;
+	content: "絵文字";
+}
+
+/* Custom CSS */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(6) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::before {
+	font-size: 13px !important;
+	content: "カスタムCSS";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(6)::before {
+	font-size: 16px !important;
+	content: "カスタムCSS";
+}
+
+/* Plugins */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(7) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::before {
+	font-size: 13px !important;
+	content: "プラグイン";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(7)::before {
+	font-size: 16px !important;
+	content: "プラグイン";
+}
+
+/* Themes */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(8) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(8)::before {
+	font-size: 13px !important;
+	content: "テーマ";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(8)::before {
+	font-size: 16px !important;
+	content: "テーマ";
+}
+
+.bda-settings-button {
+	font-size: 0px !important;
+}
+
+.bda-settings-button::before {
+	font-size: 12px;
+	content: "設定";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(1) {
+	font-size: 0px !important;
+}
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(1)::before {
+	font-size: 14px;
+	content: "更新";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(2) {
+	font-size: 0px !important;
+}
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(2)::before {
+	font-size: 14px;
+	content: "保存";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(3) {
+	font-size: 0px !important;
+}
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(3)::before {
+	font-size: 14px;
+	content: "破棄";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>span {
+	font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>span::before {
+	font-size: 16px;
+	content: "保存されてないコードは破棄されます"
+}
+
+#bd-customcss-attach-controls>ul>li>div>span {
+	font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>ul>li>div>span::before {
+	font-size: 13px;
+	content: "リアルタイム更新を有効にする"
+}
+
+#bd-settingspane-container>div>div>div>ul>li>.plugin-settings {
+	color: white;
+}
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(2)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_person_white_24px.svg)
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(3)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(9)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_security_white_24px.svg);
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(4)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_apps_white_24px.svg)
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(5)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(9)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_link_white_24px.svg)
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(7)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(8)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/speed.svg)
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(10)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_mic_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(11)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_desktop_windows_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(12)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(11)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_notifications_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(12)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_keyboard_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(14)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_games_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(15)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(14)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_chat_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(16)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(15)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_camera_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(17)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(16)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_videocam_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(18)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(17)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_language_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(19)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_laptop_windows_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(21)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(20)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(4)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_history_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(22)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(21)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(7)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_warning_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(23)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(22)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(6)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_developer_mode_white_24px.svg)
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="itemDefault"]::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/exit.svg)
+}
+
+/* サーバー設定 */
+.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(2) {
+	padding-left: 48px;
+}
+
+.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(2)::after,
+[class="layer-kosS71"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(1)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/info.svg);
+	content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 15px;
+    margin-top: -2px;
+    opacity: .3;
+    -webkit-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+}
+.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:last-child {
+	padding-left: 48px;
+}
+
+.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:last-child::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/delete.svg);
+	content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 15px;
+    margin-top: -2px;
+    opacity: .3;
+    -webkit-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+}
+
+/* BetterDiscord Icons */
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/betterdiscord.svg)
+}
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(4)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_call_split_white_24px.svg);
+}
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/emote.svg)
+}
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/code.svg)
+}
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/puzzle.svg)
+}
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(8)::after {
+	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/palette.svg)
+}
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"],
+#bd-settings-sidebar .ui-tab-bar-item {
+    padding-left: 48px
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]::after,
+#bd-settings-sidebar .ui-tab-bar-item::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 15px;
+    margin-top: -2px;
+    opacity: .3;
+    -webkit-transition: all .60s ease-in-out;
+    transition: all .60s ease-in-out
+}
+
+.app,
+body::after {
+		-webkit-animation: cv-fade 6s ease-out;
+		animation: cv-fade 6s ease-out
+}
+@-webkit-keyframes cv-fade {
+		0% {
+				opacity: 0;
+				-webkit-filter: blur(10px);
+				filter: blur(10px)
+		}
+		70% {
+				-webkit-filter: blur(0px);
+				filter: blur(0px)
+		}
+		100% {
+				opacity: 1
+		}
+}
+@keyframes cv-fade {
+		0% {
+				opacity: 0;
+				-webkit-filter: blur(10px);
+				filter: blur(10px)
+		}
+		70% {
+				-webkit-filter: blur(0px);
+				filter: blur(0px)
+		}
+		100% {
+				opacity: 1
+		}
+}
+#app-mount::before {
+		content: "";
+		background: transparent;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 9998;
+		pointer-events: none;
+		-webkit-animation: cv-bg 10.5s ease-in-out;
+		animation: cv-bg 10.5s ease-in-out
+}
+@-webkit-keyframes cv-bg {
+		0% {
+				background-color: rgba(0, 0, 0, .5)
+		}
+		72% {
+				background-color: rgba(0, 0, 0, .5)
+		}
+		100% {
+				background-color: transparent
+		}
+}
+@keyframes cv-bg {
+		0% {
+				background-color: rgba(0, 0, 0, .5)
+		}
+		72% {
+				background-color: rgba(0, 0, 0, .5)
+		}
+		100% {
+				background-color: transparent
+		}
+}
+#app-mount::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		color: #fff;
+		font-size: 50px;
+		font-weight: 700;
+		text-align: center;
+		line-height: 100vh;
+		opacity: 0;
+		z-index: 9999;
+		pointer-events: none;
+		-webkit-animation: cv-init 7s ease-in-out;
+		animation: cv-init 7s ease-in-out;
+		font-family: 'Webdings';
+}
+
+@-webkit-keyframes cv-init {
+	0% {
+			content: var(--load1);
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	25% {
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	30% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	45% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	49% {
+			content: var(--load1);
+			opacity: 0;
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3)
+	}
+	50% {
+			content: var(--load2);
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	55% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	70% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	74% {
+			content: var(--load2);
+			opacity: 0;
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3)
+	}
+	75% {
+			content: var(--load3);
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	80% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	95% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	99% {
+			content: var(--load3);
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	100% {
+			content: "";
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			opacity: 0
+	}
+}
+@keyframes cv-init {
+	0% {
+			content: var(--load1);
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	25% {
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	30% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	45% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	49% {
+			content: var(--load1);
+			opacity: 0;
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3)
+	}
+	50% {
+			content: var(--load2);
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	55% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	70% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	74% {
+			content: var(--load2);
+			opacity: 0;
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3)
+	}
+	75% {
+			content: var(--load3);
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	80% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	95% {
+			opacity: .3;
+			-webkit-transform: scale(1);
+			transform: scale(1)
+	}
+	99% {
+			content: var(--load3);
+			opacity: 0;
+			-webkit-transform: scale(.7);
+			transform: scale(.7)
+	}
+	100% {
+			content: "";
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			opacity: 0
+	}
+}
+
+.avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
+.guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
+.message-group .avatar-large[style*='249869841706516481']+.comment .user-name::after {
+		content: "[テーマ作成者]"
+}
+
+.avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
+.guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
+.message-group .avatar-large[style*='249869841706516481']+.comment .user-name::after {
+		position: absolute;
+		height: 14px;
+		padding: 1px 2px;
+		border-radius: 3px;
+		background: rgba(0, 0, 0, 0.5);
+		color: hsla(0, 0%, 100%, 0.8);
+		font-size: 9px;
+		text-align: center;
+		font-weight: 700;
+		line-height: 16px;
+		text-shadow: 0 0 1px rgba(0, 0, 0, .3);
+		text-transform: uppercase;
+		vertical-align: bottom
+}
+
+.avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
+.guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
+.message-group .avatar-large[style*='249869841706516481']+.comment .user-name::after {
+		position: relative;
+		background: rgba(100, 100, 100, 0.3);
+		color: hsla(0, 0%, 100%, 0.6);
+		margin-left: 6px
+}
+
+.app::after {
+	content: "aaaa";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
 }

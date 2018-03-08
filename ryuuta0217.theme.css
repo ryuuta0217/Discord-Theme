@@ -1,4 +1,4 @@
-//META{"name":"ryuuta0217 Theme","description":"背景ベース色は黒。アクセント色はピンク色。","author":"ryuuta0217","version":"最新"}*//{}
+//META{"name":"ryuuta0217 Theme","description":":thinking: :innocent:","author":"ryuuta0217","version":"最新"}*//{}
 
 /*メインテーマをインポート*/
 @import url(https://cdn.rawgit.com/ryuuta0217/Discord-Theme/master/discord-theme.css);
@@ -15,7 +15,7 @@
 /* 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで! */
 :root {
 	/* フォント指定 */
-	--font-name: ほにゃ字Re;
+	--font-name: 'ほにゃ字Re';
 
 	/* メイン色(今のところ使用箇所なし) */
 	--main-color: rgba(37, 172, 232, 1);
@@ -109,15 +109,7 @@
 	background-position: center !important;
 }
 
-/* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
-/*.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP.unfocused-3drpf8,
-.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP
-{
-	background:rgba(0,0,0,0.7) !important;
-	width: 74px;
-}
-
-/* MacOS向け 追加オプション - 時計(Clockプラグインを使用している時にのみ) */
+/* 共通 追加オプション - 時計(Clockプラグインを使用している時にのみ) */
 /* Clockプラグイン: https://raw.githubusercontent.com/Jiiks/BetterDiscordApp/master/Plugins/clock.plugin.js */
 /* 右クリックして名前を付けて保存をしたあと、 BetterDiscord/Plugins にコピー&ペーストしてください */
 /*#clockPluginClock
@@ -128,4 +120,12 @@ left: 3px;
 background:transparent !important;
 font-size: 12px;
 z-index: 10000;
+}
+
+/* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
+/*.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP.unfocused-3drpf8,
+.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP
+{
+	background:rgba(0,0,0,0.7) !important;
+	width: 74px;
 }
