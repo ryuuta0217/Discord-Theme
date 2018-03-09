@@ -679,13 +679,13 @@ titleWrapper-3Vi_wz.theme-dark {
 }
 
 /* DM履歴画面関連 */
-
+/*
 .private-channels {
-		background: rgba(0, 0, 0, 0.29) !important;
+	background: var(--background-cover);
 }
-
+*/
 .search-bar {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover);
 }
 
 .channel.private:hover
@@ -746,14 +746,11 @@ titleWrapper-3Vi_wz.theme-dark {
 		border-bottom: 0px solid hsla(0, 6%, 90%, .1) !important;
 }
 
-/* test */
+/* サーバーヘッダ・チャンネル一覧 */
 
-.container-3NvGrL {
-	background: var(--background-cover)
-}
-
-.scrollerWrap-2uBjct.scrollerThemed-19vinI.themeGhostHairlineChannels-2lQojW.scrollerFade-28dRsO {
-		background: rgba(0, 0, 0, 0.58) !important;
+.flexChild-1KGW5q>container-3NvGrL,
+.channels-3g2vYe.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR {
+	background: var(--background-cover) !important;
 }
 
 /* サーバーヘッダー部分 
@@ -1072,12 +1069,12 @@ font-size: 13.2px;
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v3.8.2\A by ryuuta0217\A\Aテーマファイル作成者より:\A\Aアップデートしました。\Ahttps://github.com/\Aryuuta0217/Discord-Theme\Aから再度テーマファイルを\Aダウンロードしてください。";
+	content: "\A\Aryuuta0217 Theme v3.8.3\A by ryuuta0217\A\Aテーマファイル作成者より:\A\Aアップデートしました。\Ahttps://github.com/\Aryuuta0217/Discord-Theme\Aから再度テーマファイルを\Aダウンロードしてください。";
 	white-space: pre;
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-th_eam:after {
-	content: "\A- Discord Theme v3.8.2 -\A\Aアップデート内容:\A・設定系のアイコン追加\A・BetterDiscordの日本語化(不完全,調整中)\A・起動時の読み込みアニメーション\A・製作者タグの表示";
+	content: "\A- Discord Theme v3.8.3 -\A\Aアップデート内容:\A・設定系のアイコン追加\A・BetterDiscordの日本語化(不完全,調整中)\A・起動時の読み込みアニメーション\A・製作者タグの表示\A\Aバグ修正: DM履歴など一部が完全透過していたので修正";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
