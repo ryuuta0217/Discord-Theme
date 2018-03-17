@@ -245,14 +245,6 @@ body,
 		background: var(--new-message-bar) !important; /* メッセージバーの色 */
 }
 
-
-/* チャンネル一覧[サーバー] */
-
-.scroller-fzNley.scroller-NXV0-d {
-		background: rgba(0, 0, 0, 0.29);
-}
-
-
 /* サーバー Notice */
 
 .channel-notices {
@@ -513,8 +505,7 @@ textarea {
 		padding: 0 2px !important;
 }
 
-.header-1tS1js,
-.container-3NvGrL {
+.header-1tS1js {
 		background: rgba(0, 0, 0, 0.3) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
@@ -1690,7 +1681,6 @@ body::after {
 }
 
 .app::after {
-	content: "aaaa";
 	position: absolute;
 	top: 0;
 	left: 0;
