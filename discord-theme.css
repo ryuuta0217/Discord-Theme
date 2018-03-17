@@ -191,26 +191,16 @@ body,
 
 /* Activity 背景透過 とそのほか*/
 
-.activityFeed-HeiGwL {
-		background: rgba(0, 0, 0, 0.0) !important;
+.activityFeed--1mYMS {
+	background: rgba(0, 0, 0, 0.0) !important;
 }
 
-.scroller-fzNley.feed-3H5oYA
-{
-	background: rgba(0, 0, 0, 0.7);
+.scroller-fzNley.feed-jRZy6x {
+	background: var(--background-cover) !important;
 }
-
-.scroller-fzNley.feed-2fHzeU {
-		background: rgba(0, 0, 0, 0.7) !important;
-}
-
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.headerBar-cxbhPD {
-		background: rgba(0, 0, 0, 0) !important;
-}
-
-.activity-3tgXuD.activity-3NrhcY.marginTop20-3UscxH,
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.header-34ZDfM {
-		background: rgba(0, 0, 0, 0.3);
+.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.header-1qeJfQ.cardHeader-scsddN,
+.card-2WxYqG.card-_xTeYB {
+	background: rgba(0, 0, 0, .0) !important;
 }
 
 
