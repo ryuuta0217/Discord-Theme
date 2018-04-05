@@ -609,17 +609,19 @@ textarea {
 
 .channel-members-loading,
 .member,
-.heading {
+.heading,
+.membersWrap-3wRngy {
 		background: rgba(0, 0, 0, 0.0) !important;
 }
-.channel-members {
+.channel-members,
+.membersWrap-3wRngy {
 		background: rgba(0, 0, 0, 0.7) !important
 }
 
-.member.member-status.member-status-online:hover,
-.member.member-status.member-status-idle:hover,
-.member.member-status.member-status-dnd:hover,
-.member.member-status.member-status-offline:hover {
+.memberOnline-1xn3V8.member-2FrNV0:hover,
+.memberidle-1xn3V8.member-2FrNV0:hover,
+.memberdnd-1xn3V8.member-2FrNV0:hover,
+.memberOffline-lvMbAs.member-2FrNV0:hover {
 		background: var(--hover-color) !important;
 		border-radius: 7px;
 }
@@ -1050,12 +1052,12 @@ font-size: 13.2px;
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v3.8.3\A by ryuuta0217\A\Aテーマファイル作成者より:\A\Aアップデートしました。\Ahttps://github.com/\Aryuuta0217/Discord-Theme\Aから再度テーマファイルを\Aダウンロードしてください。";
+	content: "\A\Aryuuta0217 Theme v3.8.4\A by ryuuta0217\A\A https://github.com/ryuuta0217/Discord-Theme";
 	white-space: pre;
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-th_eam:after {
-	content: "\A- Discord Theme v3.8.3 -\A\Aアップデート内容:\A・設定系のアイコン追加\A・BetterDiscordの日本語化(不完全,調整中)\A・起動時の読み込みアニメーション\A・製作者タグの表示\A\Aバグ修正: DM履歴など一部が完全透過していたので修正";
+	content: "\A- Discord Theme v3.8.4 -\A\Aアップデート内容:\A・サーバーメンバーリストの背景が正しく適応されていなかったため修正しました。\A\A Created By ryuuta0217";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
