@@ -1,3 +1,4 @@
+/* Start SorceCode */
 :root {
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
@@ -610,11 +611,11 @@ textarea {
 .channel-members-loading,
 .member,
 .heading,
-.membersWrap-3wRngy {
+.scroller-fzNley.members-1bid1J {
 		background: rgba(0, 0, 0, 0.0) !important;
 }
 .channel-members,
-.membersWrap-3wRngy {
+.scroller-fzNley.members-1bid1J {
 		background: rgba(0, 0, 0, 0.7) !important
 }
 
@@ -637,7 +638,6 @@ textarea {
 .channelTextAreaEnabled-c05Zpy.channelTextArea-1HTP3C.channelTextArea-os01xC {
 		background: rgba(0, 0, 0, 0.4) !important;
 }
-
 
 /* サーバーチャンネルタイトル */
 
@@ -1402,10 +1402,14 @@ body::after {
 @-webkit-keyframes cv-fade {
 		0% {
 				opacity: 0;
-				-webkit-filter: blur(10px);
-				filter: blur(10px)
+				-webkit-filter: blur(30px);
+				filter: blur(30px)
 		}
 		70% {
+				-webkit-filter: blur(15px);
+				filter: blur(15px)
+		}
+		90% {
 				-webkit-filter: blur(0px);
 				filter: blur(0px)
 		}
@@ -1416,10 +1420,14 @@ body::after {
 @keyframes cv-fade {
 		0% {
 				opacity: 0;
-				-webkit-filter: blur(10px);
-				filter: blur(10px)
+				-webkit-filter: blur(30px);
+				filter: blur(30px)
 		}
 		70% {
+				-webkit-filter: blur(15px);
+				filter: blur(15px)
+		}
+		90% {
 				-webkit-filter: blur(0px);
 				filter: blur(0px)
 		}
