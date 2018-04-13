@@ -76,6 +76,29 @@ body,
 	background: var(--background-cover) !important;
 }
 
+/* ユーザープロフィールポップアップ(簡易) */
+.headerPlaying-2Q7mBy.header-3budic.size16-3IvaX_,
+.body-3ljq11,
+.footerDefault-1t_gFA.footer-2wFs91,
+.headerNormal-3Vn9nT.header-3budic.size16-3IvaX_ {
+	background: var(--user-popup-cover) !important;
+}
+
+/* * QuickMessage */
+.footerDefault-1t_gFA.footer-2wFs91>input {
+	background: var(--input) !important;
+}
+
+/* ユーザープロフィールポップアップ(詳細) */
+.topSectionPlaying-3jAH9b,
+.topSectionNormal-2LlRG1 {
+	background: var(--user-popup-cover) !important;
+}
+
+.body-3_tdh6 {
+	background: var(--user-popup-cover) !important;
+}
+
 /* ゲーム選択 ゲームを選択しているとき */
 .itemSelected-3XxAMf.item-3879bf.selected-eNoxEK.tabBarItem-2YOhcM
 {
@@ -97,16 +120,16 @@ body,
 /* 入力欄 ぽっぷあっぷ */
 .autocomplete-1TnWNR.autocomplete-1LLKUa
 {
-	background:rgba(0,0,0,0.8);
+	background:var(--input-popup);
 }
 
 /* 報告ポップアップ透過 */
 .inner-1_1f7b>form {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 }
 
 .flex-lFgbSz.flex-3B1Tl4.horizontalReverse-2LanvO.horizontalReverse-k5PqxT.flex-3B1Tl4.directionRowReverse-2eZTxP.justifyStart-2yIZo0.alignStretch-1hwxMa.noWrap-v6g9vO.footer-1PYmcw {
-		background: rgba(0, 0, 0, 0) !important;
+		background: var(--invisible-color) !important;
 }
 
 /* 右クリメニュー */
@@ -133,7 +156,7 @@ body,
 /*チャンネルタイトル背景*/
 
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.title-qAcLxz {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 }
 
 /* 絵文字の選択 */
@@ -152,7 +175,7 @@ body,
 .no-search-results {
 		height: 401px !important;
 		width: 380px;
-		background: rgba(0, 0, 0, 0) !important;
+		background: var(--invisible-color) !important;
 }
 
 
@@ -178,7 +201,7 @@ body,
 /* Search Box */
 
 .search-bar-inner {
-		background: rgba(0, 0, 0, 0.6) !important;
+		background: var(--input) !important;
 		color: black !important;
 }
 
@@ -193,7 +216,7 @@ body,
 /* Activity 背景透過 とそのほか*/
 
 .activityFeed--1mYMS {
-	background: rgba(0, 0, 0, 0.0) !important;
+	background: var(--invisible-color) !important;
 }
 
 .scroller-fzNley.feed-jRZy6x {
@@ -251,10 +274,10 @@ body,
 /* Ctrl+Q と DM検索ウィンドウ */
 
 .quickswitcher-2NdiGJ {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 }
 .input-MwQhcX {
-		background: rgba(0, 0, 0, 0.8) !important;
+		background: var(--input) !important;
 }
 
 
@@ -278,7 +301,7 @@ body,
 /* NSFWの背景透過修正 */
 
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyCenter-29N31w.alignStretch-1hwxMa.noWrap-v6g9vO.theme-dark {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 }
 
 /*
@@ -291,7 +314,7 @@ background:rgba(0,0,0,0.7) !important;
 /* 何もないチャンネルの背景透過修正 */
 
 .noChannel-2EQ0a9 {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 		width: 900px;
 }
 
@@ -334,7 +357,7 @@ textarea {
 }
 
 .ui-standard-sidebar-view {
-		background: rgba(0, 0, 0, 0) !important;
+		background: var(--invisible-color) !important;
 }
 
 
@@ -369,7 +392,7 @@ textarea {
 
 .content-region,
 .sidebar-region {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
 
@@ -490,7 +513,7 @@ textarea {
 /* サーバーリスト(選択)エリア */
 
 .guilds-wrapper {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 		width: 70px;
 		padding: 0 2px !important;
@@ -500,13 +523,14 @@ textarea {
 		background: rgba(0, 0, 0, 0.3) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
-
+/*
 {
-		background: rgba(0, 0, 0, 0.0) !important;
+		background: var() !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
-}
+}*/
+
 .notice-3w3nb0.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR {
-		background: rgba(0, 0, 0, 0.7);
+		background: var(--background-cover);
 }
 
 
@@ -573,7 +597,7 @@ textarea {
 /* チャットエリア(メインエリア) */
 
 .content .flex-spacer {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 }
 
 /* チャット部分の背景の透過度 */
@@ -612,11 +636,11 @@ textarea {
 .member,
 .heading,
 .scroller-fzNley.members-1bid1J {
-		background: rgba(0, 0, 0, 0.0) !important;
+		background: var(--invisible-color) !important;
 }
 .channel-members,
 .scroller-fzNley.members-1bid1J {
-		background: rgba(0, 0, 0, 0.7) !important
+		background: var(--background-cover) !important
 }
 
 .memberOnline-1xn3V8.member-2FrNV0:hover,
@@ -632,7 +656,7 @@ textarea {
 .theme-dark .chat form,
 .channels-3g2vYe,
 .vertical-3X17r5 {
-		background-color: rgba(0, 0, 0, 0) !important;
+		background-color: var(--invisible-color) !important;
 }
 
 .channelTextAreaEnabled-c05Zpy.channelTextArea-1HTP3C.channelTextArea-os01xC {
@@ -643,7 +667,7 @@ textarea {
 
 .title-wrap,
 titleWrapper-3Vi_wz.theme-dark {
-		background: rgba(0, 0, 0, 0.7);
+		background: var(--background-cover);
 }
 
 #friends {
@@ -658,7 +682,7 @@ titleWrapper-3Vi_wz.theme-dark {
 }
 
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.headerBar-cxbhPD {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 }
 
 /* DM履歴画面関連 */
@@ -698,20 +722,20 @@ titleWrapper-3Vi_wz.theme-dark {
 /* フレンドのオンライン表示リスト等(フレンド申請承認待ち、ブロックしたひと、オンラインの人、すべてのフレンド、フレンド候補、フレンドを追加) */
 
 .friends-table {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 		margin-top: 0 !important;
 }
 
 /* DM検索 */
 
 .search-bar {
-		background: rgba(0, 0, 0, 0.0) !important;
+		background: var(--invisible-color) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
 
 .friends-header,
 .friends-table {
-		background: rgba(0, 0, 0, 0.7) !important;
+		background: var(--background-cover) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
 
@@ -762,7 +786,7 @@ titleWrapper-3Vi_wz.theme-dark {
 		height: 14px;
 		-webkit-border-radius: 20px;
 		overflow: hidden;
-		background: rgba(0, 0, 0, 0.0);
+		background: var(--invisible-color);
 }
 
 
@@ -824,7 +848,7 @@ titleWrapper-3Vi_wz.theme-dark {
 */
 
 .channel-members h2 {
-		background: rgba(0, 0, 0, 0);
+		background: var(--invisible-color);
 		padding-top: 3px;
 		padding-bottom: 6px;
 }
@@ -847,8 +871,6 @@ titleWrapper-3Vi_wz.theme-dark {
 }
 
 .callout-backdrop {
-		background: rgba(0, 0, 0, 0.6);
-		border-color: rgba(0, 0, 0, 0.7) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 		font-size: 12px;
 		text-transform: uppercase;
@@ -1052,12 +1074,12 @@ font-size: 13.2px;
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v3.8.4\A by ryuuta0217\A\A https://github.com/ryuuta0217/Discord-Theme";
+	content: "\A\Aryuuta0217 Theme v4.0\A by ryuuta0217\A\A https://github.com/\Aryuuta0217/Discord-Theme";
 	white-space: pre;
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-th_eam:after {
-	content: "\A- Discord Theme v3.8.4 -\A\Aアップデート内容:\A・サーバーメンバーリストの背景が正しく適応されていなかったため修正しました。\A\A Created By ryuuta0217";
+	content: "\A- Discord Theme v4.0 -\A\Aアップデート内容:\A・カラーを変更しても変わらない場所があったので修正。\A・前バージョンでは適応されていたものが適応されなくなっていたので修正\A\A Created By ryuuta0217";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
