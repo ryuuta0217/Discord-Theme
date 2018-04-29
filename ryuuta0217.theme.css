@@ -8,13 +8,14 @@
 .app,
 .callout-backdrop {
 		/* https://と続いているところに背景画像のURLを貼ろう 1920x1080の画像を推奨しています */
+		/* Base64にも対応しています */
 		background-image: url("https://example.com/background-image.png");
 		background-size: cover;
 }
 
 /* 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで! */
 :root {
-	/* フォント指定 - PCにインストールされているフォント名を使用してください */
+		/* フォント指定 - PCにインストールされているフォント名を使用してください */
 	--font-name: ほにゃ字Re;
 
 	/* メイン色(今のところ使用箇所なし) */
@@ -24,7 +25,7 @@
 	--accent-color: rgba(207, 113, 118, 1);
 
 	/* 背景カバー */
-	--background-cover: rgba(0, 0, 0, 0.7);
+	--background-cover: rgba(0, 0, 0, 0.6);
 
 	/* サーバーチャンネル一覧の背景部、カバー */
 	--channel-background: rgba(0, 0, 0, 0.45);
@@ -42,7 +43,7 @@
 	--selected-color: rgba(207, 113, 118, .6);
 
 	/* カーソルを合わせた時の色 */
-	--hover-color: rgba(207, 113, 118, 0.4);
+	--hover-color: rgba(207, 113, 118, 0.2);
 
 	/* 未読色 */
 	--unread-color: rgba(207, 113, 118, 0.7);
@@ -74,6 +75,12 @@
 
 	/* 入力欄ポップアップ */
 	--input-popup: rgba(0, 0, 0, 0.8);
+
+	/* ゲームタブ カード背景 (旧 Activity) */
+	--activity-card-background: rgba(0, 0, 0, 0.7);
+
+	/* メニュー背景色(右クリポップアップなど) */
+	--menu-color: rgba(0, 0, 0, 0.7);
 }
 
 /* 追加オプション - 有効にする際は . や # の前にある /* を外してください */
@@ -101,15 +108,6 @@
     		background: url("https://example.com/upload-background-image.png") !important;
     		background-size: cover !important;
 			background-position: center !important;
-}
-
-/* 共通 追加オプション - 設定画面の背景変更 */
-/* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
-/*.layer-kosS71>.ui-standard-sidebar-view
-{
-	background: url("https://example.com/settings-background-image.png") !important;
-	background-size: cover !important;
-	background-position: center !important;
 }
 
 /* 共通 追加オプション - 時計(Clockプラグインを使用している時にのみ) */

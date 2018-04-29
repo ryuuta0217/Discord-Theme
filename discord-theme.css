@@ -5,7 +5,7 @@
 	--load3: "✔ 読み込み完了";
 }
 
-.app::after,
+.app-19_DXt::after,
 .callout-backdrop {
 		z-index: -9999;
 }
@@ -36,10 +36,10 @@ body,
 .search-bar-inner,
 .search-bar-inner,
 #clockPluginClock,
-.userPopout-4pfA0d,
+.userPopout-3XzG_A,
 .friends-table-header,
 .search-bar-inner>input,
-.contextMenu-uoJTbz.theme-dark,
+.contextMenu-HLZMGh.theme-dark,
 .search-bar.search-bar-light,
 .titleWrapper-3Vi_wz.theme-dark,
 .scroller-NXV0-d.scroller-fzNley,
@@ -62,12 +62,75 @@ body,
 }
 
 /* 背景表示されない問題修正 */
-.layers-20RVFW,
-.layer-kosS71,
+#voice-connection, 
+#friends, 
+.friends-header, 
+.friends-table, 
+.guilds-wrapper, 
+.guild-header header, 
+.channels-wrap, 
+.private-channels .search-bar, 
+.private-channels, 
+.guild-channels, 
+.account, 
+.friend-table-add-header,
+.chat, 
+.content, 
+.title-wrap:not(.search-bar), 
+.messages-wrapper, 
+.messages .divider span, 
+.messages .divider:before, 
+.content, .message-group-blocked, 
+.is-local-bot-message,
+.channel-members-loading, 
+.channel-members-loading .heading, 
+.channel-members-loading .member, 
+.typing, 
+.container-RYiLUQ, 
+.theme-dark .ui-standard-sidebar-view, 
+.theme-dark .ui-standard-sidebar-view .sidebar-region,
+.theme-dark .ui-standard-sidebar-view .content-region,
+.theme-dark .channel-members,
 .container-2OU7Cz,
-.typing-3eiiL_ {
+.theme-dark .chat form, 
+.channels-3g2vYe, 
+.theme-dark .friends-table, 
+.theme-dark .messages-wrapper, 
+.content .flex-spacer, 
+.theme-dark .chat>.content, 
+.theme-dark .chat, 
+.channel-members, 
+.search .search-bar, 
+.container-iksrDt, 
+.container-3lnMWU, 
+.theme-dark .title-qAcLxz, 
+.theme-dark .typing-3eiiL_,
+.theme-dark .activityFeed-28jde9,
+.theme-dark .headerBar-cxbhPD,
+.theme-dark .lfg-3xoFkI,
+.video-3lOWa6,
+.theme-dark .private-channel-call,
+.appMount-3VJmYg,
+.container-2lgZY8,
+.channels-Ie2l6A,
+.container-PNkimc,
+.container-2Thooq,
+.theme-dark .title-3qD0b-,
+.theme-dark .typing-2GQL18,
+.search-bar.search-bar-light,
+.emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
+.theme-dark .members-1998pB,
+.ui-standard-sidebar-view {
   background: transparent !important;
 }
+
+.theme-dark .layer-3QrUeG, .theme-dark .layers-3iHuyZ, .typeWindows-15E0Ys {
+    background: var(--background-cover) !important;
+}
+
+/* ここまで */
+
+
 
 /* 新機能 LFG に関する設定 - 2017/12/19 */
 /* 背景 */
@@ -77,15 +140,15 @@ body,
 }
 
 /* ユーザープロフィールポップアップ(簡易) */
-.headerPlaying-2Q7mBy.header-3budic.size16-3IvaX_,
-.body-3ljq11,
-.footerDefault-1t_gFA.footer-2wFs91,
-.headerNormal-3Vn9nT.header-3budic.size16-3IvaX_ {
+.headerPlaying-j0WQBV.header-2BwW8b.size16-14cGz5,
+.body-3iLsc4,
+.footerDefault-2CICpu.footer-1fjuF6,
+.headerNormal-T_seeN.header-2BwW8b.size16-14cGz5 {
 	background: var(--user-popup-cover) !important;
 }
 
 /* * QuickMessage */
-.footerDefault-1t_gFA.footer-2wFs91>input {
+.footerDefault-2CICpu.footer-1fjuF6>input {
 	background: var(--input) !important;
 }
 
@@ -134,8 +197,8 @@ body,
 
 /* 右クリメニュー */
 
-.contextMenu-uoJTbz {
-		background: var(--background-color) !important;
+.contextMenu-HLZMGh {
+		background: var(--menu-color) !important;
 }
 
 .itemSubMenu-3ZgIw- {
@@ -222,11 +285,16 @@ body,
 .scroller-fzNley.feed-jRZy6x {
 	background: var(--background-cover) !important;
 }
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.header-1qeJfQ.cardHeader-scsddN,
-.card-2WxYqG.card-_xTeYB {
-	background: rgba(0, 0, 0, .0) !important;
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
+	background: var(--transparent-color) !important;
 }
 
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-ey0m8X,
+.card-7JP0BX.card-rJBFl3.marginTop20-3TxNs6,
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-3nTWsD,
+.card-7JP0BX.card-1KzkE6 {
+	background: var(--activity-card-background) !important;
+}
 
 /* メインレイヤー(チャット部、チャンネル一覧部) 修正*/
 
@@ -360,34 +428,6 @@ textarea {
 		background: var(--invisible-color) !important;
 }
 
-
-/* 各種同一設定統一 */
-
-.links,
-.typeWindows-15E0Ys.titleBar-3_fDwJ.horizontalReverse-k5PqxT.flex-3B1Tl4.directionRowReverse-2eZTxP.justifyStart-2yIZo0.alignStretch-1hwxMa,
-.container-0,
-.chat,
-.typing,
-.wordmark-2L03Wr,
-.content,
-.userPopout-4pfA0d,
-.inner-1_1f7b,
-.user-profile-modal .guild-channels,
-.private-channels,
-.guild-header header,
-.divider-red span,
-.messages-wrapper,
-#rtc-connection,
-.appMount-14L89u,
-.deprecated-settings-modal .settings-inner,
-.deprecated-settings-modal .settings-actions,
-.deprecated-settings-modal .settings-header,
-#voice-connection {
-		background: transparent !important;
-}
-
-
-
 /* ユーザー設定 */
 
 .content-region,
@@ -461,13 +501,6 @@ textarea {
 		-webkit-transition: opacity 200ms ease-in-out;
 }
 
-.selected:active,
-.selected:hover,
-.selected,
-.ui-tab-bar-item.selected {
-		background-color: #3a71c1 background:rgba(207, 113, 118) !important;
-}
-
 /* ここまで */
 
 
@@ -479,18 +512,25 @@ textarea {
 
 /* ユーザー設定->設定項目にカーソルを合わせた時の動作 */
 
-.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa:hover,
+.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:hover,
 .itemDefault-3NDwnY:hover,
-.item-3879bf:hover,
-.ui-tab-bar-item:hover {
-		background: rgba(207, 113, 118, 0.2);
+.item-3879bf:hover {
+		background: var(--hover-color);
 }
 
+/* BetterDiscord用 */
+#bd-settings-sidebar>span>div>.ui-tab-bar-item:hover {
+	background: var(--hover-color) !important;
+}
+
+#bd-settings-sidebar>span>div>.ui-tab-bar-item.selected {
+	background: var(--selected-color) !important;
+}
 
 /* 選択されているタブ */
 
-.selected-eNoxEK,
-.ui-tab-bar-item.selected {
+.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha,
+.selected-eNoxEK {
 		background: var(--selected-color) !important;
 }
 
@@ -513,7 +553,6 @@ textarea {
 /* サーバーリスト(選択)エリア */
 
 .guilds-wrapper {
-		background: var(--background-cover) !important;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 		width: 70px;
 		padding: 0 2px !important;
@@ -547,7 +586,7 @@ textarea {
 
 /* 通話中 */
 
-.container-3lnMWU {
+.container-1UB9sr {
 		background: var(--vc-color) !important;
 		height: 40px;
 		padding: 14px;
@@ -568,8 +607,7 @@ textarea {
 	background-color: rgba(0,0,0,0);
 }
 
-.contentSelectedText-3j5CXt.content-2mSKOj,
-.contentDefaultText-2elG3R.content-2mSKOj:hover,
+.contentSelectedText-3wUhMi.content-20Aix8,
 .contentHoveredVoice-3qGNKh:active,
 .contentSelectedVoice-gTtYM9:active {
 		background-color: var(--selected-color) !important;
@@ -577,8 +615,7 @@ textarea {
 
 /* チャンネルにカーソルを合わした際 */
 
-.content-2mSKOj:hover,
-.contentDefaultText-2elG3R:hover {
+.wrapper-KpKNwI:hover>.content-20Aix8 {
 		background-color: var(--hover-color);
 }
 
@@ -597,7 +634,6 @@ textarea {
 /* チャットエリア(メインエリア) */
 
 .content .flex-spacer {
-		background: var(--background-cover) !important;
 }
 
 /* チャット部分の背景の透過度 */
@@ -617,14 +653,12 @@ textarea {
 
 /*|| ``` で囲うやつの透過とか色指定とか ||*/
 
-.scrollbarGhost-K_3Xa9,
-.scrollbar-11WJwo hljs,
-.scrollbarGhost-K_3Xa9.scrollbar-11WJwo hljs {
-		background: rgba(207, 113, 118, 0.4) !important;
-		color: #C9C9C9 !important;
+.scrollbarGhost-2F9Zj2.scrollbar-3dvm_9.hljs {
+		background: var(--markdown-background) !important;
+		color: var(--markdown-text-color) !important;
 		border-radius: 8px;
 }
-.markup pre {
+.markup>pre {
 		background: transparent !important;
 		border-color: rgba(207, 113, 118, 0) !important;
 }
@@ -635,7 +669,7 @@ textarea {
 .channel-members-loading,
 .member,
 .heading,
-.scroller-fzNley.members-1bid1J {
+.scroller-2FKFPG.members-1998pB {
 		background: var(--invisible-color) !important;
 }
 .channel-members,
@@ -643,12 +677,15 @@ textarea {
 		background: var(--background-cover) !important
 }
 
-.memberOnline-1xn3V8.member-2FrNV0:hover,
-.memberidle-1xn3V8.member-2FrNV0:hover,
-.memberdnd-1xn3V8.member-2FrNV0:hover,
-.memberOffline-lvMbAs.member-2FrNV0:hover {
+.memberOnline-1CIh-0.member-3W1lQa:hover>.content-OzHfo4,
+.memberOffline-2lN7gt.member-3W1lQa:hover>.content-OzHfo4 {
 		background: var(--hover-color) !important;
 		border-radius: 7px;
+}
+
+.memberOnline-1CIh-0.member-3W1lQa.popout-open>.content-OzHfo4,
+.memberOffline-2lN7gt.member-3W1lQa.popout-open>.content-OzHfo4 {
+	background: var(--selected-color) !important;
 }
 
 .container-2OU7Cz,
@@ -743,6 +780,7 @@ titleWrapper-3Vi_wz.theme-dark {
 /* アカウント部分 */
 
 .container-iksrDt,
+.container-2Thooq,
 .account {
 		border-top: none !important;
 		width: 240px;
@@ -765,6 +803,13 @@ titleWrapper-3Vi_wz.theme-dark {
 {
 	background: rgba(0,0,0,0.6) !important;
 }
+*/
+
+/* ポップアップメニュー */
+.menu-Sp6bN1 {
+	background: var(--menu-color) !important;
+}
+
 
 /* チャンネルのテキストサイズ */
 
@@ -1074,12 +1119,12 @@ font-size: 13.2px;
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v4.0\A by ryuuta0217\A\Aアップデートされました。\A更新がまだの方で表示が\A崩れたりしている方は\A更新してください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
+	content: "\A\Aryuuta0217 Theme v4.1\A by ryuuta0217\A\Aテーマが適応されない問題\Aを修正しました。\Aアップデートしてください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
 	white-space: pre;
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-th_eam:after {
-	content: "\A- Discord Theme v4.0 -\A\Aアップデート内容:\A・カラーを変更しても変わらない場所があったので修正。\A・前バージョンでは適応されていたものが適応されなくなっていたので修正\A\A Created By ryuuta0217";
+[layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
+	content: "\A- Discord Theme v4.1 -\A\Aアップデート内容:\A・Discordのアップデートによりテーマがおかしくなっていたので修正。\A・追加オプション「設定画面の背景変更」を削除\A・チャンネルの一部の範囲にカーソルを合わせた時、デフォルトの色が使用されることがある問題を修正\A・ユーザーポップアウトの修正\A・メンバーリストでユーザーにカーソルを合わせたとき、ポップアップを開いたときの色を追加\A・右クリックメニュー等の色を変更できるように\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
@@ -1349,7 +1394,7 @@ font-size: 13.2px;
 }
 
 .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(2)::after,
-[class="layer-kosS71"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(1)::after {
+[class="layer-3QrUeG"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(1)::after {
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/info.svg);
 	content: "";
     position: absolute;
@@ -1416,7 +1461,7 @@ font-size: 13.2px;
     transition: all .60s ease-in-out
 }
 
-.app,
+.app-19_DXt,
 body::after {
 		-webkit-animation: cv-fade 6s ease-out;
 		animation: cv-fade 6s ease-out
@@ -1702,7 +1747,7 @@ body::after {
 		margin-left: 6px
 }
 
-.app::after {
+.app-19_DXt::after {
 	position: absolute;
 	top: 0;
 	left: 0;
