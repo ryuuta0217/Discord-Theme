@@ -1,4 +1,5 @@
 /* Start SorceCode */
+
 :root {
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
@@ -24,6 +25,7 @@ body,
 .comment,
 .message,
 .tooltips,
+.tooltip,
 .title-wrap,
 .search-bar,
 .name-3gtcmp,
@@ -153,13 +155,18 @@ body,
 }
 
 /* ユーザープロフィールポップアップ(詳細) */
-.topSectionPlaying-3jAH9b,
-.topSectionNormal-2LlRG1 {
+.topSectionPlaying-1J5E4n,
+.topSectionNormal-2-vo2m {
 	background: var(--user-popup-cover) !important;
 }
 
-.body-3_tdh6 {
+.body-3ND3kc {
 	background: var(--user-popup-cover) !important;
+}
+
+/* ポップアウト */
+.tooltip {
+	background: var(--background-cover) !important;
 }
 
 /* ゲーム選択 ゲームを選択しているとき */
@@ -351,7 +358,7 @@ body,
 
 /* ビデオ通話 */
 
-/* title-2Ul_Rx flexChild-1KGW5q weightBold-2qbcng */
+/* title-2Ul_Rx flexChild-faoVW3 weightBold-2qbcng */
 
 
 /*
@@ -381,8 +388,8 @@ background:rgba(0,0,0,0.7) !important;
 
 /* 何もないチャンネルの背景透過修正 */
 
-.noChannel-2EQ0a9 {
-		background: var(--background-cover) !important;
+.noChannel-Z1DQK7 {
+		background: var(--transparent-color) !important;
 		width: 900px;
 }
 
@@ -630,12 +637,6 @@ textarea {
 	background:rgba(0,0,0,0.7);
 }
 
-
-/* チャットエリア(メインエリア) */
-
-.content .flex-spacer {
-}
-
 /* チャット部分の背景の透過度 */
 
 .message-group {
@@ -793,7 +794,7 @@ titleWrapper-3Vi_wz.theme-dark {
 
 /* サーバーヘッダ・チャンネル一覧 */
 
-.flexChild-1KGW5q>container-3NvGrL,
+.flexChild-faoVW3>container-3NvGrL,
 .channels-3g2vYe.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR {
 	background: var(--background-cover) !important;
 }
@@ -829,7 +830,6 @@ titleWrapper-3Vi_wz.theme-dark {
 		line-height: 16px;
 		width: 92px;
 		height: 14px;
-		-webkit-border-radius: 20px;
 		overflow: hidden;
 		background: var(--invisible-color);
 }
@@ -973,11 +973,11 @@ font-size: 13.2px;
 
 /* h4 タイトル */
 
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.title-38OOBL {
+.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.title-2BxgL2 {
 	font-size: 0px;
 }
 
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.title-38OOBL:before {
+.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.title-2BxgL2:before {
 	font-size: 17px;
 	content: "テキストチャンネルがありません!";
 }
@@ -985,11 +985,11 @@ font-size: 13.2px;
 
 /* div 説明 */
 
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.text-1rLRsh.margin-top-8 {
+.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.text-GwUZgS.margin-top-8 {
 	font-size: 0px;
 }
 
-.noChannel-2EQ0a9>.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyCenter-29N31w.alignCenter-3VxkQP.noWrap-v6g9vO.wrapper-1-BJK5>.flexChild-1KGW5q>.text-1rLRsh.margin-top-8:before {
+.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.text-GwUZgS.margin-top-8:before {
 	font-size: 14px;
 	content: "どうやら奇妙な場所に来てしまったようですね。テキストチャンネルを読むための権限がない、または、このサーバーにはテキストチャンネルが存在しません。";
 }
@@ -1020,11 +1020,11 @@ font-size: 13.2px;
 
 /* NSFW タイトル日本語化 (NSFW Channel -> 成人向けのチャンネルです！ */
 
-.title-2mmhgH.margin-bottom-8 {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.title-SL0Wts.margin-bottom-8 {
 	font-size: 0px;
 }
 
-.title-2mmhgH.margin-bottom-8:before {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.title-SL0Wts.margin-bottom-8:before {
 	font-size: 24px;
 	content: "成人向けのチャンネルです！";
 }
@@ -1032,11 +1032,13 @@ font-size: 13.2px;
 
 /* NSFW コメント日本語化 */
 
-.description-15n-1L.margin-bottom-20 {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>
+
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.description-3t0KC1.margin-bottom-20 {
 	font-size: 0px;
 }
 
-.description-15n-1L.margin-bottom-20:before {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.description-3t0KC1.margin-bottom-20:before {
 	font-size: 16px;
 	content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを開きますか？";
 }
@@ -1047,23 +1049,30 @@ font-size: 13.2px;
 
 /* 旧: .contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM */
 
-.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.largeGrow-2_1w2U.actionRed-sT3Bw5.action-2mLTX4 {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN>.contents-18-Yxp,
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN>.contexts-18-Yxp {
+	position: fixed;
 	font-size: 0px;
+}
+
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN {
+	font-size: 0px;
+	width: 50px !important;
 }
 
 
 /* 旧: .contentsFilled-3M8HCx.contents-4L4hQM:before -> いろんなボタンがバグるので変更*/
 
-.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.largeGrow-2_1w2U.actionRed-sT3Bw5.action-2mLTX4:before {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN:before {
 	font-size: 14px;
 	content: "はい(開く)";
 }
 
-.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.largeGrow-2_1w2U.action-2mLTX4 {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookOutlined-3sRXeN.colorPrimary-3b3xI6.sizeLarge-1vSeWK.grow-q77ONN {
 	font-size: 0px;
 }
 
-.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.largeGrow-2_1w2U.action-2mLTX4:before {
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookOutlined-3sRXeN.colorPrimary-3b3xI6.sizeLarge-1vSeWK.grow-q77ONN:before {
 	font-size: 14px;
 	content: "いいえ(開かない)";
 }
@@ -1119,12 +1128,12 @@ font-size: 13.2px;
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v4.1\A by ryuuta0217\A\Aテーマが適応されない問題\Aを修正しました。\Aアップデートしてください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
+	content: "\A\Aryuuta0217 Theme v4.2\A by ryuuta0217\A\Aテーマが適応されない問題\Aを修正しました。\Aアップデートしてください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
 	white-space: pre;
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
-	content: "\A- Discord Theme v4.1 -\A\Aアップデート内容:\A・Discordのアップデートによりテーマがおかしくなっていたので修正。\A・追加オプション「設定画面の背景変更」を削除\A・チャンネルの一部の範囲にカーソルを合わせた時、デフォルトの色が使用されることがある問題を修正\A・ユーザーポップアウトの修正\A・メンバーリストでユーザーにカーソルを合わせたとき、ポップアップを開いたときの色を追加\A・右クリックメニュー等の色を変更できるように\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
+	content: "\A- Discord Theme v4.2 -\A\Aアップデート内容:\A・Discordのアップデートによりテーマがおかしくなっていたので修正。\A・追加オプション「設定画面の背景変更」を削除\A・チャンネルの一部の範囲にカーソルを合わせた時、デフォルトの色が使用されることがある問題を修正\A・ユーザーポップアウトの修正\A・メンバーリストでユーザーにカーソルを合わせたとき、ポップアップを開いたときの色を追加\A・右クリックメニュー等の色を変更できるように\A・ユーザーポップアップ(詳細)の変更を忘れていたので修正\A・NSFW/何もないグループのテキストを修正(翻訳)\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
