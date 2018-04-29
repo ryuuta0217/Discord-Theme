@@ -170,7 +170,7 @@ body,
 }
 
 /* ゲーム選択 ゲームを選択しているとき */
-.itemSelected-3XxAMf.item-3879bf.selected-eNoxEK.tabBarItem-2YOhcM
+.itemSelected-3XxAMf.item-3879bf.selected-3s45Ha.tabBarItem-2YOhcM
 {
 	background:rgba(255,255,255,0.0) !important;
 }
@@ -537,7 +537,7 @@ textarea {
 /* 選択されているタブ */
 
 .itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha,
-.selected-eNoxEK {
+.selected-3s45Ha {
 		background: var(--selected-color) !important;
 }
 
@@ -1141,45 +1141,45 @@ font-size: 13.2px;
 
 /* 設定@アイコン */
 .ui-tab-bar-item,
-.itemDefault-3NDwnY {
+.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p {
 	font-size: 13px !important;
 }
 
-.selected,
-.selected-eNoxEK {
+.ui-tab-bar-item.selected,
+.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha {
 	font-size: 16px !important;
 }
 
 /* 文字がはみ出る設定項目の文字サイズ変更((選択時)) */
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(3) {
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(3) {
 	font-size: 14.9px !important;
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(4) {
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(4) {
 	font-size: 13.1px !important;
 }
 
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(23),
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-eNoxEK:nth-child(22) {
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(23),
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(22) {
 	font-size: 14.34px !important;
 }
 
 /* 設定日本語化 */
-.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa:nth-child(10) {
+.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10) {
 	font-size: 0px !important;
 	height: 32px;
 }
 
-.itemSelected-3XxAMf.item-3879bf.selected-eNoxEK:nth-child(10) {
+.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10) {
 	font-size: 0px !important;
 	height: 32px;
 }
-.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa:nth-child(10)::before {
+.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10)::before {
 	font-size: 13px;
 	content: "マイク & ビデオ";
 }
 
-.itemSelected-3XxAMf.item-3879bf.selected-eNoxEK:nth-child(10)::before {
+.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha:nth-child(10)::before {
 	font-size: 16px;
 	content: "マイク & ビデオ";
 }
