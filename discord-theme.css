@@ -55,6 +55,7 @@ body,
 .quick-message.quickMessage-28pD5Y.marginBottom8-1mABJ4,
 .innerEnabled-gLHeOL.inner-3if5cm.flex-3B1Tl4.innerNoAutocomplete-kaUXJZ,
 .textAreaEnabled-2vOfh8.textArea-20yzAH.textArea-20yzAH.scrollbarGhostHairline-D_btXm.scrollbar-11WJwo,
+.textAreaEnabled-3vQ5WZ.textArea-2Spzkt.textArea-2Spzkt.scrollbarGhostHairline-1mSOM1.scrollbar-3dvm_9,
 .textAreaEnabled-2vOfh8.textArea-20yzAH.textAreaForm-2NWGTp.scrollbarGhostHairline-D_btXm.scrollbar-11WJwo,
 .typeWindows-15E0Ys.titleBar-3_fDwJ.horizontalReverse-k5PqxT.flex-3B1Tl4.directionRowReverse-2eZTxP.justifyStart-2yIZo0.alignStretch-1hwxMa,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.title-qAcLxz,
@@ -121,6 +122,8 @@ body,
 .theme-dark .typing-2GQL18,
 .search-bar.search-bar-light,
 .emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
+#bda-qem-twitch-container,
+#bda-qem-favourite-container,
 .theme-dark .members-1998pB,
 .ui-standard-sidebar-view {
   background: transparent !important;
@@ -193,13 +196,21 @@ body,
 	background:var(--input-popup);
 }
 
-/* 報告ポップアップ透過 */
-.inner-1_1f7b>form {
-		background: var(--background-cover) !important;
+/* 招待ポップアップウィンドウ透過 */
+.modal-3HD5ck.modal-vcwOUu.sizeSmall-Sf4iOi {
+	background: var(--background-cover) !important;
 }
 
-.flex-lFgbSz.flex-3B1Tl4.horizontalReverse-2LanvO.horizontalReverse-k5PqxT.flex-3B1Tl4.directionRowReverse-2eZTxP.justifyStart-2yIZo0.alignStretch-1hwxMa.noWrap-v6g9vO.footer-1PYmcw {
-		background: var(--invisible-color) !important;
+/* ポップアップウィンドウ透過 */
+.inner-1JeGVc>form {
+	background: var(--background-cover) !important;
+}
+
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1R_AjF,
+.scrollerWrap-2lJEkd.content-2BXhLs.scrollerThemed-2oenus.themeGhostHairline-DBD-2d,
+.flex-1xMQg5.flex-1O1GKY.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-2yfCgX.footer-1ia-qo,
+.flex-1xMQg5.flex-1O1GKY.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-2yfCgX {
+	background: var(--invisible-color) !important;
 }
 
 /* 右クリメニュー */
@@ -229,25 +240,49 @@ body,
 		background: var(--background-cover) !important;
 }
 
+/* BetterDiscord 絵文字 セレクトタブ */
+.noArrow-3BYQ0Z.noShadow-321ZPm.popout-3sVMXz.popoutTopRight-3BzFIE>#bda-qem {
+	background: rgba(48, 79, 254, 0.5) !important;
+	border-bottom: 0px !important;
+}
+
+[id*="bda-qem-"] {
+	color: white;
+}
+
+[id*="bda-qem-"].active {
+	color: black !important;
+}
+
+[class*="noArrow-"][class*="noShadow-"][class*="popout-"][class*="popoutTopRight-"]>#bda-qem .active {
+	background: rgba(0, 255, 34, 0.856);
+}
+
 /* 絵文字の選択 */
 
-.emojiPicker-3g68GS {
+#bda-qem-twitch-container,
+#bda-qem-favourite-container,
+.emojiPicker-3m1S-j {
 		height: 500px;
 		width: 380px;
-		background: rgba(48, 79, 254, 0.5);
+		border-radius: 0px;
+		background: rgba(48, 79, 254, 0.5) !important;
 }
 
 
 /* 絵文字選択部 */
 
-.scrollerWrap-2uBjct.scrollerWrap-EC-dSj.scrollerThemed-19vinI.themeLight-1WK0Av.scrollerFade-28dRsO.scrollerTrack-3hhmU0,
-.scroller-fzNley.scroller-2dsok0,
+.scrollerWrap-2lJEkd.scrollerWrap-PyxcLY.scrollerThemed-2oenus.themeLight-1_DWyY.scrollerFade-1Ijw5y.scrollerTrack-1ZIpsv,
+.scroller-2FKFPG.scroller-3vODG7,
 .no-search-results {
 		height: 401px !important;
 		width: 380px;
 		background: var(--invisible-color) !important;
 }
 
+[class*="noArrow-"][class*="noShadow-"][class*="popout-"][class*="popoutTopRight-"] {
+	background: var(--invisible-color) !important;
+}
 
 /* 絵文字カテゴリ表示部 */
 
@@ -285,7 +320,8 @@ body,
 
 /* Activity 背景透過 とそのほか*/
 
-.activityFeed--1mYMS {
+.activityFeed--1mYMS,
+[class*="activityFeed-"] {
 	background: var(--invisible-color) !important;
 }
 
@@ -909,10 +945,9 @@ titleWrapper-3Vi_wz.theme-dark {
 
 /*文字入力部 */
 
-.textAreaEnabled-2vOfh8.textArea-20yzAH.textArea-20yzAH.scrollbarGhostHairline-D_btXm.scrollbar-11WJwo,
-.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1Tl4.innerNoAutocomplete-kaUXJZ {
+.textAreaEnabled-3vQ5WZ.textArea-2Spzkt.textArea-2Spzkt.scrollbarGhostHairline-1mSOM1.scrollbar-3dvm_9,
+.innerEnabled-3g80kR.inner-zqa7da.flex-1O1GKY.innerNoAutocomplete-1WpcVO {
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
-		border-radius: 0px !important;
 }
 
 .callout-backdrop {
@@ -1128,12 +1163,12 @@ font-size: 13.2px;
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v4.2\A by ryuuta0217\A\Aテーマが適応されない問題\Aを修正しました。\Aアップデートしてください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
+	content: "\A\Aryuuta0217 Theme v4.2.2\A by ryuuta0217\A\Aテーマが適応されない問題\Aを修正しました。\Aアップデートしてください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
 	white-space: pre;
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
-	content: "\A- Discord Theme v4.2 -\A\Aアップデート内容:\A・Discordのアップデートによりテーマがおかしくなっていたので修正。\A・追加オプション「設定画面の背景変更」を削除\A・チャンネルの一部の範囲にカーソルを合わせた時、デフォルトの色が使用されることがある問題を修正\A・ユーザーポップアウトの修正\A・メンバーリストでユーザーにカーソルを合わせたとき、ポップアップを開いたときの色を追加\A・右クリックメニュー等の色を変更できるように\A・ユーザーポップアップ(詳細)の変更を忘れていたので修正\A・NSFW/何もないグループのテキストを修正(翻訳)\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
+	content: "\A- Discord Theme v4.2.2 -\A\Aアップデート内容:\A・Discordのアップデートによりテーマがおかしくなっていたので修正。\A・追加オプション「設定画面の背景変更」を削除\A・チャンネルの一部の範囲にカーソルを合わせた時、デフォルトの色が使用されることがある問題を修正\A・ユーザーポップアウトの修正\A・メンバーリストでユーザーにカーソルを合わせたとき、ポップアップを開いたときの色を追加\A・右クリックメニュー等の色を変更できるように\A・ユーザーポップアップ(詳細)の変更を忘れていたので修正\A・NSFW/何もないグループのテキストを修正(翻訳)\A\A\Av4.2.1\A・いろいろ修正\A\A\Av4.2.2\A・絵文字選択ポップアップ修正\A・ポップアップウィンドウ透過修正\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
