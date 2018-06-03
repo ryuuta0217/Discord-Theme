@@ -8,8 +8,8 @@ BetterDiscord( https://github.com/rauenzi/BetterDiscordApp/releases ) が導入�
 1. まず、 https://raw.githubusercontent.com/ryuuta0217/Discord-Theme/master/ryuuta0217.theme.css を開きます<br>
 2. 右クリックして、名前を付けて保存します。<br>
 3. Discordを開き、ユーザー設定 --> Themes --> Open Theme Folder をクリックします
-4. 先ほど保存したファイルを開いたフォルダーに貼り付けます。<br>
-5. 貼り付けたファイルを開きます<br>
+4. 先ほど保存したファイルを開いたフォルダーにコピーします。<br>
+5. コピーしたファイルを開きます<br>
 6. 内容に従って、背景画像や追加オプションを変更します。<br>
 7. DiscordをCtrl+R(Macをお使いの方はDockでDiscordを右クリック --> 終了 --> もう一度起動 をしてください。)で再読み込みします。<br>
 8. ユーザー設定 --> Themes --> ryuuta0217 Theme v最新 by ryuuta0217 の横にあるスライドをクリックします。<br>
