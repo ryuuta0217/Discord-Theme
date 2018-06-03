@@ -4,7 +4,55 @@
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
 	--load3: "✔ 読み込み完了";
+	--version: "4.2.2";
 }
+
+/* バージョン表示 */
+#bd-settings-sidebar>span>div:last-child:after
+{
+	font-size: 13px;
+	color: rgba(0, 255, 34, 0.856) !important;
+	content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされました\A\A https://github.com/\Aryuuta0217/Discord-Theme";
+	white-space: pre;
+}
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
+	content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・ちょっとした追加と変更\A・Discordのアプデ対応\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
+	white-space: pre;
+	color: rgb(0, 255, 30);
+	font-size: 14px;
+}
+
+body:before {
+	content: "現在のテーマバージョン: v" var(--version)"\A自動的にアップデートされました ✔\A\ATheme by ryuuta0217";
+	white-space: pre;
+	z-index: 1000000000000000000000000;
+	color: #fff;
+	background: var(--accent-color);
+	top: 0;
+	left: 50%;
+	position: absolute;
+	border-radius: 5px;
+	padding: 5px 15px;
+	-webkit-transform: translate(-50%, -100%);
+	transform: translate(-50%, -100%);
+	-webkit-animation: version 5s ease;
+	animation: version 5s ease;
+	-webkit-animation-delay: 7s;
+	animation-delay: 7s;
+	font-family: "メイリオ";
+  }
+  
+  @-webkit-keyframes version {
+	from, to {
+	  -webkit-transform: translate(-50%, -100%);
+	  transform: translate(-50%, -100%)
+	}
+	20%, 80% {
+	  -webkit-transform: translate(-50%, 20%);
+	  transform: translate(-50%, 20%)
+	}
+  }
 
 .app-19_DXt::after,
 .callout-backdrop {
@@ -12,9 +60,12 @@
 }
 
 /* フォント設定 */
+*,
+div,
 html,
 header,
 body,
+input,
 .text,
 .file,
 .text,
@@ -34,6 +85,7 @@ body,
 .message.first,
 .content-column,
 .welcome-message,
+.contents-18-Yxp,
 .private-channels,
 .search-bar-inner,
 .search-bar-inner,
@@ -61,7 +113,7 @@ body,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.title-qAcLxz,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.header-3sp3cE,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.headerBar-cxbhPD {
-	font-family: var(--font-name), Yu Gothic UI, Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: var(--font-name), Yu Gothic UI, Whitney, Helvetica Neue, Helvetica, Arial, sans-serif !important;
 }
 
 /* 背景表示されない問題修正 */
@@ -148,6 +200,7 @@ body,
 .headerPlaying-j0WQBV.header-2BwW8b.size16-14cGz5,
 .body-3iLsc4,
 .footerDefault-2CICpu.footer-1fjuF6,
+.footer-1fjuF6,
 .headerNormal-T_seeN.header-2BwW8b.size16-14cGz5 {
 	background: var(--user-popup-cover) !important;
 }
@@ -170,6 +223,10 @@ body,
 /* ポップアウト */
 .tooltip {
 	background: var(--background-cover) !important;
+}
+
+.tooltip:after {
+	border-top-color: var(--background-cover) !important;
 }
 
 /* ゲーム選択 ゲームを選択しているとき */
@@ -1157,23 +1214,6 @@ font-size: 13.2px;
 	content: "メッセージ" !important;
 }
 
-
-/* バージョン表示 */
-#bd-settings-sidebar>span>div:last-child:after
-{
-	font-size: 13px;
-	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v4.2.2\A by ryuuta0217\A\Aテーマが適応されない問題\Aを修正しました。\Aアップデートしてください。\A\A https://github.com/\Aryuuta0217/Discord-Theme";
-	white-space: pre;
-}
-
-[layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
-	content: "\A- Discord Theme v4.2.2 -\A\Aアップデート内容:\A・Discordのアップデートによりテーマがおかしくなっていたので修正。\A・追加オプション「設定画面の背景変更」を削除\A・チャンネルの一部の範囲にカーソルを合わせた時、デフォルトの色が使用されることがある問題を修正\A・ユーザーポップアウトの修正\A・メンバーリストでユーザーにカーソルを合わせたとき、ポップアップを開いたときの色を追加\A・右クリックメニュー等の色を変更できるように\A・ユーザーポップアップ(詳細)の変更を忘れていたので修正\A・NSFW/何もないグループのテキストを修正(翻訳)\A\A\Av4.2.1\A・いろいろ修正\A\A\Av4.2.2\A・絵文字選択ポップアップ修正\A・ポップアップウィンドウ透過修正\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
-	white-space: pre;
-	color: rgb(0, 255, 30);
-	font-size: 14px;
-}
-
 /* 設定@アイコン */
 .ui-tab-bar-item,
 .itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p {
@@ -1556,8 +1596,8 @@ body::after {
 		left: 0;
 		z-index: 9998;
 		pointer-events: none;
-		-webkit-animation: cv-bg 10.5s ease-in-out;
-		animation: cv-bg 10.5s ease-in-out
+		-webkit-animation: cv-bg 4.8s ease-in-out;
+		animation: cv-bg 4.8s ease-in-out
 }
 @-webkit-keyframes cv-bg {
 		0% {
@@ -1596,167 +1636,106 @@ body::after {
 		opacity: 0;
 		z-index: 9999;
 		pointer-events: none;
-		-webkit-animation: cv-init 7s ease-in-out;
-		animation: cv-init 7s ease-in-out;
+		-webkit-animation: cv-init 3s ease-in-out;
+		animation: cv-init 3s ease-in-out;
 		font-family: 'Webdings';
 }
 
 @-webkit-keyframes cv-init {
-	0% {
-			content: var(--load1);
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	25% {
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	30% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	45% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	49% {
-			content: var(--load1);
-			opacity: 0;
-			-webkit-transform: scale(1.3);
-			transform: scale(1.3)
-	}
-	50% {
-			content: var(--load2);
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	55% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	70% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	74% {
-			content: var(--load2);
-			opacity: 0;
-			-webkit-transform: scale(1.3);
-			transform: scale(1.3)
-	}
-	75% {
-			content: var(--load3);
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	80% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	95% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	99% {
-			content: var(--load3);
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	100% {
-			content: "";
-			-webkit-transform: scale(1);
-			transform: scale(1);
-			opacity: 0
-	}
-}
-@keyframes cv-init {
-	0% {
-			content: var(--load1);
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	25% {
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	30% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	45% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	49% {
-			content: var(--load1);
-			opacity: 0;
-			-webkit-transform: scale(1.3);
-			transform: scale(1.3)
-	}
-	50% {
-			content: var(--load2);
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	55% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	70% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	74% {
-			content: var(--load2);
-			opacity: 0;
-			-webkit-transform: scale(1.3);
-			transform: scale(1.3)
-	}
-	75% {
-			content: var(--load3);
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	80% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	95% {
-			opacity: .3;
-			-webkit-transform: scale(1);
-			transform: scale(1)
-	}
-	99% {
-			content: var(--load3);
-			opacity: 0;
-			-webkit-transform: scale(.7);
-			transform: scale(.7)
-	}
-	100% {
-			content: "";
-			-webkit-transform: scale(1);
-			transform: scale(1);
-			opacity: 0
-	}
-}
+    0% {
+      content: var(--load1);
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    30%, 45%, 55%, 70%, 80%, 95% {
+      opacity: .3;
+      -webkit-transform: scale(1);
+      transform: scale(1)
+    }
+    49% {
+      content: var(--load1);
+      opacity: 0;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3)
+    }
+    50% {
+      content: var(--load2);
+      opacity: 0;
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    74% {
+      content: var(--load2);
+      opacity: 0;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3)
+    }
+    75%, 99% {
+      content: var(--load3);
+      opacity: 0;
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    100% {
+      content: "";
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0
+    }
+  }
+  
+  @keyframes cv-init {
+    0% {
+      content: var(--load1);
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    30%, 45%, 55%, 70%, 80%, 95% {
+      opacity: .3;
+      -webkit-transform: scale(1);
+      transform: scale(1)
+    }
+    49% {
+      content: var(--load1);
+      opacity: 0;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3)
+    }
+    50% {
+      content: var(--load2);
+      opacity: 0;
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    74% {
+      content: var(--load2);
+      opacity: 0;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3)
+    }
+    75%, 99% {
+      content: var(--load3);
+      opacity: 0;
+      -webkit-transform: scale(.7);
+      transform: scale(.7)
+    }
+    100% {
+      content: "";
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0
+    }
+  }
 
 .avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
 .guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
