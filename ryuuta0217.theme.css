@@ -89,6 +89,17 @@
 /* 共通 追加オプション - 時計(Clockプラグインを使用している時にのみ) */
 /* Clockプラグイン: https://raw.githubusercontent.com/Jiiks/BetterDiscordApp/master/Plugins/clock.plugin.js */
 /* 右クリックして名前を付けて保存をしたあと、 BetterDiscord/Plugins にコピー&ペーストしてください */
+
+/* 共通 追加オプション - アップロード画面の背景変更 */
+/* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
+/*.da-backdrop {
+    		opacity:1 !important;
+    		background: url("https://cdn.discordapp.com/attachments/382103142608797699/433973433391644672/2018-04-12_21.49.04.png") !important;
+			background-size: cover !important;
+			background-position: center !important;
+			z-index: 9100;
+}
+
 /*#clockPluginClock
 {
 position: relative;
