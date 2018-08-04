@@ -1,4 +1,4 @@
-//META{"name":"ryuuta0217 Theme","description":":thinking: :innocent:","author":"ryuuta0217","version":"最新"}*//{}
+/*//META{"name":"ryuuta0217 Theme","description":"背景ベース色は黒。アクセント色はピンク色。","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
 
 /*メインテーマをインポート*/
 @import url("https://p1kt.net/discord-theme/src.css");
@@ -15,7 +15,7 @@
 
 /* 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで! */
 :root {
-		/* フォント指定 - PCにインストールされているフォント名を使用してください */
+	/* フォント指定 - PCにインストールされているフォント名を使用してください */
 	--font-name: ほにゃ字Re;
 
 	/* メイン色(今のところ使用箇所なし) */
@@ -81,33 +81,9 @@
 
 	/* メニュー背景色(右クリポップアップなど) */
 	--menu-color: rgba(0, 0, 0, 0.7);
-}
 
-/* 追加オプション - 有効にする際は . や # の前にある /* を外してください */
-
-/* 共通 追加オプション - 添付画像の表示サイズ変更 */
-/* width: 、 height: の 150px の 150の部分を各自変えてください。両方の値はどちらも同一が望ましいです*/
-/*.inner-1_1f7b>.modal-image>img
-{
-	width: calc(100% + 150px);
-	height: calc(100% + 150px);
-}
-
-/* 共通 追加オプション - ビデオ通話　背景透過 */
-/* 背景が透過し、会話の文字が見えるようになりますが右クリックや文字選択はサポートされていません。ご了承ください。*/
-/*.ui-video-height.minimum.private-channel-call.animated
-{
-	background: rgba(0,0,0,0.7) !important;
-	height: 50px;
-}
-
-/* 共通 追加オプション - アップロード画面の背景変更 */
-/* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
-/*.backdrop-2ohBEd {
-    		opacity:1 !important;
-    		background: url("https://example.com/upload-background-image.png") !important;
-    		background-size: cover !important;
-			background-position: center !important;
+	/* トースト表示の表示位置(下から Xpx で指定) */
+	--toast-position: 0px;
 }
 
 /* 共通 追加オプション - 時計(Clockプラグインを使用している時にのみ) */
@@ -130,3 +106,4 @@ z-index: 10000;
 	background:rgba(0,0,0,0.7) !important;
 	width: 74px;
 }
+*/

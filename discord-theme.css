@@ -1,10 +1,13 @@
 /* Start SorceCode */
+#pluginNotice {
+	background: rgba(0, 110, 255, 0.2);
+}
 
 :root {
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
 	--load3: "✔ 読み込み完了";
-	--version: "4.2.2";
+	--version: "4.4";
 }
 
 /* バージョン表示 */
@@ -12,7 +15,7 @@
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされました\A\A https://github.com/\Aryuuta0217/Discord-Theme";
+	content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされます\A\A https://github.com/\Aryuuta0217/Discord-Theme";
 	white-space: pre;
 }
 
@@ -24,7 +27,7 @@
 }
 
 body:before {
-	content: "現在のテーマバージョン: v" var(--version)"\A自動的にアップデートされました ✔\A\ATheme by ryuuta0217";
+	content: "現在のテーマバージョン: v" var(--version)"\A\ATheme by ryuuta0217";
 	white-space: pre;
 	z-index: 1000000000000000000000000;
 	color: #fff;
@@ -33,7 +36,7 @@ body:before {
 	left: 50%;
 	position: absolute;
 	border-radius: 5px;
-	padding: 5px 15px;
+	padding: 2px 15px;
 	-webkit-transform: translate(-50%, -100%);
 	transform: translate(-50%, -100%);
 	-webkit-animation: version 5s ease;
@@ -57,6 +60,39 @@ body:before {
 .app-19_DXt::after,
 .callout-backdrop {
 		z-index: -9999;
+}
+
+/* ウィンドウバー 
+
+.app-19_DXt {
+	padding-top: 18px;
+}
+
+.titleBar-AC4pGV {
+  width: 100%;
+  position: absolute;
+  top: -4px;
+  z-index: 9000 !important;
+}
+
+.wordmark-2iDDfm,
+.da-wordmark {
+	top: -2px;
+}
+
+.da-winButton {
+	top: -1.4px;
+}
+
+/* ユーザーアイコン */
+.avatar-large,
+.image-33JSyf {
+	/*border-radius: 8px !important;*/
+}
+
+/* トースト表示 */
+.toasts {
+	bottom: var(--toast-position) !important;
 }
 
 /* フォント設定 */
@@ -101,12 +137,13 @@ input,
 .search-bar-inner>input[type="text"],
 .friends-table-body.scroller>span>div,
 .modal-3HOjGZ.modal-KwRiOq.size-2pbXxj,
-.guilds-wrapper .guilds .friends-online,
+.guilds-1q_RqH,
+.guildsWrapper-5TJh6A .guilds .friends-online,
 .durationTimeDisplay-z9q8lp.weightMedium-13x9Y8,
 .headerContent-22XGYm.flex-3B1Tl4.alignCenter-3VxkQP,
 .quick-message.quickMessage-28pD5Y.marginBottom8-1mABJ4,
 .innerEnabled-gLHeOL.inner-3if5cm.flex-3B1Tl4.innerNoAutocomplete-kaUXJZ,
-.textAreaEnabled-2vOfh8.textArea-20yzAH.textArea-20yzAH.scrollbarGhostHairline-D_btXm.scrollbar-11WJwo,
+[class*="textAreaEnabled-"][class*="textArea-"][class*="textArea-"][class*="scrollbarGhostHairline-"][class*="scrollbar-"]
 .textAreaEnabled-3vQ5WZ.textArea-2Spzkt.textArea-2Spzkt.scrollbarGhostHairline-1mSOM1.scrollbar-3dvm_9,
 .textAreaEnabled-2vOfh8.textArea-20yzAH.textAreaForm-2NWGTp.scrollbarGhostHairline-D_btXm.scrollbar-11WJwo,
 .typeWindows-15E0Ys.titleBar-3_fDwJ.horizontalReverse-k5PqxT.flex-3B1Tl4.directionRowReverse-2eZTxP.justifyStart-2yIZo0.alignStretch-1hwxMa,
@@ -120,8 +157,10 @@ input,
 #voice-connection, 
 #friends, 
 .friends-header, 
+pre,
 .friends-table, 
-.guilds-wrapper, 
+.guildsWrapper-5TJh6A,
+.guilds-1q_RqH, 
 .guild-header header, 
 .channels-wrap, 
 .private-channels .search-bar, 
@@ -129,13 +168,13 @@ input,
 .guild-channels, 
 .account, 
 .friend-table-add-header,
-.chat, 
-.content, 
+.da-chat,
+.da-content, 
 .title-wrap:not(.search-bar), 
-.messages-wrapper, 
+.da-messagesWrapper, 
 .messages .divider span, 
 .messages .divider:before, 
-.content, .message-group-blocked, 
+.da-content, .message-group-blocked, 
 .is-local-bot-message,
 .channel-members-loading, 
 .channel-members-loading .heading, 
@@ -147,13 +186,13 @@ input,
 .theme-dark .ui-standard-sidebar-view .content-region,
 .theme-dark .channel-members,
 .container-2OU7Cz,
-.theme-dark .chat form, 
+.theme-dark .chat-3bRxxu form, 
 .channels-3g2vYe, 
 .theme-dark .friends-table, 
-.theme-dark .messages-wrapper, 
-.content .flex-spacer, 
-.theme-dark .chat>.content, 
-.theme-dark .chat, 
+.theme-dark .da-messagesWrapper, 
+.da-content .flex-spacer, 
+.theme-dark .chat-3bRxxu>.da-content, 
+.theme-dark .chat-3bRxxu, 
 .channel-members, 
 .search .search-bar, 
 .container-iksrDt, 
@@ -177,6 +216,7 @@ input,
 #bda-qem-twitch-container,
 #bda-qem-favourite-container,
 .theme-dark .members-1998pB,
+.da-content,
 .ui-standard-sidebar-view {
   background: transparent !important;
 }
@@ -241,6 +281,31 @@ input,
 	background:rgba(255,255,255,0.0) !important;
 }
 
+/* ゲームタブ カード:プレイ中 */
+.card-7JP0BX.card-rJBFl3.da-card {
+	background: var(--activity-card-background);
+}
+
+/* ゲームタブ　カード:What's new */
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-ey0m8X,
+.card-7JP0BX.card-rJBFl3.marginTop20-3TxNs6,
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-3nTWsD,
+.card-7JP0BX.card-1KzkE6 {
+	background: var(--activity-card-background) !important;
+}
+
+.activityFeed--1mYMS,
+[class*="activityFeed-"] {
+	background: var(--invisible-color) !important;
+}
+
+.scroller-fzNley.feed-jRZy6x {
+	background: var(--background-cover) !important;
+}
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
+	background: var(--transparent-color) !important;
+}
+
 /* test */
 .itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa.tabBarItem-2YOhcM>.gameDefault-2SBp6B.game-3qQlfY:hover
 {
@@ -264,7 +329,7 @@ input,
 }
 
 .flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1R_AjF,
-.scrollerWrap-2lJEkd.content-2BXhLs.scrollerThemed-2oenus.themeGhostHairline-DBD-2d,
+.scrollerWrap-1IAIlv.content-2BXhLs.scrollerThemed-2oenus.themeGhostHairline-DBD-2d,
 .flex-1xMQg5.flex-1O1GKY.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-2yfCgX.footer-1ia-qo,
 .flex-1xMQg5.flex-1O1GKY.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-2yfCgX {
 	background: var(--invisible-color) !important;
@@ -329,7 +394,7 @@ input,
 
 /* 絵文字選択部 */
 
-.scrollerWrap-2lJEkd.scrollerWrap-PyxcLY.scrollerThemed-2oenus.themeLight-1_DWyY.scrollerFade-1Ijw5y.scrollerTrack-1ZIpsv,
+.scrollerWrap-1IAIlv.scrollerWrap-PyxcLY.scrollerThemed-2oenus.themeLight-1_DWyY.scrollerFade-1Ijw5y.scrollerTrack-1ZIpsv,
 .scroller-2FKFPG.scroller-3vODG7,
 .no-search-results {
 		height: 401px !important;
@@ -375,34 +440,13 @@ input,
 	background: rgba(0,0,0,0.1) !important;
 }
 
-/* Activity 背景透過 とそのほか*/
-
-.activityFeed--1mYMS,
-[class*="activityFeed-"] {
-	background: var(--invisible-color) !important;
-}
-
-.scroller-fzNley.feed-jRZy6x {
-	background: var(--background-cover) !important;
-}
-.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
-	background: var(--transparent-color) !important;
-}
-
-.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-ey0m8X,
-.card-7JP0BX.card-rJBFl3.marginTop20-3TxNs6,
-.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-3nTWsD,
-.card-7JP0BX.card-1KzkE6 {
-	background: var(--activity-card-background) !important;
-}
-
 /* メインレイヤー(チャット部、チャンネル一覧部) 修正*/
 
 .flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyStart-2yIZo0.alignStretch-1hwxMa.noWrap-v6g9vO.base-3AoPqv {
 		border-radius: 0px;
 }
 
-.chat .divider.divider-red>span {
+.chat-3bRxxu .divider.divider-red>span {
 		background: rgba(54, 57, 62, 1) !important;
 }
 
@@ -423,7 +467,9 @@ input,
 
 /* 新しいメッセージ バー */
 
-.new-messages-bar {
+.new-messages-bar,
+.newMessagesBar-mujexs,
+.da-newMessagesBar {
 		background: var(--new-message-bar) !important; /* メッセージバーの色 */
 }
 
@@ -486,31 +532,6 @@ background:rgba(0,0,0,0.7) !important;
 		width: 900px;
 }
 
-
-/* ビデオ通話設定日本語化 */
-
-
-/* .title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.margin-bottom-8 */
-
-
-/* 背景透過とかのやつ */
-
-.links,
-.help-container {
-		display: none;
-}
-
-.layer,
-.layers {
-		background: transparent !important;
-}
-
-textarea {
-		background: transparent !important;
-}
-
-
-
 /* スクロールバーの色等 */
 
 .scroller-wrap .scroller::-webkit-scrollbar-thumb {
@@ -536,6 +557,31 @@ textarea {
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
 
+/* テーマ -> Colors */
+.container-1RjyoP>.flex-vertical>div:nth-child(6)>h5 {
+	font-size:0px;
+}
+.container-1RjyoP>.flex-vertical>div:nth-child(6)>h5::after {
+	font-size: 12px;
+	content: "色";
+}
+
+.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(1)>label {
+	font-size: 0px;
+}
+.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(1)>label::before {
+	font-size: 16px;
+	content: "色盲の方向けモード";
+}
+
+.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(2) {
+	font-size: 0px;
+}
+.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(2)::before {
+	font-size: 14px;
+	content: "色盲の方がより分かりやすいように、Discordのいくつかの視覚効果を変更します。";
+}
+
 
 /* Citar - Quote Message CSS */
 
@@ -555,7 +601,7 @@ textarea {
 		height: 30px !important;
 		width: 30px !important;
 		background: rgba(0, 0, 0, 0.4);
-		font-family: "Segoe MDL2 Assets", "Whitney";
+		font-family: "Segoe MDL2 Assets", "Whitney" !important;
 		border-radius: 9px !important;
 		transition: all 200ms ease-in-out;
 		-webkit-transition: all 200ms ease-in-out;
@@ -652,7 +698,7 @@ textarea {
 
 /* サーバーリスト(選択)エリア */
 
-.guilds-wrapper {
+.guildsWrapper-5TJh6A {
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 		width: 70px;
 		padding: 0 2px !important;
@@ -784,7 +830,7 @@ textarea {
 
 .container-2OU7Cz,
 .theme-dark .title-qAcLxz,
-.theme-dark .chat form,
+.theme-dark .chat-3bRxxu form,
 .channels-3g2vYe,
 .vertical-3X17r5 {
 		background-color: var(--invisible-color) !important;
@@ -916,7 +962,7 @@ titleWrapper-3Vi_wz.theme-dark {
 
 /* 左上オンライン数表示 */
 
-.guilds-wrapper .guilds .friends-online {
+.guildsWrapper-5TJh6A .guilds .friends-online {
 		color: #ccc;
 		font-size: 9px;
 		margin: 8px 0 1px -19px;
@@ -930,7 +976,7 @@ titleWrapper-3Vi_wz.theme-dark {
 
 /* チャットトピックのサイズ等 */
 
-.chat>.title-wrap>.topic {
+.chat-3bRxxu>.title-wrap>.topic {
 		font-size: 14px;
 		margin-top: 5px;
 		color: #656565 !important;
@@ -1244,7 +1290,7 @@ font-size: 13.2px;
 	font-size: 0px !important;
 	height: 32px;
 }
-
+.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha:nth-child(10),
 .itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10) {
 	font-size: 0px !important;
 	height: 32px;
