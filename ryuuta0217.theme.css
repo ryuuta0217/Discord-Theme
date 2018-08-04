@@ -94,7 +94,7 @@
 /* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
 /*.da-backdrop {
     		opacity:1 !important;
-    		background: url("https://cdn.discordapp.com/attachments/382103142608797699/433973433391644672/2018-04-12_21.49.04.png") !important;
+    		background: url("https://example.com/upload-background-image.png") !important;
 			background-size: cover !important;
 			background-position: center !important;
 			z-index: 9100;
