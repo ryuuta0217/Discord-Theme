@@ -7,7 +7,7 @@
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
 	--load3: "✔ 読み込み完了";
-	--version: "4.5";
+	--version: "4.5.1";
 }
 
 /* ギルドリストトップ ボタンアイコン
@@ -53,7 +53,7 @@
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
-	content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・ちょっとした追加と変更\A・Discordのアプデ対応\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
+	content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・大幅追加とバグ修正\A・Discordのアプデ対応\A\A・現在、tooltip-background は使用できません。申し訳ありません。\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
@@ -299,11 +299,11 @@ pre,
 
 /* ポップアウト */
 .tooltip {
-	background: var(--tooltip-background) !important;
+	/* background: var(--tooltip-background) !important; */
 }
 
 .tooltip:after {
-	border-right-color: var(--tooltip-background);
+	/* border-right-color: var(--tooltip-background); */
 }
 
 /* ゲーム選択 ゲームを選択しているとき */
