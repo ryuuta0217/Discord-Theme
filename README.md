@@ -23,6 +23,6 @@ ryuuta0217.theme.css の 18行目で変更することができます。<br>
 「ほにゃ。」サイト-> http://honya.nyanta.jp/ <br>
 
 ### 連絡先
-質問や機能追加の要望は、以下どれかまで。<br>
+質問や機能追加の要望は、以下どちらかまで。<br>
 Twitter: @p1kt2 ( https://twitter.com/p1kt2 )<br>
 Discord: https://discord.gg/By9ncpX <br>
