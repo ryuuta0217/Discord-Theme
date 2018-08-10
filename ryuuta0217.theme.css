@@ -1,4 +1,6 @@
-/*//META{"name":"ryuuta0217 SRC Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
+/*//META{"name":"ryuuta0217 Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
+/*メインテーマをインポート*/
+@import url("https://cdn.p1kt.net/discord-theme/src.css");
 /* 背景指定/Backgrounds */
 
 [class*="app-"] {
