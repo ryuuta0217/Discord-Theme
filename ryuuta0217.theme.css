@@ -1,127 +1,165 @@
-/*//META{"name":"ryuuta0217 Theme","description":"背景ベース色は黒。アクセント色はピンク色。","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
-
-/*メインテーマをインポート*/
-@import url("https://p1kt.net/discord-theme/src.css");
-
+/*//META{"name":"ryuuta0217 SRC Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
 /* 背景指定/Backgrounds */
 
-.app,
-.callout-backdrop {
-		/*
-		https:// と続いているところに背景画像のURLを貼ろう 1920x1080の画像を推奨しています
-		!!必ず画像の直リンクを指定してください!!
-		Base64にも対応しています
-		*/
-		background-image: url("https://example.com/background-image.png");
-		background-size: cover;
+[class*="app-"] {
+	/* https://と続いているところに背景画像のURLを貼ろう 1920x1080の画像を推奨しています */
+	background-image: url("https://example.com/background-image.png");
+	background-size: cover;
+	background-position: center;
 }
 
 /*
 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで!
 Twitter: twitter.com/p1kt2
 Discord: discord.gg/By9ncpX
-
 指定方法
 アクセントカラー例
 --accent-color: rgba(R, G, B, A);
 R,G,B はggるなりなんなりして出してください
 Aは透明度です。
-
 Visual Studio Codeなどのエディターを使用すると、GUIで色指定ができて便利です。
 */
 :root {
-	/* フォント指定 - PCにインストールされているフォント名を使用してください */
-	--font-name: ほにゃ字Re;
+/* フォント指定 - PCにインストールされているフォント名を使用してください */
+--font-name: ほにゃ字Re;
 
-	/* メイン色(今のところ使用箇所なし) */
-	--main-color: rgba(37, 172, 232, 1);
+/* メイン色(今のところ使用箇所なし) */
+--main-color: rgba(37, 172, 232, 1);
 
-	/* アクセントカラー (左下アカウント表示部分などに使用) */
-	--accent-color: rgba(207, 113, 118, 1);
+/* アクセントカラー (左下アカウント表示部分などに使用) */
+--accent-color: rgba(207, 113, 118, 1);
 
-	/* 背景カバー */
-	--background-cover: rgba(0, 0, 0, 0.6);
+/* 背景カバー */
+--background-cover: rgba(0, 0, 0, 0.6);
 
-	/* サーバーチャンネル一覧の背景部、カバー */
-	--channel-background: rgba(0, 0, 0, 0.45);
+/* サーバーチャンネル一覧の背景部、カバー */
+--channel-background: rgba(0, 0, 0, 0.45);
 
-	/* スクロールバーの色 */
-	--scroll-bar-color: rgba(30, 33, 36, 1);
+/* スクロールバーの色 */
+--scroll-bar-color: rgba(30, 33, 36, 1);
 
-	/* スクロールバーの背景色 */
-	--scroll-bar-background-color: rgba(0, 0, 0, 0);
+/* スクロールバーの背景色 */
+--scroll-bar-background-color: rgba(0, 0, 0, 0);
 
-	/* 背景色 */
-	--background-color: rgba(0, 0, 0, 0.6);
+/* 背景色 */
+--background-color: rgba(0, 0, 0, 0.6);
 
-	/* 選択済みの色 */
-	--selected-color: rgba(207, 113, 118, .6);
+/* 選択済みの色 */
+--selected-color: rgba(207, 113, 118, .6);
 
-	/* カーソルを合わせた時の色 */
-	--hover-color: rgba(207, 113, 118, 0.2);
+/* カーソルを合わせた時の色 */
+--hover-color: rgba(207, 113, 118, 0.2);
 
-	/* 未読色 */
-	--unread-color: rgba(207, 113, 118, 0.7);
+/* 未読色 */
+--g-unread-badge-color: rgba(207, 113, 118, 0.7);
+/* 開いているサーバーの色 */
+--g-selected-badge-color: rgba(207, 113, 118, 1);
 
-	/* ボイチャ接続中色 */
-	--vc-color: rgba(207, 113, 118, 0.97);
+/* ツールチップ(カーソルを合わせた時などに横に出るポップアップのようなもの)背景色 */
+--tooltip-background: rgba(0, 0, 0, 0.5);
 
+/* ボイチャ接続中色 */
+--vc-color: rgba(207, 113, 118, 0.97);
+
+/* 文字色 */
+--text-color: rgba(255,255,255,0.87);
+
+/* チャット履歴のタイムスタンプの文字の色 */
+--timestamp-color: rgba(255,255,255,.6);
+
+/* Markdown pre記法(``` で囲う) の色 */
+--markdown-background: rgba(207, 113, 118, 0.4);
+
+/* 完全透明 */
+--invisible-color: rgba(0,0,0,0);
+--transparent-color: transparent;
+
+/* 新しいメッセージ バー */
+--new-message-bar: rgba(269, 56, 39, 1);
+
+/* ユーザー情報(ポップアップ背景色) */
+/* 簡易情報 */
+--user-popup-background: rgba(0,0,0,0.6);
 	/* 文字色 */
-	--text-color: rgba(255,255,255,0.86);
+	--user-popup-text-color: white;
 
-	/* チャット履歴のタイムスタンプの文字の色 */
-	--timestamp-color: rgba(255,255,255,.6);
+/* 詳細情報 */
+--user-popup-details-background: rgba(0,0,0,0.6);
+	/* 文字色 */
+	--user-popup-details-text-color: white;
 
-	/* Markdown pre記法(``` で囲う) の色 */
-	--markdown-background: rgba(207, 113, 118, 0.4);
+/* 文字入力部分 */
+--input: rgba(0, 0, 0, 0.4);
 
-	/* 完全透明 */
-	--invisible-color: rgba(0,0,0,0);
-	--transparent-color: transparent;
+/* メッセージ入力欄: 自動補完ポップアップ背景色 */
+--autocomplete-popup: rgba(0, 0, 0, 0.8);
+	/* 文字色 (rgbaでも指定可能です)*/
+	--autocomplete-popup-text: white;
 
-	/* 新しいメッセージ バー */
-	--new-message-bar: rgba(269, 56, 39, 1);
+/* ゲームタブ カード背景 (旧 Activity) */
+--activity-card-background: rgba(0, 0, 0, 0.7);
 
-	/* ユーザーの詳細情報(ポップアップカバー色) */
-	--user-popup-cover: rgba(0,0,0,0.6);
+/* メニュー背景色(右クリポップアップなど) */
+--menu-color: rgba(0, 0, 0, 0.7);
+/* メニューアイテムにカーソルを合わせた時の色 */
+--menu-hover-color: rgba(197, 35, 130, 0.5);
 
-	/* 文字入力部分 */
-	--input: rgba(0, 0, 0, 0.4);
+/* トースト表示の表示位置(下から Xpx で指定) */
+--toast-position: 0px;
 
-	/* 入力欄ポップアップ */
-	--input-popup: rgba(0, 0, 0, 0.8);
+/* メッセージ検索関連 */
 
-	/* ゲームタブ カード背景 (旧 Activity) */
-	--activity-card-background: rgba(0, 0, 0, 0.7);
+/* 候補表示[自動補完]背景色 */
+--searchPopout-background: rgba(0, 0, 0, 0.8);
 
-	/* メニュー背景色(右クリポップアップなど) */
-	--menu-color: rgba(0, 0, 0, 0.7);
+/* 候補表示[自動補完]の候補にホバーした(カーソルを合わせた)ときの色 */
+--searchPopout-background-hovered: rgba(207, 113, 118, 0.2);
 
-	/* トースト表示の表示位置(下から Xpx で指定) */
-	--toast-position: 0px;
+/* 候補表示[自動補完]の候補を選択したときの色 (ホバーしたときと同じ値にすることを推奨) */
+--searchPopout-background-selected: rgba(207, 113, 118, 0.2);
+
+/* 検索語句表示 + キー表示 背景色 */
+--searchPopout-query-background: rgba(207, 113, 118, 0.3);
+
+/* 文字色系 (rgbaも使用可能です)*/
+/* 候補表示セクションタイトル */
+--searchPopout-header-text-color: white;
+
+/* 候補表示フィルタータイプ */
+--searchPopout-filter-text-color: white;
+
+/* 候補表示フィルタータイプの説明 */
+--searchPopout-answer-text-color: gray;
+
+/* その他(検索履歴など) */
+--searchPopout-generic-text-color: white;
+
+/* アップデート通知ポップアウト */
+--update-notification-popout-background: rgba(0, 0, 0, 0.5);
+	/* 文字色 */
+	--update-notification-popout-text-color: white;
+	/* 文字色(リンク) */
+	--update-notification-popout-link-text-color: aqua;
 }
 
 /* 追加オプション */
-/* オプションを有効にするには、「.」の前にある /* を外してください */
+/* !! オプションを有効にするには、「.」の前にある /* を外してください !! */
 
-/* 共通 追加オプション - アップロード画面の背景変更 */
+/* 共通 追加オプション - アップロード画面/ポップアップの背景変更 */
 /* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
 
 /*
 opacity : 透明度です。 0から1で指定します。(0.1, 0.2, 0.3 など)
 background:  背景を指定します。 https://example.com で始まっているURLを
 ほかのURL(直リンクのみ使用可)に置き換えることでアップロード画面の背景を設定します。
-
 */
-
-/*.da-backdrop {
-            opacity:1 !important;
-            background: url("https://example.com/upload-background-image.png") !important;
-            background-size: cover !important;
-            background-position: center !important;
-            z-index: 9100;
+/*[class*="backdrop-"] {
+		opacity:1 !important;
+		background: url("https://example.com/upload-background-image.png") !important;
+		background-size: cover !important;
+		background-position: center !important;
+		z-index: 9100;
 }
-
 /* 共通 追加オプション - 時計(Clockプラグインを使用している時にのみ) */
 /* Clockプラグイン: https://raw.githubusercontent.com/Jiiks/BetterDiscordApp/master/Plugins/clock.plugin.js */
 /* 右クリックして名前を付けて保存をしたあと、 BetterDiscord/Plugins にコピー&ペーストしてください */
@@ -134,12 +172,13 @@ background:transparent !important;
 font-size: 12px;
 z-index: 10000;
 }
-
 /* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
-/*.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP.unfocused-3drpf8,
+/*[class*="typeMacOS-"][class*="titleBar-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyBetween-"][class*="alignCenter-"][class*="unfocused-"],
 .typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP
 {
-    background:rgba(0,0,0,0.7) !important;
-    width: 74px;
+background:rgba(0,0,0,0.7) !important;
+width: 74px;
 }
-*/
+
+/* これより下は消さないでください */
+[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after{content: "" !important;}

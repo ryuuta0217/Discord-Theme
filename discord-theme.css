@@ -1,16 +1,49 @@
 /* Start SorceCode */
 #pluginNotice {
-	background: rgba(0, 110, 255, 0.2);
+	background: var(--background-cover);
 }
 
 :root {
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
 	--load3: "✔ 読み込み完了";
-	--version: "4.4";
+	--version: "4.5";
+}
+
+/* ギルドリストトップ ボタンアイコン
+
+.da-scrollerWrap>.da-guilds.da-scroller>.da-guild>.da-guildInner {
+	background: url(https://i.imgur.com/vbSJz26.gif);
+    background-position: center;
+	background-size: 60px 60px;
+}
+.da-homeIcon,
+.da-homeIcon>g {
+	display: none !important;
+}
+
+/* 更新警告 */
+[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after {
+	content: "アップデートが必要です!! | https://goo.gl/iBwgVW";
+	position: absolute;
+	right: 42%;
+	top: 0.5%;
+	font-size: 13px;
+	font-weight: 900;
+	color: red;
 }
 
 /* バージョン表示 */
+[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::after {
+	content: " | Discord-Theme v"var(--version)" by ryuuta0217 | Thank you for using!";
+	white-space: pre;
+	color: rgb(252, 247, 247);
+	position: fixed;
+	top: 0.52%;
+	font-size: 13px;
+	font-weight: 900;
+}
+
 #bd-settings-sidebar>span>div:last-child:after
 {
 	font-size: 13px;
@@ -62,33 +95,18 @@ body:before {
 		z-index: -9999;
 }
 
-/* ウィンドウバー 
+/* ウィンドウバー */
 
-.app-19_DXt {
-	padding-top: 18px;
-}
-
-.titleBar-AC4pGV {
-  width: 100%;
-  position: absolute;
-  top: -4px;
-  z-index: 9000 !important;
-}
-
-.wordmark-2iDDfm,
-.da-wordmark {
-	top: -2px;
-}
-
-.da-winButton {
-	top: -1.4px;
-}
 
 /* ユーザーアイコン */
-.avatar-large,
-.image-33JSyf {
-	/*border-radius: 8px !important;*/
-}
+/*.avatar-large,
+.image-33JSyf,
+[class*="content-"]
+[class*="avatarWrapper-"]
+[class*="wapper-"][class*="small-"],
+[class*="image-"][class*="small-"][class*="mask-"] {
+	border-radius: 8px !important;
+}*/
 
 /* トースト表示 */
 .toasts {
@@ -119,6 +137,7 @@ input,
 .emoji-picker,
 .input-MwQhcX,
 .message.first,
+.guilds-1q_RqH,
 .content-column,
 .welcome-message,
 .contents-18-Yxp,
@@ -137,7 +156,6 @@ input,
 .search-bar-inner>input[type="text"],
 .friends-table-body.scroller>span>div,
 .modal-3HOjGZ.modal-KwRiOq.size-2pbXxj,
-.guilds-1q_RqH,
 .guildsWrapper-5TJh6A .guilds .friends-online,
 .durationTimeDisplay-z9q8lp.weightMedium-13x9Y8,
 .headerContent-22XGYm.flex-3B1Tl4.alignCenter-3VxkQP,
@@ -174,16 +192,9 @@ pre,
 .da-messagesWrapper, 
 .messages .divider span, 
 .messages .divider:before, 
-.da-content, .message-group-blocked, 
 .is-local-bot-message,
-.channel-members-loading, 
-.channel-members-loading .heading, 
-.channel-members-loading .member, 
 .typing, 
 .container-RYiLUQ, 
-.theme-dark .ui-standard-sidebar-view, 
-.theme-dark .ui-standard-sidebar-view .sidebar-region,
-.theme-dark .ui-standard-sidebar-view .content-region,
 .theme-dark .channel-members,
 .container-2OU7Cz,
 .theme-dark .chat-3bRxxu form, 
@@ -191,33 +202,48 @@ pre,
 .theme-dark .friends-table, 
 .theme-dark .da-messagesWrapper, 
 .da-content .flex-spacer, 
-.theme-dark .chat-3bRxxu>.da-content, 
 .theme-dark .chat-3bRxxu, 
 .channel-members, 
 .search .search-bar, 
 .container-iksrDt, 
 .container-3lnMWU, 
-.theme-dark .title-qAcLxz, 
-.theme-dark .typing-3eiiL_,
-.theme-dark .activityFeed-28jde9,
-.theme-dark .headerBar-cxbhPD,
 .theme-dark .lfg-3xoFkI,
 .video-3lOWa6,
-.theme-dark .private-channel-call,
 .appMount-3VJmYg,
 .container-2lgZY8,
 .channels-Ie2l6A,
 .container-PNkimc,
 .container-2Thooq,
-.theme-dark .title-3qD0b-,
-.theme-dark .typing-2GQL18,
-.search-bar.search-bar-light,
-.emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
-#bda-qem-twitch-container,
-#bda-qem-favourite-container,
-.theme-dark .members-1998pB,
 .da-content,
-.ui-standard-sidebar-view {
+.noChannel-Z1DQK7,
+
+.topSectionNormal-2-vo2m,
+.channel-members-loading,
+.topSectionPlaying-1J5E4n,
+.theme-dark .title-3qD0b-,
+.ui-standard-sidebar-view,
+.theme-dark .title-qAcLxz,
+#bda-qem-twitch-container,
+.theme-dark .typing-3eiiL_,
+.theme-dark .typing-2GQL18,
+.theme-dark .members-1998pB,
+.search-bar.search-bar-light,
+.header-2BwW8b.size16-14cGz5,
+#bda-qem-favourite-container,
+.theme-dark .headerBar-cxbhPD,
+.channel-members-loading .member,
+.theme-dark .activityFeed-28jde9,
+.theme-dark .private-channel-call,
+.channel-members-loading .heading,
+.da-content, .message-group-blocked,
+.theme-dark .chat-3bRxxu>.da-content,
+.theme-dark .ui-standard-sidebar-view,
+[class*="searchPopout-"]>[class*="resultsGroup-"],
+.theme-dark .ui-standard-sidebar-view .sidebar-region,
+.theme-dark .ui-standard-sidebar-view .content-region,
+[class*="noShadow-"][class*="popout-"][class*="popoutBottom-"],
+.emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
   background: transparent !important;
 }
 
@@ -237,36 +263,47 @@ pre,
 }
 
 /* ユーザープロフィールポップアップ(簡易) */
-.headerPlaying-j0WQBV.header-2BwW8b.size16-14cGz5,
+
+.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.headerTop-3C2Zn0,
+.activityUserPopout-2yItg2.activity-11LB_k,
 .body-3iLsc4,
-.footerDefault-2CICpu.footer-1fjuF6,
-.footer-1fjuF6,
-.headerNormal-T_seeN.header-2BwW8b.size16-14cGz5 {
-	background: var(--user-popup-cover) !important;
+.footer-1fjuF6 {
+	background: var(--user-popup-background) !important;
 }
 
-/* * QuickMessage */
-.footerDefault-2CICpu.footer-1fjuF6>input {
+/* - QuickMessage */
+.footer-1fjuF6>input {
 	background: var(--input) !important;
 }
 
-/* ユーザープロフィールポップアップ(詳細) */
-.topSectionPlaying-1J5E4n,
-.topSectionNormal-2-vo2m {
-	background: var(--user-popup-cover) !important;
+/* - 文字色 */
+.body-3iLsc4>div:nth-child(1),
+.body-3iLsc4>div:nth-child(3)>div,
+.body-3iLsc4>div:nth-child(3)>ul>li,
+.body-3iLsc4>ul>li {
+	color: var(--user-popup-text-color) !important;
 }
 
+/* ユーザープロフィールポップアップ(詳細) */
+.header-QKLPzZ.flex-1O1GKY.alignCenter-1dQNNs,
+.headerFill-adLl4x,
+.topSectionNormal-2-vo2m>div,
 .body-3ND3kc {
-	background: var(--user-popup-cover) !important;
+	background: var(--user-popup-details-background) !important;
+}
+/* - 文字色 */
+.body-3ND3kc>div>div>div>div:nth-child(1),
+.body-3ND3kc>div>div>div:nth-child(2)>div>div>div>div {
+	color: var(--user-popup-details-text-color) !important;
 }
 
 /* ポップアウト */
 .tooltip {
-	background: var(--background-cover) !important;
+	background: var(--tooltip-background) !important;
 }
 
 .tooltip:after {
-	border-top-color: var(--background-cover) !important;
+	border-right-color: var(--tooltip-background);
 }
 
 /* ゲーム選択 ゲームを選択しているとき */
@@ -302,9 +339,10 @@ pre,
 .scroller-fzNley.feed-jRZy6x {
 	background: var(--background-cover) !important;
 }
+/* 移動
 .flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
 	background: var(--transparent-color) !important;
-}
+}*/
 
 /* test */
 .itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa.tabBarItem-2YOhcM>.gameDefault-2SBp6B.game-3qQlfY:hover
@@ -313,9 +351,13 @@ pre,
 }
 
 /* 入力欄 ぽっぷあっぷ */
-.autocomplete-1TnWNR.autocomplete-1LLKUa
-{
-	background:var(--input-popup);
+.autocomplete-1TnWNR.autocomplete-1LLKUa,
+.da-autocomplete {
+	background:var(--autocomplete-popup) !important;
+}
+
+.da-autocomplete>div>div>div>div>div {
+	color: var(--autocomplete-popup-text);
 }
 
 /* 招待ポップアップウィンドウ透過 */
@@ -337,29 +379,28 @@ pre,
 
 /* 右クリメニュー */
 
-.contextMenu-HLZMGh {
+[class*="contextMenu-"] {
 		background: var(--menu-color) !important;
 }
 
-.itemSubMenu-3ZgIw- {
+[class*="contextMenu-"]>[class*="itemGroup-"]>[class*="item-"]:hover {
+	background-color: var(--menu-hover-color) !important;
+}
+
+[class*="itemSubMenu-"] {
 	background: var(--invisible-color) !important;
 }
 
-.theme-dark .itemSubMenu-3ZgIw- {
+.theme-dark [class*="itemSubMenu-"] {
 	background: url(/assets/1988164a7c55346d32117b151f4e319d.svg) no-repeat 155px 50% !important;
 }
-.theme-dark .itemSubMenu-3ZgIw-:hover {
-	background: #25282d url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50% !important;
+.theme-dark [class*="itemSubMenu-"]:hover {
+	background-color: var(--menu-hover-color) !important;
+	background-image: url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50% !important;
 }
 
-.itemSubMenu-3ZgIw-.itemSubMenuHasScroller-P43A40 {
+[class*="itemSubMenu-"][class*="itemSubMenuHasScroller-"] {
 	background: var(--scroll-bar-background-color)
-}
-
-/*チャンネルタイトル背景*/
-
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.title-qAcLxz {
-		background: var(--background-cover) !important;
 }
 
 /* BetterDiscord 絵文字 セレクトタブ */
@@ -432,12 +473,100 @@ pre,
 		color: black !important;
 }
 
+/* サーバーの検索部 - 自動補完 : background */
+[class*="searchPopout-"] {
+	background:  var(--searchPopout-background) !important;
+}
 
+[class*="searchPopout-"]>[class*="searchQuery-"] {
+	background: var(--searchPopout-background);
+}
 
-/*
+/* - 自動補完アイテム @ :hover & .selected*/
+[class*="searchPopout-"]>[class*="resultsGroup-"]>[class*="option-"]:hover {
+	background: var(--searchPopout-background-hovered) !important;
+}
+
+[class*="searchPopout-"]>[class*="resultsGroup-"]>[class*="option-"][class*="selected-"] {
+	background: var(--searchPopout-background-selected);
+}
+
+[class*="searchPopout-"]>[class*="searchQuery-"][class*="selected-"] {
+	background: var(--searchPopout-query-background);
+}
+
+/* - 自動補完アイテム @ 文字色 */
+[class*="searchPopout-"]>[class*="resultsGroup-"]>[class*="header-"] {
+	color: var(--searchPopout-header-text-color);
+}
+
+[class*="searchPopout-"]>[class*="resultsGroup-"]>[class*="option-"]>[class*="filter-"] {
+	color: var(--searchPopout-filter-text-color);
+}
+
+[class*="searchPopout-"]>[class*="resultsGroup-"]>[class*="option-"]>[class*="answer-"] {
+	color: var(--searchPopout-answer-text-color);
+}
+
+[class*="searchPopout-"]>[class*="resultsGroup-"]>[class*="option-"]>[class*="nonText-"] {
+	color: var(--searchPopout-generic-text-color);
+}
+
+[class*="searchPopout-"]>[class*="searchQuery-"]>[class*="searchFor-"] {
+	color: var(--searchPopout-search-text-color);
+}
+
+[class*="searchPopout-"]>[class*="searchQuery-"]>[class*="searchFor-"]>strong {
+	color: var(--searchPopout-query-text-color);
+}
+
+/* 検索結果部 
+
+.search-results-wrap {
+	background: transparent !important;
+}
+
+.search-results {
+	background: transparent !important;
+}
+
+.search-results>.channel-separator>span {
+	background: transparent !important;
+}
+
+.search-result::before {
+	background-image: transparent !important;
+}
+
+.results-wrapper {
+	background: transparent !important;
+}
+
+[class*="scrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"] {
+	background: transparent !important;
+}
+
 .scroller-fzNley.scroller
 {
 	background: rgba(0,0,0,0.1) !important;
+}*/
+
+.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>div:nth-child(3) {
+	background: var(--transparent-color);
+}
+
+.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"] {
+	background: var(--update-notification-popout-background) !important;
+}
+
+.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="flex-"]>[class*="flexChild-"]>[class*="h4-"],
+.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="flex-"]>[class*="flexChild-"]>[class*="date-"],
+.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>ul>li {
+	color: var(--update-notification-popout-text-color) !important;
+}
+
+.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>ul>li>a {
+	color: var(--update-notification-popout-link-text-color) !important;
 }
 
 /* メインレイヤー(チャット部、チャンネル一覧部) 修正*/
@@ -526,11 +655,7 @@ background:rgba(0,0,0,0.7) !important;
 */
 
 /* 何もないチャンネルの背景透過修正 */
-
-.noChannel-Z1DQK7 {
-		background: var(--transparent-color) !important;
-		width: 900px;
-}
+/* 背景透過修正に移動 */
 
 /* スクロールバーの色等 */
 
@@ -721,12 +846,12 @@ background:rgba(0,0,0,0.7) !important;
 
 /* 未読メッセージの白いやつと開いているサーバーの横のやつ */
 
-.unread:before {
-		background: var(--unread-color) !important;
+[class*="guild-"][class*="unread-"]:before {
+		background: var(--g-unread-badge-color) !important;
 }
 
-.guild.selected:before {
-		background: var(--accent-color) !important;
+[class*="guild-"][class*="selected-"]:before {
+		background: var(--g-selected-badge-color) !important;
 }
 
 
@@ -787,8 +912,13 @@ background:rgba(0,0,0,0.7) !important;
 
 /*| 文字色(hex可、color可) |*/
 
-.markup {
+[class*="markup-"] {
 		color: var(--text-color) !important;
+}
+
+/* メッセージタイムスタンプの文字色 */
+[class*="timestampCozy-"] {
+	color: var(--timestamp-color) !important;
 }
 
 /*|| ``` で囲うやつの透過とか色指定とか ||*/
@@ -1053,18 +1183,6 @@ titleWrapper-3Vi_wz.theme-dark {
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
 
-.callout-backdrop {
-		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
-		font-size: 12px;
-		text-transform: uppercase;
-		margin: 0px 0px;
-		border-radius: 6px;
-		opacity: 1;
-		padding: 8px 15px;
-		line-height: 1px;
-		width: 100%;
-		text-align: center;
-}
 
 
 /*
@@ -1593,8 +1711,8 @@ font-size: 13.2px;
 
 .app-19_DXt,
 body::after {
-		-webkit-animation: cv-fade 6s ease-out;
-		animation: cv-fade 6s ease-out
+		-webkit-animation: cv-fade 5s ease-out;
+		animation: cv-fade 5s ease-out
 }
 @-webkit-keyframes cv-fade {
 		0% {
@@ -1642,8 +1760,8 @@ body::after {
 		left: 0;
 		z-index: 9998;
 		pointer-events: none;
-		-webkit-animation: cv-bg 4.8s ease-in-out;
-		animation: cv-bg 4.8s ease-in-out
+		-webkit-animation: cv-bg 4.4s ease-in-out;
+		animation: cv-bg 4.4s ease-in-out
 }
 @-webkit-keyframes cv-bg {
 		0% {
@@ -1782,46 +1900,3 @@ body::after {
       opacity: 0
     }
   }
-
-.avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
-.guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
-.message-group .avatar-large[style*='249869841706516481']+.comment .user-name::after {
-		content: "[テーマ作成者]"
-}
-
-.avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
-.guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
-.message-group .avatar-large[style*='249869841706516481']+.comment .user-name::after {
-		position: absolute;
-		height: 14px;
-		padding: 1px 2px;
-		border-radius: 3px;
-		background: rgba(0, 0, 0, 0.5);
-		color: hsla(0, 0%, 100%, 0.8);
-		font-size: 9px;
-		text-align: center;
-		font-weight: 700;
-		line-height: 16px;
-		text-shadow: 0 0 1px rgba(0, 0, 0, .3);
-		text-transform: uppercase;
-		vertical-align: bottom
-}
-
-.avatar-small[style*='249869841706516481']+.member-inner .member-username-inner::after,
-.guild-settings-modal-members .avatar-small[style*='249869841706516481']+.member-inner .member-username::after,
-.message-group .avatar-large[style*='249869841706516481']+.comment .user-name::after {
-		position: relative;
-		background: rgba(100, 100, 100, 0.3);
-		color: hsla(0, 0%, 100%, 0.6);
-		margin-left: 6px
-}
-
-.app-19_DXt::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-}
