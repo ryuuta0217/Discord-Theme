@@ -7,7 +7,7 @@
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
 	--load3: "✔ 読み込み完了";
-	--version: "4.5.1";
+	--version: "4.5.2";
 }
 
 /* ギルドリストトップ ボタンアイコン
@@ -53,7 +53,7 @@
 }
 
 [layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
-	content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・大幅追加とバグ修正\A・Discordのアプデ対応\A\A・現在、tooltip-background は使用できません。申し訳ありません。\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
+	content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・ちょっとした追加と変更\A・設定画面のアイコンがアプデでズレてたので修正\A・Game Libraryが透過していなかったので修正\A・QuickSwitcherの背景色変更が行われてなかったので修正\A・Discordのアプデ対応\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
 	white-space: pre;
 	color: rgb(0, 255, 30);
 	font-size: 14px;
@@ -206,17 +206,17 @@ pre,
 .channel-members, 
 .search .search-bar, 
 .container-iksrDt, 
-.container-3lnMWU, 
-.theme-dark .lfg-3xoFkI,
+.da-content,
 .video-3lOWa6,
 .appMount-3VJmYg,
 .container-2lgZY8,
 .channels-Ie2l6A,
 .container-PNkimc,
 .container-2Thooq,
-.da-content,
 .noChannel-Z1DQK7,
-
+.container-3lnMWU, 
+.gameLibrary-TTDw4Y,
+.theme-dark .lfg-3xoFkI,
 .topSectionNormal-2-vo2m,
 .channel-members-loading,
 .topSectionPlaying-1J5E4n,
@@ -616,10 +616,10 @@ pre,
 
 /* Ctrl+Q と DM検索ウィンドウ */
 
-.quickswitcher-2NdiGJ {
+.quickswitcher-3JagVE {
 		background: var(--background-cover) !important;
 }
-.input-MwQhcX {
+.input-2VB9rf {
 		background: var(--input) !important;
 }
 
@@ -800,9 +800,8 @@ background:rgba(0,0,0,0.7) !important;
 
 /* 選択されているタブ */
 
-.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha,
-.selected-3s45Ha {
-		background: var(--selected-color) !important;
+[class*="scroller-"].sidebar-region-scroller>.sidebar>[class*="side-"]>[class*="itemSelected-"][class*="item-"][class*="selected-"] {
+	background: var(--selected-color) !important;
 }
 
 .ui-form-item,
@@ -1576,60 +1575,69 @@ font-size: 13.2px;
 [layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(9)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_link_white_24px.svg)
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(7)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(8)::after {
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(6)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(7)::after {
+	background: url(https://cdn.p1kt.net/discord-theme/round_attach_money_white_24dp.png);
+}
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(8)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(9)::after {
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/speed.svg)
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(10)::after {
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(9)::after,
+[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(10)::after {
+	background: url(https://cdn.p1kt.net/discord-theme/hypesquad-white.png) no-repeat;
+	background-position: 0%;
+	background-size: 24px;
+}
+
+[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(12)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_mic_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(11)::after {
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_desktop_windows_white_24px.svg)
-}
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(12)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(11)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_notifications_white_24px.svg)
-}
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(12)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_keyboard_white_24px.svg)
 }
 .platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(14)::after,
 .platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_games_white_24px.svg)
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_notifications_white_24px.svg)
 }
 .platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(15)::after,
 .platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(14)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_chat_white_24px.svg)
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_keyboard_white_24px.svg)
 }
 .platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(16)::after,
 .platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(15)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_camera_white_24px.svg)
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_games_white_24px.svg)
 }
 .platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(17)::after,
 .platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(16)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_videocam_white_24px.svg)
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_chat_white_24px.svg)
 }
 .platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(18)::after,
 .platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(17)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_camera_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(19)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(18)::after {
+	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_videocam_white_24px.svg)
+}
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(20)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(19)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_language_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(19)::after {
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(21)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_laptop_windows_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(21)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(20)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(4)::after {
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(23)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(22)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_history_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(22)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(21)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(7)::after {
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(24)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(23)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_warning_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(23)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(22)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(6)::after {
+.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(25)::after,
+.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(24)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_developer_mode_white_24px.svg)
 }
 [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="itemDefault"]::after {
