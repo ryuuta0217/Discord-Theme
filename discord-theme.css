@@ -1,4 +1,30 @@
 /* Start SorceCode */
+
+/* 背景画像設定 */
+[class*="app-"] {
+	background-image: var(--background-image-url);
+	background-size: var(--background-size);
+	background-position: var(--background-position);
+}
+
+/* 背景カバー */
+[class*="layer-"], [class*="layers-"], [class*="typeWindows-"] {
+    background: var(--background-cover) !important;
+}
+
+/* 設定画面背景 */
+[layer-id="user-settings"]>div:nth-child(3)>[class*="standardSidebarView-"] {
+	background-image: var(--Sbackground-image-url) !important;
+	background-size: var(--Sbackground-size) !important;
+    background-position: var(--Sbackground-position) !important;
+}
+
+/* 設定画面背景カバー */
+[class*="sidebarRegion-"]>div,
+[class*="contentRegion-"] {
+	background-color: var(--Sbackground-cover) !important;
+}
+
 #pluginNotice {
 	background: var(--background-cover);
 }
@@ -7,18 +33,19 @@
 	--load1: "テーマを読み込み中";
 	--load2: "アセットを読み込み中";
 	--load3: "✔ 読み込み完了";
-	--version: "4.5.2";
+	--version: "5.0";
 }
 
-/* ギルドリストトップ ボタンアイコン
+/* ギルドリストトップ ボタンアイコン */
 
-.da-scrollerWrap>.da-guilds.da-scroller>.da-guild>.da-guildInner {
-	background: url(https://i.imgur.com/vbSJz26.gif);
-    background-position: center;
-	background-size: 60px 60px;
+[class*="homeLink-"] {
+	background: var(--home-icon);
+	background-repeat: no-repeat;
+  background-position: center;
+	background-size: 100%;
 }
-.da-homeIcon,
-.da-homeIcon>g {
+[class*="homeIcon-"],
+[class*="homeIcon-"]>g {
 	display: none !important;
 }
 
@@ -34,12 +61,26 @@
 }
 
 /* バージョン表示 */
-[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::after {
-	content: " | Discord-Theme v"var(--version)" by ryuuta0217 | Thank you for using!";
+[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::before {
+	content: "|                                                                         |";
+	text-align: justify;
 	white-space: pre;
 	color: rgb(252, 247, 247);
+	top: 6px;
+	left: 65px;
 	position: fixed;
-	top: 0.52%;
+	font-size: 13px;
+	font-weight: 900;
+}
+
+[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::after {
+	content: "Discord-Theme v"var(--core-version)"@Core"var(--version)" by ryuuta0217   Thank you for using!";
+	text-align: justify;
+	white-space: pre;
+	color: rgb(252, 247, 247);
+	top: 6.8px;
+	left: 73px;
+	position: fixed;
 	font-size: 13px;
 	font-weight: 900;
 }
@@ -48,11 +89,11 @@
 {
 	font-size: 13px;
 	color: rgba(0, 255, 34, 0.856) !important;
-	content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされます\A\A https://github.com/\Aryuuta0217/Discord-Theme";
+	content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされます\A\A GitHub:\Aryuuta0217 /\A Discord-Theme";
 	white-space: pre;
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
+[layer-id="user-settings"] [class*="standardSidebarView-"] .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
 	content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・ちょっとした追加と変更\A・設定画面のアイコンがアプデでズレてたので修正\A・Game Libraryが透過していなかったので修正\A・QuickSwitcherの背景色変更が行われてなかったので修正\A・Discordのアプデ対応\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
 	white-space: pre;
 	color: rgb(0, 255, 30);
@@ -117,20 +158,19 @@ body:before {
 *,
 div,
 html,
-header,
 body,
 input,
 .text,
 .file,
 .text,
+header,
 .member,
 .button,
 .header,
-.sidebar,
 .comment,
 .message,
-.tooltips,
 .tooltip,
+.tooltips,
 .title-wrap,
 .search-bar,
 .name-3gtcmp,
@@ -146,11 +186,12 @@ input,
 .search-bar-inner,
 #clockPluginClock,
 .userPopout-3XzG_A,
+[class*="sidebar-"],
 .friends-table-header,
 .search-bar-inner>input,
-.contextMenu-HLZMGh.theme-dark,
 .search-bar.search-bar-light,
-.titleWrapper-3Vi_wz.theme-dark,
+.contextMenu-HLZMGh,
+.titleWrapper-3Vi_wz,
 .scroller-NXV0-d.scroller-fzNley,
 .tooltip.tooltip-right.tooltip-black,
 .search-bar-inner>input[type="text"],
@@ -161,9 +202,9 @@ input,
 .headerContent-22XGYm.flex-3B1Tl4.alignCenter-3VxkQP,
 .quick-message.quickMessage-28pD5Y.marginBottom8-1mABJ4,
 .innerEnabled-gLHeOL.inner-3if5cm.flex-3B1Tl4.innerNoAutocomplete-kaUXJZ,
-[class*="textAreaEnabled-"][class*="textArea-"][class*="textArea-"][class*="scrollbarGhostHairline-"][class*="scrollbar-"]
 .textAreaEnabled-3vQ5WZ.textArea-2Spzkt.textArea-2Spzkt.scrollbarGhostHairline-1mSOM1.scrollbar-3dvm_9,
 .textAreaEnabled-2vOfh8.textArea-20yzAH.textAreaForm-2NWGTp.scrollbarGhostHairline-D_btXm.scrollbar-11WJwo,
+[class*="textAreaEnabled-"][class*="textArea-"][class*="textArea-"][class*="scrollbarGhostHairline-"][class*="scrollbar-"],
 .typeWindows-15E0Ys.titleBar-3_fDwJ.horizontalReverse-k5PqxT.flex-3B1Tl4.directionRowReverse-2eZTxP.justifyStart-2yIZo0.alignStretch-1hwxMa,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.title-qAcLxz,
 .flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignCenter-3VxkQP.noWrap-v6g9vO.header-3sp3cE,
@@ -172,88 +213,81 @@ input,
 }
 
 /* 背景表示されない問題修正 */
-#voice-connection, 
-#friends, 
-.friends-header, 
 pre,
-.friends-table, 
-.guildsWrapper-5TJh6A,
-.guilds-1q_RqH, 
-.guild-header header, 
-.channels-wrap, 
-.private-channels .search-bar, 
-.private-channels, 
-.guild-channels, 
-.account, 
-.friend-table-add-header,
-.da-chat,
-.da-content, 
-.title-wrap:not(.search-bar), 
-.da-messagesWrapper, 
-.messages .divider span, 
-.messages .divider:before, 
-.is-local-bot-message,
-.typing, 
-.container-RYiLUQ, 
-.theme-dark .channel-members,
-.container-2OU7Cz,
-.theme-dark .chat-3bRxxu form, 
-.channels-3g2vYe, 
-.theme-dark .friends-table, 
-.theme-dark .da-messagesWrapper, 
-.da-content .flex-spacer, 
-.theme-dark .chat-3bRxxu, 
-.channel-members, 
-.search .search-bar, 
-.container-iksrDt, 
-.da-content,
+.typing,
+#friends,
+.account,
+.lfg-3xoFkI,
+.chat-3bRxxu,
+.title-3qD0b-,
+.title-qAcLxz,
 .video-3lOWa6,
+.friends-table,
+.typing-3eiiL_,
+.typing-2GQL18,
+.friends-table,
+.guilds-1q_RqH,
+.channels-wrap,
+.guild-channels,
+.friends-header,
+.members-1998pB,
+.channel-members,
+[class*="chat-"],
+.channels-3g2vYe,
+.channel-members,
+.channels-Ie2l6A,
 .appMount-3VJmYg,
 .container-2lgZY8,
-.channels-Ie2l6A,
+.container-RYiLUQ, 
+.container-2OU7Cz,
+.container-iksrDt,
 .container-PNkimc,
 .container-2Thooq,
 .noChannel-Z1DQK7,
-.container-3lnMWU, 
+.container-3lnMWU,
+.private-channels,
+#voice-connection,
+.chat-3bRxxu form,
+.headerBar-cxbhPD,
+.search .search-bar,
 .gameLibrary-TTDw4Y,
-.theme-dark .lfg-3xoFkI,
+.guild-header header,
+.guildsWrapper-5TJh6A,
+.is-local-bot-message,
+.private-channel-call,
+.message-group-blocked,
+.messages .divider span,
 .topSectionNormal-2-vo2m,
+.friend-table-add-header,
 .channel-members-loading,
+[class*="activityFeed-"],
 .topSectionPlaying-1J5E4n,
-.theme-dark .title-3qD0b-,
-.ui-standard-sidebar-view,
-.theme-dark .title-qAcLxz,
 #bda-qem-twitch-container,
-.theme-dark .typing-3eiiL_,
-.theme-dark .typing-2GQL18,
-.theme-dark .members-1998pB,
+.messages .divider:before,
+[class*="messagesWrapper-"],
+[class*="applicationStore-"],
 .search-bar.search-bar-light,
 .header-2BwW8b.size16-14cGz5,
 #bda-qem-favourite-container,
-.theme-dark .headerBar-cxbhPD,
+.title-wrap:not(.search-bar),
+[class*="messagesWrapper-"], 
+.private-channels .search-bar,
+[class*="standardSidebarView-"],
+.chat-3bRxxu>[class*="content-"],
 .channel-members-loading .member,
-.theme-dark .activityFeed-28jde9,
-.theme-dark .private-channel-call,
 .channel-members-loading .heading,
-.da-content, .message-group-blocked,
-.theme-dark .chat-3bRxxu>.da-content,
-.theme-dark .ui-standard-sidebar-view,
+[class*="standardSidebarView-"] .content-region,
 [class*="searchPopout-"]>[class*="resultsGroup-"],
-.theme-dark .ui-standard-sidebar-view .sidebar-region,
-.theme-dark .ui-standard-sidebar-view .content-region,
+[class*="standardSidebarView-"] [class*="sidebarRegion-"],
 [class*="noShadow-"][class*="popout-"][class*="popoutBottom-"],
 .emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
-.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
+[class*="layers-"]>[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"],
+.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw,
+[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="scrollerStore-"][class*="systemPad-"]>[class*="table-"]>[class*="stickyHeader-"][class*="header-"][class*="row-"],
+[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="spacer-"][class*="firefoxFixScrollFlex-"]>[class*="root-"],
+[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="spacer-"][class*="firefoxFixScrollFlex-"]>[class*="container-"] {
   background: transparent !important;
 }
-
-.theme-dark .layer-3QrUeG, .theme-dark .layers-3iHuyZ, .typeWindows-15E0Ys {
-    background: var(--background-cover) !important;
-}
-
-/* ここまで */
-
-
 
 /* 新機能 LFG に関する設定 - 2017/12/19 */
 /* 背景 */
@@ -280,7 +314,10 @@ pre,
 .body-3iLsc4>div:nth-child(1),
 .body-3iLsc4>div:nth-child(3)>div,
 .body-3iLsc4>div:nth-child(3)>ul>li,
-.body-3iLsc4>ul>li {
+.body-3iLsc4>ul>li,
+[class*="userPopout-"]>div:nth-child(2)>div,
+[class*="userPopout-"]>div:nth-child(2)>div>textarea::placeholder,
+[class*="userPopout-"]>div:nth-child(3)>div>div:nth-child(2){
 	color: var(--user-popup-text-color) !important;
 }
 
@@ -305,40 +342,13 @@ pre,
 .tooltip:after {
 	/* border-right-color: var(--tooltip-background); */
 }
+/* アクティビティタブ全般 */
 
-/* ゲーム選択 ゲームを選択しているとき */
-.itemSelected-3XxAMf.item-3879bf.selected-3s45Ha.tabBarItem-2YOhcM
-{
-	background:rgba(255,255,255,0.0) !important;
+/* クイック起動 - ホバー時のボタン名が全部でないバグ修正 */
+[class*="activityFeed-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="feedWrapper-"][class*="firefoxFixScrollFlex-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="feed-"]>[class*="body-"]>div>[class*="dock-1-"][class*="dock-"]>div {
+	width: 94px;
 }
 
-/* ゲーム選択 未選択のゲーム・カーソルを合わせたとき */
-.itemDefault-3NDwnY.item-3879bf.notSelected-PgwTMa.tabBarItem-2YOhcM:hover
-{
-	background:rgba(255,255,255,0.0) !important;
-}
-
-/* ゲームタブ カード:プレイ中 */
-.card-7JP0BX.card-rJBFl3.da-card {
-	background: var(--activity-card-background);
-}
-
-/* ゲームタブ　カード:What's new */
-.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-ey0m8X,
-.card-7JP0BX.card-rJBFl3.marginTop20-3TxNs6,
-.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1RC2Wb.cardHeader-3nTWsD,
-.card-7JP0BX.card-1KzkE6 {
-	background: var(--activity-card-background) !important;
-}
-
-.activityFeed--1mYMS,
-[class*="activityFeed-"] {
-	background: var(--invisible-color) !important;
-}
-
-.scroller-fzNley.feed-jRZy6x {
-	background: var(--background-cover) !important;
-}
 /* 移動
 .flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
 	background: var(--transparent-color) !important;
@@ -351,11 +361,12 @@ pre,
 }
 
 /* 入力欄 ぽっぷあっぷ */
-.autocomplete-1TnWNR.autocomplete-1LLKUa,
+[class*="autocomplete-"][class*="autocomplete-"],
 .da-autocomplete {
 	background:var(--autocomplete-popup) !important;
 }
 
+[class*="autocomplete-"][class*="autocomplete-"]>div>div>div>div>div,
 .da-autocomplete>div>div>div>div>div {
 	color: var(--autocomplete-popup-text);
 }
@@ -391,10 +402,10 @@ pre,
 	background: var(--invisible-color) !important;
 }
 
-.theme-dark [class*="itemSubMenu-"] {
+[class*="itemSubMenu-"] {
 	background: url(/assets/1988164a7c55346d32117b151f4e319d.svg) no-repeat 155px 50% !important;
 }
-.theme-dark [class*="itemSubMenu-"]:hover {
+[class*="itemSubMenu-"]:hover {
 	background-color: var(--menu-hover-color) !important;
 	background-image: url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50% !important;
 }
@@ -438,13 +449,59 @@ pre,
 .scrollerWrap-1IAIlv.scrollerWrap-PyxcLY.scrollerThemed-2oenus.themeLight-1_DWyY.scrollerFade-1Ijw5y.scrollerTrack-1ZIpsv,
 .scroller-2FKFPG.scroller-3vODG7,
 .no-search-results {
-		height: 401px !important;
+		height: 415px !important;
 		width: 380px;
 		background: var(--invisible-color) !important;
 }
 
+/* 絵文字関連 */
+
+[class*="emojiPicker-"] {
+	border: solid 0px rgba(0, 0, 0, .0) !important;
+}
+
+[class*="emojiPicker-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[class*="stickyHeader-"] {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+[class*="emojiPicker-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[class*="stickyHeader-"]>[class*="category-"] {
+	font-weight: 999;
+	font-size: 100%;
+	color: black !important;
+}
+
+[class*="emojiPicker-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[name="recent"] {
+	font-size: 0% !important;
+}
+
+img.emoji.jumboable {
+	width: var(--big-emote-size) !important;
+	height: var(--big-emote-size) !important;
+}
+
+#bda-qem {
+	padding-right: 0px !important;
+}
+
+#bda-qem>button:hover {
+	background: rgba(0, 255, 34, 0.530) !important;
+}
+
+#bda-qem>button {
+	border-left: rgba(0,0,0,0) 0px solid !important;
+	box-shadow: rgba(0,0,0,0) 0px 0 0 0 !important;
+}
+
 [class*="noArrow-"][class*="noShadow-"][class*="popout-"][class*="popoutTopRight-"] {
 	background: var(--invisible-color) !important;
+}
+
+[class*="emojiPicker-"]>[class*="header-"]>[class*="searchBar-"] {
+	background: transparent !important;
+}
+
+[class*="emojiPicker-"]>[class*="header-"]>[class*="searchBar-"]>[class*="searchBarInner-"]>input::placeholder {
+	color: black !important;
 }
 
 /* 絵文字カテゴリ表示部 */
@@ -551,21 +608,21 @@ pre,
 	background: rgba(0,0,0,0.1) !important;
 }*/
 
-.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>div:nth-child(3) {
+[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>div:nth-child(3) {
 	background: var(--transparent-color);
 }
 
-.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"] {
+[class*="modal-"]>[class*="inner-"]>[class*="modal-"] {
 	background: var(--update-notification-popout-background) !important;
 }
 
-.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="flex-"]>[class*="flexChild-"]>[class*="h4-"],
-.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="flex-"]>[class*="flexChild-"]>[class*="date-"],
-.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>ul>li {
+[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="flex-"]>[class*="flexChild-"]>[class*="h4-"],
+[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="flex-"]>[class*="flexChild-"]>[class*="date-"],
+[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>ul>li {
 	color: var(--update-notification-popout-text-color) !important;
 }
 
-.theme-dark>[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>ul>li>a {
+[class*="modal-"]>[class*="inner-"]>[class*="modal-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>ul>li>a {
 	color: var(--update-notification-popout-link-text-color) !important;
 }
 
@@ -616,10 +673,10 @@ pre,
 
 /* Ctrl+Q と DM検索ウィンドウ */
 
-.quickswitcher-3JagVE {
+[class*="quickswitcher-"] {
 		background: var(--background-cover) !important;
 }
-.input-2VB9rf {
+[class*="input-"] {
 		background: var(--input) !important;
 }
 
@@ -640,15 +697,8 @@ pre,
 
 /* WARNING,  Experimental!! */
 
-
-/* NSFWの背景透過修正 */
-
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyCenter-29N31w.alignStretch-1hwxMa.noWrap-v6g9vO.theme-dark {
-		background: var(--background-cover) !important;
-}
-
 /*
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyCenter-29N31w.alignStretch-1hwxMa.noWrap-v6g9vO.theme-dark
+.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyCenter-29N31w.alignStretch-1hwxMa.noWrap-v6g9vO
 {
 background:rgba(0,0,0,0.7) !important;
 }
@@ -659,54 +709,113 @@ background:rgba(0,0,0,0.7) !important;
 
 /* スクロールバーの色等 */
 
-.scroller-wrap .scroller::-webkit-scrollbar-thumb {
-		border: 4px solid rgba(255, 255, 255, 0) !important;
+[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerWrap-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="messages-"]::-webkit-scrollbar-thumb {
+		border: var(--scroll-bar-border) !important;
 		background-color: var(--scroll-bar-color) !important;
 		/*background-color: #03A9F4 !important;*/
 }
 
-.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
-		border: 4px solid rgba(255, 255, 255, 0) !important;
+[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerWrap-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="messages-"]::-webkit-scrollbar-track-piece {
+		border: var(--scroll-bar-background-border) !important;
 		background-color: var(--scroll-bar-background-color) !important;
-}
-
-.ui-standard-sidebar-view {
-		background: var(--invisible-color) !important;
 }
 
 /* ユーザー設定 */
 
-.content-region,
-.sidebar-region {
-		background: var(--background-cover) !important;
-		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
-}
-
 /* テーマ -> Colors */
-.container-1RjyoP>.flex-vertical>div:nth-child(6)>h5 {
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(5)>h5 {
 	font-size:0px;
 }
-.container-1RjyoP>.flex-vertical>div:nth-child(6)>h5::after {
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(5)>h5::after {
 	font-size: 12px;
 	content: "色";
 }
 
-.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(1)>label {
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(5)>div>div:nth-child(1)>div>label {
 	font-size: 0px;
 }
-.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(1)>label::before {
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(5)>div>div:nth-child(1)>div>label::before {
 	font-size: 16px;
 	content: "色盲の方向けモード";
 }
 
-.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(2) {
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(5)>div>div:nth-child(2) {
 	font-size: 0px;
 }
-.container-1RjyoP>.flex-vertical>div:nth-child(6)>div>div:nth-child(2)::before {
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(5)>div>div:nth-child(2)::before {
 	font-size: 14px;
 	content: "色盲の方がより分かりやすいように、Discordのいくつかの視覚効果を変更します。";
 }
 
+/* テーマ -> 詳細設定 */
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(9)>div:nth-child(1)>div:nth-child(1)>label {
+    font-size: 0px;
+}
+
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(9)>div:nth-child(1)>div:nth-child(1)>label::before {
+    font-size: 16px;
+    content: "アクティビティフィードを表示する";
+}
+
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(9)>div:nth-child(2) {
+    font-size: 0px;
+}
+
+[class*="container-"]>[class*="vertical-"][class*="flex-"]>div:nth-child(9)>div:nth-child(2)::before {
+    font-size: 14px;
+    content: "会話に集中できるようにアクティビティフィードを非表示にするには、これをオフにします。";
+}
+
+/* テキスト・画像 -> Show Spoiler Content*/
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>h5 {
+    font-size: 0px;
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>h5::before {
+    font-size: 12px;
+    content: "スポイラーを表示するタイミング";
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="description-"] {
+    font-size: 0px;
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="description-"]::before {
+    font-size: 14px;
+    content: "スポイラーをいつ表示するかを制御します。";
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="radioGroup-"]>div:nth-child(1)>div>div {
+    font-size: 0px;
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="radioGroup-"]>div:nth-child(1)>div>div::before {
+    font-size: 16px;
+    content: "クリックした時";
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="radioGroup-"]>div:nth-child(2)>div>div {
+    font-size: 0px;
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="radioGroup-"]>div:nth-child(2)>div>div::before {
+    font-size: 16px;
+    content: "サーバーである程度の権限を持っている時";
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="radioGroup-"]>div:nth-child(3)>div>div {
+    font-size: 0px;
+}
+
+[class*="contentRegion-"]>[class*="contentTransitionWrap-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="contentRegionScrollerWrap-"][class*="scrollerThemed-"][class*="themeGhost-"][class*="scrollerTrack-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="contentRegionScroller-"]>[class*="contentColumn-"][class*="contentColumnDefault-"]>div>[class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(12)>div[class*="radioGroup-"]>div:nth-child(3)>div>div::before {
+    font-size: 16px;
+    content: "常に表示";
+}
+
+/* テキスト入力欄 */
+[class*="channelTextArea-"][class*="channelTextArea-"]>[class*="inner-"][class*="flex-"] {
+	background-color: var(--input-box-color) !important;
+}
 
 /* Citar - Quote Message CSS */
 
@@ -783,9 +892,7 @@ background:rgba(0,0,0,0.7) !important;
 
 /* ユーザー設定->設定項目にカーソルを合わせた時の動作 */
 
-.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:hover,
-.itemDefault-3NDwnY:hover,
-.item-3879bf:hover {
+[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="sidebarRegionScroller-"]>[class*="sidebar-"]>[class*="side-"]>[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:hover {
 		background: var(--hover-color);
 }
 
@@ -800,7 +907,7 @@ background:rgba(0,0,0,0.7) !important;
 
 /* 選択されているタブ */
 
-[class*="scroller-"].sidebar-region-scroller>.sidebar>[class*="side-"]>[class*="itemSelected-"][class*="item-"][class*="selected-"] {
+[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="sidebarRegionScroller-"]>[class*="sidebar-"]>[class*="side-"]>[class*="itemSelected-"][class*="item-"][class*="selected-"] {
 	background: var(--selected-color) !important;
 }
 
@@ -822,21 +929,11 @@ background:rgba(0,0,0,0.7) !important;
 
 /* サーバーリスト(選択)エリア */
 
-.guildsWrapper-5TJh6A {
+[class*="layers-"]>[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] {
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 		width: 70px;
 		padding: 0 2px !important;
 }
-
-.header-1tS1js {
-		background: rgba(0, 0, 0, 0.3) !important;
-		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
-}
-/*
-{
-		background: var() !important;
-		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
-}*/
 
 .notice-3w3nb0.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR {
 		background: var(--background-cover);
@@ -845,11 +942,11 @@ background:rgba(0,0,0,0.7) !important;
 
 /* 未読メッセージの白いやつと開いているサーバーの横のやつ */
 
-[class*="guild-"][class*="unread-"]:before {
+[class*="container-"][class*="unread-"]:before {
 		background: var(--g-unread-badge-color) !important;
 }
 
-[class*="guild-"][class*="selected-"]:before {
+[class*="container-"][class*="selected-"]:before {
 		background: var(--g-selected-badge-color) !important;
 }
 
@@ -857,7 +954,7 @@ background:rgba(0,0,0,0.7) !important;
 /* 通話中 */
 
 .container-1UB9sr {
-		background: var(--vc-color) !important;
+		background: var(--voice-channel-connected-popup-color) !important;
 		height: 40px;
 		padding: 14px;
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
@@ -878,19 +975,43 @@ background:rgba(0,0,0,0.7) !important;
 }
 
 .contentSelectedText-3wUhMi.content-20Aix8,
-.contentHoveredVoice-3qGNKh:active,
-.contentSelectedVoice-gTtYM9:active {
+.contentHoveredVoice-3qGNKh:active {
 		background-color: var(--selected-color) !important;
 }
 
-/* チャンネルにカーソルを合わした際 */
-
-.wrapper-KpKNwI:hover>.content-20Aix8 {
-		background-color: var(--hover-color);
+/* VC Connected */
+[class*="contentSelectedVoice-"],
+[class*="contentConnectedVoice-"] {
+	border-radius: var(--voice-channel-border-radius);
+	background-color: var(--connected-voice-channel-color) !important;
+}
+/* VC User Hovered */
+[class*="draggable-"]>[class*="voiceUser-"][class*="userSmall-"][class*="userHovered-"] {
+	background-color: var(--voice-channel-user-hover-color) !important;
+	border-radius: var(--voice-channel-user-hover-border-radius) !important;
 }
 
-.wrapperDefaultText-3M3F1R.wrapper-fDmxzK {
-		background-color: rgba(207, 113, 118, 0);
+/* VC hovered */
+[class*="wrapperHoveredVoice-"]:hover>[class*="content-"] {
+	border-radius: var(--voice-channel-hover-border-radius) !important;
+	background-color: var(--voice-channel-hover-color) !important;
+}
+
+/* テキストチャンネル */
+[class*="wrapperSelectedText-"]>[class*="content-"] {
+	border-top-left-radius: var(--text-channel-border-radius) !important;
+	border-top-right-radius: var(--text-channel-border-radius) !important;
+	border-bottom-left-radius: var(--text-channel-border-radius) !important;
+	border-bottom-right-radius: var(--text-channel-border-radius) !important;
+}
+
+/* チャンネルにカーソルを合わした際 */
+[class*="wrapperHoveredText-"]:hover>[class*="content-"] {
+	border-top-left-radius: var(--text-channel-border-radius) !important;
+	border-top-right-radius: var(--text-channel-border-radius) !important;
+	border-bottom-left-radius: var(--text-channel-border-radius) !important;
+	border-bottom-right-radius: var(--text-channel-border-radius) !important;
+	background-color: var(--text-channel-hover-color);
 }
 
 
@@ -958,8 +1079,8 @@ background:rgba(0,0,0,0.7) !important;
 }
 
 .container-2OU7Cz,
-.theme-dark .title-qAcLxz,
-.theme-dark .chat-3bRxxu form,
+.title-qAcLxz,
+.chat-3bRxxu form,
 .channels-3g2vYe,
 .vertical-3X17r5 {
 		background-color: var(--invisible-color) !important;
@@ -972,7 +1093,7 @@ background:rgba(0,0,0,0.7) !important;
 /* サーバーチャンネルタイトル */
 
 .title-wrap,
-titleWrapper-3Vi_wz.theme-dark {
+titleWrapper-3Vi_wz{
 		background: var(--background-cover);
 }
 
@@ -997,17 +1118,16 @@ titleWrapper-3Vi_wz.theme-dark {
 	background: var(--background-cover);
 }
 */
-.search-bar {
+[class*="channels-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"]>[class*="privateChannels-"]>[class*="searchBar-"]>div {
 		background: var(--background-cover);
 }
 
-.channel.private:hover
-{
+[class*="channels-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"]>[class*="privateChannels-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerThemed-"][class*="themeGhostHairline-"][class*="scrollerFade-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"]>[class*="channel-"]:hover>a {
 	background: var(--hover-color);
 	border-radius: 4px;
 }
 
-.channel.selected.private
+[class*="channels-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"]>[class*="privateChannels-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerThemed-"][class*="themeGhostHairline-"][class*="scrollerFade-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"]>[class*="channel-"][class*="selected-"]>a
 {
 	background: var(--selected-color);
 	border-radius: 4px
@@ -1048,16 +1168,22 @@ titleWrapper-3Vi_wz.theme-dark {
 
 /* アカウント部分 */
 
-.container-iksrDt,
-.container-2Thooq,
-.account {
+[class*="channels-"][class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(2) {
 		border-top: none !important;
 		width: 240px;
 		margin-left: 0px;
-		background: var(--accent-color) !important;
+		background: var(--my-account-background) !important;
 		height: 45px;
 		box-sizing: border-box;
 		border-bottom: 0px solid hsla(0, 6%, 90%, .1) !important;
+}
+
+[class*="channels-"][class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(2)>[class*="accountDetails-"]>.username {
+    color: var(--my-account-NAME-text-color) !important;
+}
+
+[class*="channels-"][class*="vertical-"][class*="flex-"][class*="directionColumn"]>div:nth-child(2)>[class*="accountDetails-"]>.discriminator {
+    color: var(--my-account-TAG-text-color) !important;
 }
 
 /* サーバーヘッダ・チャンネル一覧 */
@@ -1074,10 +1200,15 @@ titleWrapper-3Vi_wz.theme-dark {
 }
 */
 
-/* ポップアップメニュー */
-.menu-Sp6bN1 {
-	background: var(--menu-color) !important;
+/* ポップアップメニューなど */
+[class*="menu-"] {
+	background: var(--dialog-color) !important;
 }
+
+[class*="menu-"]>[class*="item-"]:hover {
+	background: var(--dialog-hover-color);
+}
+
 
 
 /* チャンネルのテキストサイズ */
@@ -1110,26 +1241,6 @@ titleWrapper-3Vi_wz.theme-dark {
 		margin-top: 5px;
 		color: #656565 !important;
 }
-
-
-/* ??? */
-
-
-/*
-.chat .divider>span {
-	background-color:transparent !important;
-	font-size:12px;
-	text-transform:uppercase;
-	margin:10px 0px;
-	border-radius: 0px;
-	opacity: 1;
-    padding: 8px 15px;
-    line-height: 1px;
-    width: 100%;
-    text-align: center;
-}
-*/
-
 
 /* チャンネルメンバーの設定 */
 
@@ -1182,30 +1293,6 @@ titleWrapper-3Vi_wz.theme-dark {
 		border-bottom: 1px solid hsla(0, 0%, 100%, .0) !important;
 }
 
-
-
-/*
-.content-2mSKOj {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 32px;
-  padding: 0 8px;
-  margin: 1px 0 1px 8px;
-  border-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden
-}
-*/
-
 .wrapper-fDmxzK {
 		height: 34px;
 		overflow: hidden;
@@ -1228,23 +1315,23 @@ font-size: 13.2px;
 
 /* h4 タイトル */
 
-.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.title-2BxgL2 {
+[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="title-"] {
 	font-size: 0px;
 }
 
-.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.title-2BxgL2:before {
+[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="title-"]:before {
 	font-size: 17px;
-	content: "テキストチャンネルがありません!";
+	content: "テキストチャンネルがないようです :(";
 }
 
 
 /* div 説明 */
 
-.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.text-GwUZgS.margin-top-8 {
+[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="text-"] {
 	font-size: 0px;
 }
 
-.noChannel-Z1DQK7>.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.wrapper-r-6rrt>.flexChild-faoVW3>.text-GwUZgS.margin-top-8:before {
+[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="text-"]:before {
 	font-size: 14px;
 	content: "どうやら奇妙な場所に来てしまったようですね。テキストチャンネルを読むための権限がない、または、このサーバーにはテキストチャンネルが存在しません。";
 }
@@ -1275,11 +1362,11 @@ font-size: 13.2px;
 
 /* NSFW タイトル日本語化 (NSFW Channel -> 成人向けのチャンネルです！ */
 
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.title-SL0Wts.margin-bottom-8 {
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="title-"][class*="marginBottom8-"] {
 	font-size: 0px;
 }
 
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.title-SL0Wts.margin-bottom-8:before {
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="title-"][class*="marginBottom8-"]:before {
 	font-size: 24px;
 	content: "成人向けのチャンネルです！";
 }
@@ -1287,13 +1374,11 @@ font-size: 13.2px;
 
 /* NSFW コメント日本語化 */
 
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>
-
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.description-3t0KC1.margin-bottom-20 {
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="description-"][class*="marginBottom20-"] {
 	font-size: 0px;
 }
 
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.description-3t0KC1.margin-bottom-20:before {
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="description-"][class*="marginBottom20-"]:before {
 	font-size: 16px;
 	content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを開きますか？";
 }
@@ -1301,10 +1386,33 @@ font-size: 13.2px;
 
 /* NSFW ボタン日本語化 */
 
+/* 新 */
 
-/* 旧: .contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM */
+/* ここから 選択:[はい] */
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookFilled-"][class*="actionRed-"][class*="sizeLarge-"][class*="grow-"]>[class*="contents-"] {
+	display: none;
+	font-size: 0px;
+}
 
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN>.contents-18-Yxp,
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookFilled-"][class*="actionRed-"][class*="sizeLarge-"][class*="grow-"]::before {
+	font-size: 14px;
+	content: "開く";
+}
+
+
+/* ここから 選択:[いいえ] */
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookOutlined-"][class*="colorPrimary-"][class*="sizeLarge-"][class*="grow-"]>[class*="contents-"] {
+	display: none;
+	font-size: 0px;
+}
+
+[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookOutlined-"][class*="colorPrimary-"][class*="sizeLarge-"][class*="grow-"]::before {
+	font-size: 14px;
+	content: "メインチャンネルに戻る";
+}
+
+/* 旧: 
+
 .flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN>.contexts-18-Yxp {
 	position: fixed;
 	font-size: 0px;
@@ -1315,8 +1423,6 @@ font-size: 13.2px;
 	width: 50px !important;
 }
 
-
-/* 旧: .contentsFilled-3M8HCx.contents-4L4hQM:before -> いろんなボタンがバグるので変更*/
 
 .flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN:before {
 	font-size: 14px;
@@ -1331,6 +1437,8 @@ font-size: 13.2px;
 	font-size: 14px;
 	content: "いいえ(開かない)";
 }
+
+*/
 
 /* Loading / 接続失敗 */
 
@@ -1379,47 +1487,83 @@ font-size: 13.2px;
 
 /* 設定@アイコン */
 .ui-tab-bar-item,
-.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p {
+/* .itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p */
+/*
+
+未選択
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]
+
+選択済み
+[class*="itemSelected-"][class*="item-"][class*="selected-"]
+
+*/
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"] {
 	font-size: 13px !important;
 }
 
 .ui-tab-bar-item.selected,
-.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha {
+[class*="itemSelected-"][class*="item-"][class*="selected-"] {
 	font-size: 16px !important;
 }
 
 /* 文字がはみ出る設定項目の文字サイズ変更((選択時)) */
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(3) {
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"][class*="selected-"]:nth-child(3) {
 	font-size: 14.9px !important;
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(4) {
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"][class*="selected-"]:nth-child(4) {
 	font-size: 13.1px !important;
 }
 
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(23),
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"].selected-3s45Ha:nth-child(22) {
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"][class*="selected-"]:nth-child(23),
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"][class*="selected-"]:nth-child(22) {
 	font-size: 14.34px !important;
 }
 
 /* 設定日本語化 */
-.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10) {
+[class*="itemSelected-"][class*="item-"][class*="selected-"]:nth-child(12),
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:nth-child(12) {
 	font-size: 0px !important;
 	height: 32px;
 }
-.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha:nth-child(10),
-.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10) {
-	font-size: 0px !important;
-	height: 32px;
-}
-.itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p:nth-child(10)::before {
+
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:nth-child(12)::before {
 	font-size: 13px;
 	content: "マイク & ビデオ";
 }
-
-.itemSelected-1qLhcL.item-PXvHYJ.selected-3s45Ha:nth-child(10)::before {
+[class*="itemSelected-"][class*="item-"][class*="selected-"]:nth-child(12)::before {
 	font-size: 16px;
 	content: "マイク & ビデオ";
+}
+
+[class*="itemSelected-"][class*="item-"][class*="selected-"]:nth-child(16),
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:nth-child(16) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:nth-child(16)::before {
+	font-size: 13px;
+	content: "プレイ中のゲーム";
+}
+[class*="itemSelected-"][class*="item-"][class*="selected-"]:nth-child(16)::before {
+	font-size: 16px;
+	content: "プレイ中のゲーム";
+}
+
+[class*="itemSelected-"][class*="item-"][class*="selected-"]:nth-child(18),
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:nth-child(18) {
+	font-size: 0px !important;
+	height: 32px;
+}
+
+[class*="itemDefault-"][class*="item-"][class*="notSelected-"]:nth-child(18)::before {
+	font-size: 13px;
+	content: "ゲームライブラリ";
+}
+[class*="itemSelected-"][class*="item-"][class*="selected-"]:nth-child(18)::before {
+	font-size: 16px;
+	content: "ゲームライブラリ";
 }
 
 /* BD 日本語化 */
@@ -1561,96 +1705,122 @@ font-size: 13.2px;
 	color: white;
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(2)::after {
+/* マイアカウント */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(2)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_person_white_24px.svg)
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(3)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(9)::after {
+/* プライバシー・安全 */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(3)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_security_white_24px.svg);
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(4)::after {
+/* 連携済みアプリケーション */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(4)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_apps_white_24px.svg)
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(5)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(9)::after {
+/* 接続 */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(5)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_link_white_24px.svg)
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(6)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(7)::after {
+/* 請求 */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(6)::after {
 	background: url(https://cdn.p1kt.net/discord-theme/round_attach_money_white_24dp.png);
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(8)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(9)::after {
+/* Discord Nitro */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(8)::after {
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/speed.svg)
 }
-
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(9)::after,
-[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="itemDefault"]:nth-child(10)::after {
+/* HypeSquad */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(9)::after {
 	background: url(https://cdn.p1kt.net/discord-theme/hypesquad-white.png) no-repeat;
 	background-position: 0%;
 	background-size: 24px;
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(12)::after {
+/* マイク&ビデオ */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(12)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_mic_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after {
+/* オーバーレイ */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(13)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_desktop_windows_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(14)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(13)::after {
+/* 通知 */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(14)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(13)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_notifications_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(15)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(14)::after {
+/* キー割り当て */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(15)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(14)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_keyboard_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(16)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(15)::after {
+/* プレイ中のゲーム */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(16)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(15)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_games_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(17)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(16)::after {
+/* Activity Feed */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(17)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(16)::after {
+    background: url(https://cdn.p1kt.net/material-icons/white/1x/baseline_dashboard_white_24dp.png)
+}
+/* ゲームライブラリ */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(18)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(17)::after {
+    background: url(https://cdn.p1kt.net/material-icons/white/1x/baseline_library_books_white_24dp.png)
+}
+/* テキスト・画像 */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(19)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(18)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_chat_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(18)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(17)::after {
-	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_camera_white_24px.svg)
+/* テーマ */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(20)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(19)::after {
+	background: url(https://cdn.p1kt.net/material-icons/white/1x/baseline_assistant_white_24dp.png)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(19)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(18)::after {
+/* 配信モード */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(21)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(20)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_videocam_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(20)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(19)::after {
+/* 言語 */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(22)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(21)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_language_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(21)::after {
+/* Windows設定 */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(23)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_laptop_windows_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(23)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(22)::after {
+
+/* 変更履歴 */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(25)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(22)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_history_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(24)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(23)::after {
+/* Experiments */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(26)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(23)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_warning_white_24px.svg)
 }
-.platform-win [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(25)::after,
-.platform-osx [layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="item"]:nth-child(24)::after {
+/* Developer Options */
+.platform-win [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(27)::after,
+.platform-osx [layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item"]:nth-child(24)::after {
 	background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_developer_mode_white_24px.svg)
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller .sidebar>*>[class*="itemDefault"]::after {
+/* ログアウト */
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="itemDefault"]::after {
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/exit.svg)
 }
 
 /* サーバー設定 */
-.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(2) {
+[class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"]:nth-child(2) {
 	padding-left: 48px;
 }
 
-.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(2)::after,
-[class="layer-3QrUeG"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:nth-child(1)::after {
+[class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"]:nth-child(2)::after,
+[class="layer-3QrUeG"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"]:nth-child(1)::after {
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/info.svg);
 	content: "";
     position: absolute;
@@ -1662,11 +1832,11 @@ font-size: 13.2px;
     -webkit-transition: all .15s ease-in-out;
 	transition: all .15s ease-in-out;
 }
-.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:last-child {
+[class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"]:last-child {
 	padding-left: 48px;
 }
 
-.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]:last-child::after {
+[class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"]:last-child::after {
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/delete.svg);
 	content: "";
     position: absolute;
@@ -1700,11 +1870,11 @@ font-size: 13.2px;
 	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/palette.svg)
 }
 
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"],
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"],
 #bd-settings-sidebar .ui-tab-bar-item {
     padding-left: 48px
 }
-[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller [class*="item"]::after,
+[layer-id="user-settings"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item"]::after,
 #bd-settings-sidebar .ui-tab-bar-item::after {
     content: "";
     position: absolute;
