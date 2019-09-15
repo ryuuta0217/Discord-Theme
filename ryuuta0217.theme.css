@@ -1,186 +1,284 @@
-/*//META{"name":"ryuuta0217 Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
-/*メインテーマをインポート*/
-@import url("https://cdn.p1kt.net/discord-theme/src.css");
-/* 背景指定/Backgrounds */
-
-[class*="app-"] {
-	/* https://と続いているところに背景画像のURLを貼ろう 1920x1080の画像を推奨しています */
-	background-image: url("https://example.com/background-image.png");
-	background-size: cover;
-	background-position: center;
-}
-
+/*//META{"name":"Discord-Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
 /*
-色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで!
-Twitter: twitter.com/p1kt2
-Discord: discord.gg/By9ncpX
-指定方法
-アクセントカラー例
---accent-color: rgba(R, G, B, A);
-R,G,B はggるなりなんなりして出してください
-Aは透明度です。
-Visual Studio Codeなどのエディターを使用すると、GUIで色指定ができて便利です。
+ * 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで!
+ * Twitter: twitter.com/p1kt2
+ * Discord: discord.gg/8AsqvhN
+ * 指定方法
+ * アクセントカラー例
+ * --accent-color: rgba(R, G, B, A);
+ * R,G,B はggるなりなんなりして出してください
+ * Aは透明度です。
+ * Visual Studio Codeなどのエディターを使用すると、GUIで色指定ができて便利です。
 */
 :root {
-/* フォント指定 - PCにインストールされているフォント名を使用してください */
---font-name: ほにゃ字Re;
+	/* 設定を無効化する場合は、url("https://...")などを消して、 ---設定名: ; になるようにしてください。 */
+	/* [CS] (Currently Supported)は現在のバージョンで使用可能かどうかを表しています */
+	/* 背景画像関連 */
 
-/* メイン色(今のところ使用箇所なし) */
---main-color: rgba(37, 172, 232, 1);
+	/* [CS] 背景画像URL */
+	--background-image-url: url("https://cdn.discordapp.com/attachments/569512609284620299/595892109941145609/senki-zesshou-symphogear.jpg");
+	
+		/* [CS] 背景カバー */
+		--background-cover: rgba(0, 0, 0, 0.7);
 
-/* アクセントカラー (左下アカウント表示部分などに使用) */
---accent-color: rgba(207, 113, 118, 1);
+		/* [CS] 背景画像の表示サイズ(cover: 画面に合わせる) */
+		--background-size: cover;
 
-/* 背景カバー */
---background-cover: rgba(0, 0, 0, 0.6);
+		/* [CS] 背景画像の表示位置(center: 真ん中に表示) */
+		--background-position: center;
+	
+	/* [CS] 設定画面: 背景画像URL */
+	--Sbackground-image-url: url("https://cdn.discordapp.com/attachments/569512609284620299/595892344197480450/1454860845.jpg");
+		/* [CS] 設定画面: 背景カバー */
+		--Sbackground-cover: rgba(0, 0, 0, 0.75);
+	
+		/* [CS] 設定画面: 表示サイズ */
+		--Sbackground-size: cover;
+	
+		/* [CS] 設定画面: 表示位置 */
+		--Sbackground-position: center;
 
-/* サーバーチャンネル一覧の背景部、カバー */
---channel-background: rgba(0, 0, 0, 0.45);
+	/* [CS] サーバー設定画面: 背景画像URL */
+	--GSbackground-image-url: url("https://cdn.discordapp.com/attachments/608931668945928252/621981255327547404/unknown.png");
+		/* [CS] サーバー設定画面: 背景カバー */
+		--GSbackground-cover: rgba(0, 0, 0, 0.6);
 
-/* スクロールバーの色 */
---scroll-bar-color: rgba(30, 33, 36, 1);
+		/* [CS] サーバー設定画面: 表示サイズ */
+		--GSbackground-size: cover;
 
-/* スクロールバーの背景色 */
---scroll-bar-background-color: rgba(0, 0, 0, 0);
+		/* [CS] サーバー設定画面: 表示位置 */
+		--GSbackground-position: center;
 
-/* 背景色 */
---background-color: rgba(0, 0, 0, 0.6);
+	/* [CS] アップロード画面など: 背景画像URL */
+	--Ubackground-image-url: url("https://conoha.mikumo.com/wp-content/themes/conohamikumo/images/wallpaper/2019_spring/1280_800.jpg");
+		/* [CS] アップロード画面など: 背景画像透過度 */
+		--Ubackground-opacity: 1;
 
-/* 選択済みの色 */
---selected-color: rgba(207, 113, 118, .6);
+		/* [CS] アップロード画面など: 背景カバー */
+		--Ubackground-cover: rgba(0, 0, 0, 0.4);
 
-/* カーソルを合わせた時の色 */
---hover-color: rgba(207, 113, 118, 0.2);
+		/* [CS] アップロード画面など: 表示サイズ */
+		--Ubackground-size: cover;
 
-/* 未読色 */
---g-unread-badge-color: rgba(207, 113, 118, 0.7);
-/* 開いているサーバーの色 */
---g-selected-badge-color: rgba(207, 113, 118, 1);
+		/* [CS] アップロード画面など: 表示位置 */
+		--Ubackground-position: center;
 
-/* ツールチップ(カーソルを合わせた時などに横に出るポップアップのようなもの)背景色 */
---tooltip-background: rgba(0, 0, 0, 0.5);
 
-/* ボイチャ接続中色 */
---vc-color: rgba(207, 113, 118, 0.97);
+	/* [CS] フォント指定 - PCにインストールされているフォント名を使用してください */
+	--font-name: Noto Sans;
 
-/* 文字色 */
---text-color: rgba(255,255,255,0.87);
+	/* 実際には使用されません。VSCodeなどでの色調整用です。 */
+	/* 実際に使用するには、--accent-colorに入力してください。 */
+	--rgb-colorpalette: rgb(99, 197, 99);
+	/* [CS] アクセントカラー */
+	/* アクセントカラーは、様々な場所で使用されています。 */
+	/* 例: アカウント表示部、開いているチャンネル、入力欄、マークダウンなど */
+	/* しかし、個々の設定を変更することで個別に変更できます。 */
+	/* アカウント表示部を例にすると */
+	/* --my-account-background: rgba(var(--accent-color), 0.7); */
+	/* これを のvar(--accent-color)というところで、赤、緑、青の三色を下から呼び出しています。 */
+	/* ここを任意に変更すれば個々に変更することができます。 */
+	/* 例: --my-account-background: rgba(92, 220, 252, 0.5); */
+	--accent-color: 100, 197, 100;
 
-/* チャット履歴のタイムスタンプの文字の色 */
---timestamp-color: rgba(255,255,255,.6);
+	/* [CS] スクロールバーの色 */
+	--scroll-bar-color: rgba(30, 33, 36, 1);
+		/* [CS] スクロールバーのふち */
+		--scroll-bar-border: 4px solid rgba(255, 255, 255, 0);
 
-/* Markdown pre記法(``` で囲う) の色 */
---markdown-background: rgba(207, 113, 118, 0.4);
+	/* [CS] スクロールバーの背景色 */
+	--scroll-bar-background-color: var(--invisible-color);
+		/* [CS] スクロールバーの背景のふち */
+		--scroll-bar-background-border: 1px solid rgba(255, 255, 255, 0);
 
-/* 完全透明 */
---invisible-color: rgba(0,0,0,0);
---transparent-color: transparent;
+	/* [CS] 選択済みの色 */
+	--selected-color: rgba(var(--accent-color), 0.6);
 
-/* 新しいメッセージ バー */
---new-message-bar: rgba(269, 56, 39, 1);
+	/* [CS] カーソルを合わせた時の色 */
+	--hover-color: rgba(var(--accent-color), 0.2);
 
-/* ユーザー情報(ポップアップ背景色) */
-/* 簡易情報 */
---user-popup-background: rgba(0,0,0,0.6);
-	/* 文字色 */
-	--user-popup-text-color: white;
+	/* [CS] 未読色 */
+	--g-unread-pill-color: rgba(var(--accent-color), 0.7);
+	/* [CS] 開いているサーバーの色 */
+	--g-selected-pill-color: rgba(var(--accent-color), 1);
+	/* [CS] サーバーアイコンにカーソルを合わせたときの色 */
+	--g-hovered-pill-color: rgba(var(--accent-color), 1);
 
-/* 詳細情報 */
---user-popup-details-background: rgba(0,0,0,0.6);
-	/* 文字色 */
-	--user-popup-details-text-color: white;
+	/* [CS] ツールチップ(カーソルを合わせた時などに横に出るポップアップのようなもの)背景色 */
+	--tooltip-background: rgba(var(--accent-color));
 
-/* 文字入力部分 */
---input: rgba(0, 0, 0, 0.4);
+	/* テキストチャンネル関連 */
+	--text-channel: ;
+		/* [CS] 開いているテキストチャンネルの色 */
+		--text-channel-selected-color: rgba(var(--accent-color), 0.9);
 
-/* メッセージ入力欄: 自動補完ポップアップ背景色 */
---autocomplete-popup: rgba(0, 0, 0, 0.8);
-	/* 文字色 (rgbaでも指定可能です)*/
-	--autocomplete-popup-text: white;
+		/* [CS] テキストチャンネルにカーソルを合わせた時の色 */
+		--text-channel-hover-color: rgba(var(--accent-color), 0.5);
 
-/* ゲームタブ カード背景 (旧 Activity) */
---activity-card-background: rgba(0, 0, 0, 0.7);
+		/* [CS] 選択済みのテキストチャンネルの角の丸み具合 */
+		--text-channel-border-radius: 5px;
 
-/* メニュー背景色(右クリポップアップなど) */
---menu-color: rgba(0, 0, 0, 0.7);
-/* メニューアイテムにカーソルを合わせた時の色 */
---menu-hover-color: rgba(197, 35, 130, 0.5);
+		/* [CS] 未選択のテキストチャンネルにカーソルを合わせたときの角の丸み具合 */
+		/* デフォルトは var(--text-channel-border-radius) つまり選択済みのテキストチャンネルと同じ */
+		--text-channel-hover-border-radius: var(--text-channel-border-radius);
 
-/* トースト表示の表示位置(下から Xpx で指定) */
---toast-position: 0px;
+		/* [CS] チャンネル一覧 横長さ */
+		--text-channel-list-width: 240px;
 
-/* メッセージ検索関連 */
+	/* ボイスチャンネル類 */
+	--voice-channel: ;
+		/* [CS] 接続しているボイスチャンネルの色 */
+		--connected-voice-channel-color: rgba(var(--accent-color), 0.6);
 
-/* 候補表示[自動補完]背景色 */
---searchPopout-background: rgba(0, 0, 0, 0.8);
+		/* [CS] 接続しているボイスチャンネルの角の丸み具合 */
+		--voice-channel-border-radius: var(--text-channel-border-radius);
 
-/* 候補表示[自動補完]の候補にホバーした(カーソルを合わせた)ときの色 */
---searchPopout-background-hovered: rgba(207, 113, 118, 0.2);
+		/* [CS] ボイスチャンネルにいるユーザーにカーソルを合わせた時の色 */
+		--voice-channel-user-hover-color: rgba(var(--accent-color), 0.5);
 
-/* 候補表示[自動補完]の候補を選択したときの色 (ホバーしたときと同じ値にすることを推奨) */
---searchPopout-background-selected: rgba(207, 113, 118, 0.2);
+		/* [CS] ボイスチャンネルにいるユーザーにカーソルを合わせた時の角の丸み具合 */
+		--voice-channel-user-hover-border-radius: 4px;
 
-/* 検索語句表示 + キー表示 背景色 */
---searchPopout-query-background: rgba(207, 113, 118, 0.3);
+	/* [CS] 文字色 */
+	--text-color: rgba(255,255,255,0.87);
 
-/* 文字色系 (rgbaも使用可能です)*/
-/* 候補表示セクションタイトル */
---searchPopout-header-text-color: white;
+	/* [CS] チャット履歴のタイムスタンプの文字の色 */
+	--timestamp-color: rgba(255,255,255,.6);
 
-/* 候補表示フィルタータイプ */
---searchPopout-filter-text-color: white;
+	/* [CS] Markdown pre記法(``` で囲う) の色 */
+	--markdown-background: rgba(var(--accent-color), 0.4);
+	--markdown-border-radius: 5px;
 
-/* 候補表示フィルタータイプの説明 */
---searchPopout-answer-text-color: gray;
+	/* 完全透明 変更しないでください */
+	--invisible-color: rgba(0,0,0,0);
+	--transparent-color: transparent;
 
-/* その他(検索履歴など) */
---searchPopout-generic-text-color: white;
+	/* [CS] 新しいメッセージ バー */
+	--new-message-bar: rgba(var(--accent-color), 1);
 
-/* アップデート通知ポップアウト */
---update-notification-popout-background: rgba(0, 0, 0, 0.5);
-	/* 文字色 */
-	--update-notification-popout-text-color: white;
-	/* 文字色(リンク) */
-	--update-notification-popout-link-text-color: aqua;
-}
+	/* ユーザー情報(ポップアップ背景色) */
+	/* [CS] 簡易情報 */
+	--user-popup-background: rgba(var(--accent-color), 0.5);
+		/* [CS] 文字色 */
+		--user-popup-text-color: white;
 
-/* 追加オプション */
-/* !! オプションを有効にするには、「.」の前にある /* を外してください !! */
+	/* [CS] 詳細情報 */
+	--user-popup-details-background: rgba(var(--accent-color), 0.8);
+		/* [*CS] 文字色 */
+		--user-popup-details-text-color: white;
+	
+	/* [CS] 自分のアカウント表示部 */
+	--my-account-background: rgba(var(--accent-color), 0.7);
+		/* [CS] 横長さ デフォルトではテキストチャンネル一覧の横長さに対応*/
+		--my-account-width: var(--text-channel-list-width);
+		/* [CS] 色: 名前 */
+		--my-account-NAME-text-color: white;
+		/* [CS] 色: タグ */
+		--my-account-TAG-text-color: #c9cfdb;
 
-/* 共通 追加オプション - アップロード画面/ポップアップの背景変更 */
-/* https://example.com... を削除して、画像のURLを貼ろう 1920x1080の画像を推奨しています */
+	/* [*CS] 文字入力部分 */
+	--input: rgba(0, 0, 0, 0.4);
+		/* [CS] "チャット"文字入力部分 */
+		--input-box-color: rgba(var(--accent-color), 0.4);
 
-/*
-opacity : 透明度です。 0から1で指定します。(0.1, 0.2, 0.3 など)
-background:  背景を指定します。 https://example.com で始まっているURLを
-ほかのURL(直リンクのみ使用可)に置き換えることでアップロード画面の背景を設定します。
-*/
-/*[class*="backdrop-"] {
-		opacity:1 !important;
-		background: url("https://example.com/upload-background-image.png") !important;
-		background-size: cover !important;
-		background-position: center !important;
-		z-index: 9100;
-}
-/* 共通 追加オプション - 時計(Clockプラグインを使用している時にのみ) */
-/* Clockプラグイン: https://raw.githubusercontent.com/Jiiks/BetterDiscordApp/master/Plugins/clock.plugin.js */
-/* 右クリックして名前を付けて保存をしたあと、 BetterDiscord/Plugins にコピー&ペーストしてください */
-/*#clockPluginClock
-{
-position: relative;
-top: 25px;
-left: 55px !important;
-background:transparent !important;
-font-size: 12px;
-z-index: 10000;
-}
-/* MacOS向け 追加オプション - ツールバーボタン(閉じる、拡大、最小化など) */
-/*[class*="typeMacOS-"][class*="titleBar-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyBetween-"][class*="alignCenter-"][class*="unfocused-"],
-.typeMacOS-3IiWed.titleBar-3_fDwJ.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyBetween-1d1Hto.alignCenter-3VxkQP
-{
-background:rgba(0,0,0,0.7) !important;
-width: 74px;
+	/* [CS] メッセージ入力欄: 自動補完ポップアップ背景色 */
+	--autocomplete-popup: rgba(0, 0, 0, 0.8);
+		/* [CS] 補完候補の文字色 */
+		--autocomplete-popup-text-color: white;
+		/* [CS] 補完候補の説明の文字色 */
+		--autocomplete-popup-description-text-color: #72767d;
+
+	/* [CS] メニュー背景色(右クリポップアップなど) */
+	--menu-color: rgba(0, 0, 0, 0.7);
+		/* [CS] メニューアイテムにカーソルを合わせた時の色 */
+		--menu-hover-color: rgba(var(--accent-color), 0.5);
+		/* [CS] メニューアイテム(サブメニューを表示するアイテム)にカーソルを合わせた時の色 */
+		/* デフォルトでは上のhover色を継承しています。 */
+		--menu-subMenu-item-hover-color: var(--menu-hover-color);
+		/* [CS] メニューアイテムの文字の色 */
+		--menu-item-text-color: #b9bbbe;
+		/* [CS] メニューアイテムの文字の色(危険な操作) */
+		--menu-item-danger-text-color: #f04747;
+		/* [CS] メニューアイテムのチェックボックスの色 */
+		--menu-checkBox-color: #7289da;
+		/* [CS] メニューアイテムのチェックボックスの淵の色(デフォルトは上を継承) */
+		--menu-checkBox-border-color: var(--menu-checkBox-color);
+		/* [CS] メニュースライドボックスのアクティブ色 */
+		--menu-slider-active-background: #7289da;
+		/* [CS] メニュースライドボックスの非アクティブ色 */
+		--menu-slider-notActive-background: #4f545c;
+		/* [CS] メニュースライドボックスのつまみ色 */
+		--menu-slider-circle-color: #ffffff;
+		/* [CS] メニュースライドボックスのつまみの淵色 */
+		--menu-slider-circle-border-color: var(--menu-slider-circle-color);
+
+	/* [CS] サブメニュー背景色(右クリポップアップメニューのサブメニューなど) */
+	/* 注意: デフォルトでは上のメニュー設定を継承しています。 */
+	--subMenu-color: var(--menu-color);
+		/* [CS] サブメニューアイテムにカーソルを合わせた時の色 */
+		--subMenu-hover-color: var(--menu-hover-color);
+		/* [CS] サブメニューアイテムの文字の色 */
+		--subMenu-item-text-color: var(--menu-item-text-color);
+		/* [CS] サブメニューアイテムの文字の色(危険な操作) */
+		--subMenu-item-danger-text-color: var(--menu-item-danger-text-color);
+		/* [CS] サブメニューアイテムのチェックボックスの色 */
+		--subMenu-checkBox-color: var(--menu-checkBox-color);
+		/* [CS] サブメニューアイテムのチェックボックスの淵の色 */
+		--subMenu-checkBox-border-color: var(--menu-checkBox-border-color);
+		/* [CS] サブメニュースライドボックスのアクティブ色 */
+		--subMenu-slider-active-background: var(--menu-slider-active-background);
+		/* [CS] サブメニュースライドボックスの非アクティブ色 */
+		--subMenu-slider-notActive-background: var(--menu-slider-notActive-background);
+		/* [CS] サブメニュースライドボックスのつまみ色 */
+		--subMenu-slider-circle-color: var(--menu-slider-circle-color);
+		/* [CS] サブメニュースライドボックスのつまみの淵色 */
+		--subMenu-slider-circle-border-color: var(--menu-slider-circle-border-color);
+
+	/* [?] ダイアログ表示(サーバーオプションポップアップなど) */
+	--dialog-color: rgba(0, 0, 0, 0.7);
+		--dialog-hover-color: aqua;
+
+	/* [CS] トースト表示の表示位置(下から Xpx で指定) */
+	--toast-position: 0px;
+	/* [CS] 絵文字(単体の大きいの)表示サイズ */
+	--big-emote-size: 64px;
+
+	/* メッセージ検索関連 */
+	/* [NS+] 候補表示[自動補完]背景色 */
+	--searchPopout-background: rgba(0, 0, 0, 0.8);
+		/* 候補表示[自動補完]の候補にホバーした(カーソルを合わせた)ときの色 */
+		--searchPopout-background-hovered: rgba(207, 113, 118, 0.2);
+
+		/* 候補表示[自動補完]の候補を選択したときの色 (ホバーしたときと同じ値にすることを推奨) */
+		--searchPopout-background-selected: rgba(207, 113, 118, 0.2);
+
+		/* 検索語句表示 + キー表示 背景色 */
+		--searchPopout-query-background: rgba(207, 113, 118, 0.3);
+
+		/* 文字色系 (rgbaも使用可能です)*/
+		/* 候補表示セクションタイトル */
+		--searchPopout-header-text-color: white;
+
+		/* 候補表示フィルタータイプ */
+		--searchPopout-filter-text-color: white;
+
+		/* 候補表示フィルタータイプの説明 */
+		--searchPopout-answer-text-color: gray;
+
+		/* その他(検索履歴など) */
+		--searchPopout-generic-text-color: white;
+
+	/* [CS] アップデート通知ポップアウト背景色 */
+	--update-notification-popout-background: rgba(0, 0, 0, 0.5);
+		/* [CS] 文字色 */
+		--update-notification-popout-text-color: white;
+		/* [CS] 文字色(リンク) */
+		--update-notification-popout-link-text-color: aqua;
+
+	/* [NS] ホームボタンアイコン */
+	--home-icon: url("https://media1.tenor.com/images/79f06d8e2363fe483a35f6a5b2839278/tenor.gif?itemid=10582565");
 }
 
 /* これより下は消さないでください */
 [class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after{content: "" !important;}
+:root {--core-version: "4.0";}
