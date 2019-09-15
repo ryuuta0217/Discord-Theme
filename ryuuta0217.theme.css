@@ -16,7 +16,7 @@
 	/* 背景画像関連 */
 
 	/* [CS] 背景画像URL */
-	--background-image-url: url("https://cdn.discordapp.com/attachments/569512609284620299/595892109941145609/senki-zesshou-symphogear.jpg");
+	--background-image-url: url("ここにURLを入力");
 	
 		/* [CS] 背景カバー */
 		--background-cover: rgba(0, 0, 0, 0.7);
@@ -28,7 +28,7 @@
 		--background-position: center;
 	
 	/* [CS] 設定画面: 背景画像URL */
-	--Sbackground-image-url: url("https://cdn.discordapp.com/attachments/569512609284620299/595892344197480450/1454860845.jpg");
+	--Sbackground-image-url: url("ここにURLを入力");
 		/* [CS] 設定画面: 背景カバー */
 		--Sbackground-cover: rgba(0, 0, 0, 0.75);
 	
@@ -39,7 +39,7 @@
 		--Sbackground-position: center;
 
 	/* [CS] サーバー設定画面: 背景画像URL */
-	--GSbackground-image-url: url("https://cdn.discordapp.com/attachments/608931668945928252/621981255327547404/unknown.png");
+	--GSbackground-image-url: url("ここにURLを入力");
 		/* [CS] サーバー設定画面: 背景カバー */
 		--GSbackground-cover: rgba(0, 0, 0, 0.6);
 
@@ -50,7 +50,7 @@
 		--GSbackground-position: center;
 
 	/* [CS] アップロード画面など: 背景画像URL */
-	--Ubackground-image-url: url("https://conoha.mikumo.com/wp-content/themes/conohamikumo/images/wallpaper/2019_spring/1280_800.jpg");
+	--Ubackground-image-url: url("ここにURLを入力");
 		/* [CS] アップロード画面など: 背景画像透過度 */
 		--Ubackground-opacity: 1;
 
@@ -65,7 +65,7 @@
 
 
 	/* [CS] フォント指定 - PCにインストールされているフォント名を使用してください */
-	--font-name: Noto Sans;
+	--font-name: メイリオ;
 
 	/* 実際には使用されません。VSCodeなどでの色調整用です。 */
 	/* 実際に使用するには、--accent-colorに入力してください。 */
