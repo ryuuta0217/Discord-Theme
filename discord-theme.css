@@ -1,6 +1,11 @@
 /* Start SorceCode */
 
 /* 背景画像設定 */
+/* 2019/10/11 アプデにより追加されたクラスのせいで背景が表示されない問題を解決 */
+[class*="bg-"] {
+	display: none !important;
+}
+
 #app-mount::before {
 	background: var(--background-image-url);
 	background-size: var(--background-size);
@@ -92,7 +97,7 @@ background: var(--background-cover);
 --load1: "テーマを読み込み中";
 --load2: "アセットを読み込み中";
 --load3: "✔ 読み込み完了";
---version: "6.1";
+--version: "6.2";
 --Ccore-version: "4.0";
 }
 
