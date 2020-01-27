@@ -1,8 +1,8 @@
 /*//META{"name":"Discord-Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
-@import url("https://cdn.p1kt.net/discord-theme/src.css");
+@import url("https://p1kt.net/discord-theme/src.css");
 /*
  * 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで!
- * Twitter: twitter.com/p1kt2
+ * Twitter: twitter.com/machingun_814
  * Discord: discord.gg/8AsqvhN
  * 指定方法
  * アクセントカラー例
@@ -66,7 +66,7 @@
 
 
 	/* [CS] フォント指定 - PCにインストールされているフォント名を使用してください */
-	--font-name: メイリオ;
+	--font-name: "メイリオ";
 
 	/* 実際には使用されません。VSCodeなどでの色調整用です。 */
 	/* 実際に使用するには、--accent-colorに入力してください。 */
@@ -279,7 +279,3 @@
 	/* [NS] ホームボタンアイコン */
 	--home-icon: url("https://media1.tenor.com/images/79f06d8e2363fe483a35f6a5b2839278/tenor.gif?itemid=10582565");
 }
-
-/* これより下は消さないでください */
-[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after{content: "" !important;}
-:root {--core-version: "4.0";}

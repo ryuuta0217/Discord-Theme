@@ -6,7 +6,7 @@
 	display: none !important;
 }
 
-#app-mount::before {
+[class*="appMount-"]::before {
 	background: var(--background-image-url);
 	background-size: var(--background-size);
 	background-position: var(--background-position);
@@ -97,7 +97,7 @@ background: var(--background-cover);
 --load1: "テーマを読み込み中";
 --load2: "アセットを読み込み中";
 --load3: "✔ 読み込み完了";
---version: "6.2";
+--version: "6.3";
 --Ccore-version: "4.0";
 }
 
@@ -961,7 +961,7 @@ content: "色盲の方がより分かりやすいように、Discordのいくつ
 }
 
 /* テキスト入力欄 */
-[class*="channelTextArea-"][class*="channelTextArea-"]>[class*="inner-"][class*="flex-"] {
+[class*="channelTextArea-"][class*="channelTextArea-"]>[class*="scrollableContainer-"] {
 background-color: var(--input-box-color) !important;
 }
 
