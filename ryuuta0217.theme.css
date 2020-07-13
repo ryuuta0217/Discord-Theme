@@ -279,3 +279,7 @@
 	/* [NS] ホームボタンアイコン */
 	--home-icon: url("https://media1.tenor.com/images/79f06d8e2363fe483a35f6a5b2839278/tenor.gif?itemid=10582565");
 }
+
+/* これより下は消さないでください */
+[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after{content: "" !important;}
+:root {--core-version: "4.0";}

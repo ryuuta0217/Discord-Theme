@@ -110,17 +110,6 @@ background-position: center;
 background-size: cover;
 }
 
-/* 更新警告 */
-[class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after {
-content: "アップデートが必要です!! | https://goo.gl/iBwgVW";
-position: absolute;
-right: 42%;
-top: 0.5%;
-font-size: 13px;
-font-weight: 900;
-color: red;
-}
-
 /* バージョン表示 */
 [class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::before {
 content: "|                                                                         |";
