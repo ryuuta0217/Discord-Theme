@@ -70,7 +70,7 @@ top: 2px;
 }
 /* 設定画面背景カバー */
 [aria-label="USER_SETTINGS"] [class*="sidebarRegion-"]>div,
-[aria-label="USER_SETTINGS"] [class*="contentRegion-"],
+[aria-label="USER_SETTINGS"] [class*="contentRegion-"]>div,
 [id="bd-settingspane-container"]>div {
 	background-color: var(--Sbackground-cover) !important;
 }
@@ -97,7 +97,7 @@ background: var(--background-cover);
 --load1: "テーマを読み込み中";
 --load2: "アセットを読み込み中";
 --load3: "✔ 読み込み完了";
---version: "6.3";
+--version: "6.4";
 --Ccore-version: "4.0";
 }
 
@@ -310,25 +310,28 @@ pre,
 .messages .divider:before,
 [class*="messagesWrapper-"],
 [class*="privateChannels-"],
+div[class*="contentRegion"], /* 設定画面右側透過 */
+[class*="messagesWrapper-"],
 [class*="applicationStore-"],
 [class*="activityFeed-"]>div,
 .search-bar.search-bar-light,
 .header-2BwW8b.size16-14cGz5,
 #bda-qem-favourite-container,
 .title-wrap:not(.search-bar),
-[class*="messagesWrapper-"], 
 .private-channels .search-bar,
 [class*="standardSidebarView-"],
+[class*="app-"]>[class*="app-"],
 .chat-3bRxxu>[class*="content-"],
+[class*=""],
 .channel-members-loading .member,
 .channel-members-loading .heading,
-[class*="app-"]>[class*="app-"],
 [class*="standardSidebarView-"] .content-region,
 [class*="searchPopout-"]>[class*="resultsGroup-"],
 [class*="standardSidebarView-"] [class*="sidebarRegion-"],
 [class*="noShadow-"][class*="popout-"][class*="popoutBottom-"],
 .emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
 [class*="layers-"]>[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"],
+div[class*="membersWrap-"]>div[class*="members-"]>div[class*="listContent-"], /* チャンネルメンバー一覧透過 */
 [class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="container-"],
 [class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="container-"]>[class*="container-"],
 [class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer"]>[class*="container-"]>[class*="guilds-"],
@@ -336,7 +339,7 @@ pre,
 [class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="scrollerStore-"][class*="systemPad-"]>[class*="table-"]>[class*="stickyHeader-"][class*="header-"][class*="row-"],
 [class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="spacer-"][class*="firefoxFixScrollFlex-"]>[class*="root-"],
 [class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="spacer-"][class*="firefoxFixScrollFlex-"]>[class*="container-"] {
-background: transparent !important;
+	background: transparent !important;
 }
 
 [class*="heroCarousel-"]>[class*="carouselContainer-"]>[class*="carouselItem-"]>[class*="itemBackground-"]>[class*="itemBackground-"] {
@@ -846,13 +849,13 @@ background:rgba(0,0,0,0.7) !important;
 
 /* スクロールバーの色等 */
 
-[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerWrap-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="messages-"]::-webkit-scrollbar-thumb {
+[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="scrollerWrap-"][class*="scrollerThemed"][class*="themedWithTrack"]>[class*="scroller-"][class*="messages-"][class*="scroller-"]::-webkit-scrollbar-thumb {
 	border: var(--scroll-bar-border) !important;
 	background-color: var(--scroll-bar-color) !important;
 	/*background-color: #03A9F4 !important;*/
 }
 
-[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="firefoxFixScrollFlex-"][class*="scrollerWrap-"]>[class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="systemPad-"][class*="messages-"]::-webkit-scrollbar-track-piece {
+[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="scrollerWrap-"][class*="scrollerThemed"][class*="themedWithTrack"]>[class*="scroller-"][class*="messages-"][class*="scroller-"]::-webkit-scrollbar-track-piece {
 	border: var(--scroll-bar-background-border) !important;
 	background-color: var(--scroll-bar-background-color) !important;
 }
@@ -1100,30 +1103,32 @@ background: var(--selected-color) !important;
 
 
 /* VC Connected */
-[class*="sidebar-"]>[class*="container-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="modeConnected-"]>[class*="content-"] {
-border-radius: var(--voice-channel-border-radius);
-background-color: var(--connected-voice-channel-color) !important;
+[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="wrapper-"][class*="modeConnected-"]>[class*="content"] {
+	border-radius: var(--voice-channel-border-radius);
+	background-color: var(--connected-voice-channel-color) !important;
 }
+
 /* VC User Hovered */
-[class*="draggable-"]>[class*="voiceUser-"][class*="userSmall-"][class*="userHovered-"] {
-background-color: var(--voice-channel-user-hover-color) !important;
-border-radius: var(--voice-channel-user-hover-border-radius) !important;
+[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="list-"][class*="list-"][class*="listDefault-"]>[class*="draggable-"]>[class*="voiceUser-"][class*="clickable-"][class*="userSmall-"]:hover {
+	background-color: var(--voice-channel-user-hover-color) !important;
+	border-radius: var(--voice-channel-user-hover-border-radius) !important;
 }
 
 /* テキストチャンネル */
-[class*="sidebar-"]>[class*="container-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[class*="containerDefault-"]>[class*="iconVisibility-"]>[class*="content-"] {
-border-top-left-radius: var(--text-channel-border-radius) !important;
-border-top-right-radius: var(--text-channel-border-radius) !important;
-border-bottom-left-radius: var(--text-channel-border-radius) !important;
-border-bottom-right-radius: var(--text-channel-border-radius) !important;
+[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="wrapper-"]>[class*="content-"] {
+	border-top-left-radius: var(--text-channel-border-radius) !important;
+	border-top-right-radius: var(--text-channel-border-radius) !important;
+	border-bottom-left-radius: var(--text-channel-border-radius) !important;
+	border-bottom-right-radius: var(--text-channel-border-radius) !important;
 }
 
-[class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer-"]>[class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="sidebar-"] {
+[class*="app-"]>[class*="app-"]>[class*="layers-"][class*="layers"]>[class*="layer-"][class*="baseLayer-"]>[class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="sidebar-"] {
 	width: var(--text-channel-list-width);
 }
 
 /* チャンネルにカーソルを合わした際 */
-[class*="sidebar-"]>[class*="container-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[class*="containerDefault-"]>[class*="iconVisibility-"]>[class*="content-"]:hover {
+[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="wrapper-"]:hover>[class*="content-"],
+[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="wrapper-"]>[class*="content-"]:hover {
 	border-top-left-radius: var(--text-channel-border-radius) !important;
 	border-top-right-radius: var(--text-channel-border-radius) !important;
 	border-bottom-left-radius: var(--text-channel-border-radius) !important;
@@ -1132,7 +1137,7 @@ border-bottom-right-radius: var(--text-channel-border-radius) !important;
 }
 
 /* 選択されたチャンネル */
-[class*="sidebar-"]>[class*="container-"]>[class*="scrollerWrap-"]>[class*="scroller-"]>[class*="containerDefault-"][class*="selected-"]>[class*="iconVisibility-"]>[class*="content-"] {
+[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"][class*="selected-"]>[class*="iconVisibility-"][class*="wrapper-"]>[class*="content-"] {
 	background-color: var(--text-channel-selected-color) !important;
 }
 
