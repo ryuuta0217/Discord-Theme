@@ -71,7 +71,7 @@
 	/* 実際には使用されません。VSCodeなどでの色調整用です。 */
 	/* 実際に使用するには、--accent-colorに入力してください。 */
 	--rgb-colorpalette: rgb(99, 197, 99);
-	
+
 	/* [CS] アクセントカラー */
 	/* アクセントカラーは、様々な場所で使用されています。 */
 	/* 例: アカウント表示部、開いているチャンネル、入力欄、マークダウンなど */
@@ -184,7 +184,7 @@
 		--input-box-color: rgba(var(--accent-color), 0.4);
 
 	/* [CS] メッセージ入力欄: 自動補完ポップアップ背景色 */
-	--autocomplete-popup: rgba(230, 15, 15, 0.8);
+	--autocomplete-popup: rgba(47, 49, 54, 0.8);
 		/* [CS] 補完候補の文字色 */
 		--autocomplete-popup-text-color: white;
 		/* [CS] 補完候補の説明の文字色 */
