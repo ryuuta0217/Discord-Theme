@@ -97,8 +97,8 @@ background: var(--background-cover);
 --load1: "テーマを読み込み中";
 --load2: "アセットを読み込み中";
 --load3: "✔ 読み込み完了";
---version: "6.4";
---Ccore-version: "4.0";
+--version: "6.4.1";
+--Ccore-version: "4.1";
 }
 
 /* ギルドリストトップ ボタンアイコン */
@@ -331,7 +331,7 @@ div[class*="contentRegion"], /* 設定画面右側透過 */
 [class*="noShadow-"][class*="popout-"][class*="popoutBottom-"],
 .emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
 [class*="layers-"]>[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"],
-div[class*="membersWrap-"]>div[class*="members-"]>div[class*="listContent-"], /* チャンネルメンバー一覧透過 */
+div[class*="membersWrap-"]>div[class*="members-"]>div[class*="content-"], /* チャンネルメンバー一覧透過 */
 [class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="container-"],
 [class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="container-"]>[class*="container-"],
 [class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer"]>[class*="container-"]>[class*="guilds-"],
@@ -463,17 +463,15 @@ background:rgba(255,255,255,0) !important;
 	background: var(--autocomplete-popup) !important;
 }
 
-[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[tabindex="0"][class*="autocompleteRowVertical-"][class*="autocompleteRow-"]>[class*="selector-"]>[class*="flex-"]>[class*="marginLeft8-"]:not([style*="color"]) {
+[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[class*="autocompleteRowVertical"][class*="autocompleteRow-"]>[class*="base-"][class*="selectable-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="directionRow-"][class*="justifyStart-"][class*="alignCenter-"][class*="noWrap-"][class*="content-"]>[class*="flexChild-"]>span[class*="marginLeft8-"] {
 	color: var(--autocomplete-popup-text-color) !important;
 }
 
-[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[tabindex="0"][class*="autocompleteRowVertical-"][class*="autocompleteRow-"]>[class*="selector-"]>[class*="flex-"]>[class*="flex-"]>[class*="description"],
-[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[tabindex="0"][class*="autocompleteRowVertical-"][class*="autocompleteRow-"]>[class*="selector-"]>[class*="flex-"]>[class*="description"] {
+[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[class*="autocompleteRowVertical"][class*="autocompleteRow-"]>[class*="base-"][class*="selectable-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="directionRow-"][class*="justifyStart-"][class*="alignCenter-"][class*="noWrap-"][class*="content-"]>[class*="description-"] {
 	color: var(--autocomplete-popup-description-text-color);
 }
 
-[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[tabindex="0"][class*="autocompleteRowVertical-"][class*="autocompleteRow-"]>[class*="selectorSelected-"],
-.da-autocomplete>.da-autocompleteInner>[tabindex="0"].da-autocompleteRowVertical.da-autocompleteRow>.da-selectorSelected {
+[class*="autocomplete-"][class*="autocomplete-"]>[class*="autocompleteInner-"]>[class*="autocompleteRowVertical"][class*="autocompleteRow-"]>[class*="base-"][class*="selectable-"][class*="selected-"] {
 	background: var(--hover-color) !important;
 }
 
@@ -849,13 +847,15 @@ background:rgba(0,0,0,0.7) !important;
 
 /* スクロールバーの色等 */
 
-[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="scrollerWrap-"][class*="scrollerThemed"][class*="themedWithTrack"]>[class*="scroller-"][class*="messages-"][class*="scroller-"]::-webkit-scrollbar-thumb {
+div[class*="messagesWrapper-"]>
+	div[class*="scroller-"][class*="auto-"][class*="scrollerBase-"][class*="disableScrollAnchor-"]::-webkit-scrollbar-thumb {
 	border: var(--scroll-bar-border) !important;
 	background-color: var(--scroll-bar-color) !important;
 	/*background-color: #03A9F4 !important;*/
 }
 
-[class*="messagesWrapper-"]>[class*="scrollerWrap-"][class*="scrollerWrap-"][class*="scrollerThemed"][class*="themedWithTrack"]>[class*="scroller-"][class*="messages-"][class*="scroller-"]::-webkit-scrollbar-track-piece {
+[class*="messagesWrapper-"]>
+	[class*="scroller-"][class*="auto-"][class*="scrollerBase-"][class*="disableScrollAnchor-"]::-webkit-scrollbar-track-piece {
 	border: var(--scroll-bar-background-border) !important;
 	background-color: var(--scroll-bar-background-color) !important;
 }
@@ -1127,8 +1127,20 @@ background: var(--selected-color) !important;
 }
 
 /* チャンネルにカーソルを合わした際 */
-[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="wrapper-"]:hover>[class*="content-"],
-[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"]>[class*="iconVisibility-"][class*="wrapper-"]>[class*="content-"]:hover {
+div[class*="sidebar-"]>
+	nav[class*="container-"]>
+		div[class*="scroller-"][class*="thin-"][class*="scrollerBase-"][class*="fade-"][id="channels"]>
+			div[class*="content-"]>
+				div[class*="containerDefault-"]>
+					div[class*="iconVisibility-"][class*="wrapper-"]:hover>
+						div[class*="content-"],
+div[class*="sidebar-"]>
+	nav[class*="container-"]>
+		div[class*="scroller-"][class*="thin-"][class*="scrollerBase-"][class*="fade-"][id="channels"]>
+			div[class*="content-"]>
+				div[class*="containerDefault-"]>
+					div[class*="iconVisibility-"][class*="wrapper-"]>
+						div[class*="content-"]:hover {
 	border-top-left-radius: var(--text-channel-border-radius) !important;
 	border-top-right-radius: var(--text-channel-border-radius) !important;
 	border-bottom-left-radius: var(--text-channel-border-radius) !important;
@@ -1137,7 +1149,13 @@ background: var(--selected-color) !important;
 }
 
 /* 選択されたチャンネル */
-[class*="sidebar-"]>[class*="container-"]>[class*="scroller-"][class*="thin-"][class*="scrollerBase"][class*="fade-"]>[class*="listContent-"]>[class*="containerDefault-"][class*="selected-"]>[class*="iconVisibility-"][class*="wrapper-"]>[class*="content-"] {
+div[class*="sidebar-"]>
+	nav[class*="container-"]>
+		div[class*="scroller-"][class*="thin-"][class*="scrollerBase-"][class*="fade-"][id="channels"]>
+			div[class*="content-"]>
+				div[class*="containerDefault-"][class*="selected-"]>
+					div[class*="iconVisibility-"][class*="wrapper-"][class*="modeSelected-"]>
+						div[class*="content-"] {
 	background-color: var(--text-channel-selected-color) !important;
 }
 
