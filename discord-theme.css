@@ -28,36 +28,31 @@
 	top: 0%;
 }
 
-/*  */
-[class*="appMount-"]>[data-no-focus-lock="true"]>div:nth-child(2)>[class*="backdrop-"] {
+/* アップロード画面 */
+[class*="appMount-"]>div>div[class*="backdrop-"] {
 	opacity: var(--Ubackground-opacity) !important;
 	background: var(--Ubackground-image-url) !important;
 	background-size: var(--Ubackground-size) !important;
 	background-position: var(--Ubackground-position) !important;
 }
 
-[class*="appMount-"]>[data-no-focus-lock="true"]>div:nth-child(2)>[class*="modal-"] {
+[class*="appMount-"]>div>div[class*="modal-"] {
 	padding: 0px !important;
 	background: var(--Ubackground-cover) !important;
 }
 
 /* 背景カバー */
-[class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer-"],
 [class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer-"]>[class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="sidebar-"],
 [class*="scroller-"] {
 	background: var(--transparent-color) !important;
 }
 
-[class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer-"], [class*="typeWindows-"] {
-	/*background: var(--background-cover) !important;*/
-}
-
 [class*="typeWindows-"] {
-margin-top: 0px !important;
+	margin-top: 0px !important;
 }
 
 [class*="winButton-"] {
-top: 2px;
+	top: 2px;
 }
 
 /* 設定画面背景 */
@@ -89,87 +84,83 @@ top: 2px;
 	background-color: var(--GSbackground-cover) !important;
 }
 
+/* チャンネル設定背景 */
+[class*="layers-"]>[aria-label="CHANNEL_SETTINGS"] {
+	position: fixed;
+	padding: 0px !important;
+
+	background-image: var(--CSbackground-image-url) !important;
+	background-size: var(--CSbackground-size) !important;
+	background-position: var(--CSbackground-position) !important;
+}
+
+[aria-label="CHANNEL_SETTINGS"] [class*="sidebarRegion-"]>div,
+[aria-label="CHANNEL_SETTINGS"] [class*="contentRegion-"] {
+	background-color: var(--CSbackground-cover) !important;
+}
+
 #pluginNotice {
 background: var(--background-cover);
 }
 
 :root {
---load1: "テーマを読み込み中";
---load2: "アセットを読み込み中";
---load3: "✔ 読み込み完了";
---version: "6.4.1";
---Ccore-version: "4.1";
-}
-
-/* ギルドリストトップ ボタンアイコン */
-
-[class*="listItem-"]>[class*="blob-"]>svg>foreignObject>a {
-background: var(--home-icon);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+	--version: "6.5.0";
+	--Ccore-version: "4.2";
 }
 
 /* バージョン表示 */
 [class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::before {
-content: "|                                                                         |";
-text-align: justify;
-white-space: pre;
-color: rgb(114, 118, 125);
-top: 5px;
-left: 67px;
-position: fixed;
-font-family: Arial !important;
-font-size: 13px;
-font-weight: 900;
+	content: "|                                                                            |";
+	text-align: justify;
+	white-space: pre;
+	color: rgb(114, 118, 125);
+	top: 5px;
+	left: 67px;
+	position: fixed;
+	font-family: Arial !important;
+	font-size: 13px;
+	font-weight: 900;
 }
 
 [class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]>[class*="wordmark-"]::after {
-content: "Discord-Theme v"var(--core-version)", Core"var(--version)" by ryuuta0217  Thank you for using!";
-text-align: justify;
-white-space: pre;
-color: rgb(114, 118, 125);
-top: 5.8px;
-left: 73px;
-position: fixed;
-font-family: Arial !important;
-font-size: 13px;
-font-weight: 900;
+	content: "Discord-Theme v"var(--core-version)", Core"var(--version)" by ryuuta0217  Thank you for using!";
+	text-align: justify;
+	white-space: pre;
+	color: rgb(114, 118, 125);
+	top: 5.8px;
+	left: 73px;
+	position: fixed;
+	font-family: Arial !important;
+	font-size: 13px;
+	font-weight: 900;
 }
 
-#bd-settings-sidebar>span>div:last-child:after
-{
-font-size: 13px;
-color: rgba(0, 255, 34, 0.856) !important;
-content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされます\A\A GitHub:\Aryuuta0217 /\A Discord-Theme";
-white-space: pre;
-}
-
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] .content-region .content-region-scroller>.content-column>.container-1RjyoP:after {
-content: "\A- Discord Theme v"var(--version)" -\A\Aアップデート内容:\A・ちょっとした追加と変更\A・設定画面のアイコンがアプデでズレてたので修正\A・Game Libraryが透過していなかったので修正\A・QuickSwitcherの背景色変更が行われてなかったので修正\A・Discordのアプデ対応\A\A\A Created By ryuuta0217\A\Aこのテーマをお選び頂きありがとうございます!";
-white-space: pre;
-color: rgb(0, 255, 30);
-font-size: 14px;
+#bd-settings-sidebar>span>div:last-child:after {
+	font-size: 13px;
+	color: rgba(0, 255, 34, 0.856) !important;
+	content: "\A\Aryuuta0217 Theme v"var(--version)"\A by ryuuta0217\A\A自動的にアップデートされます\A\A GitHub:\Aryuuta0217 /\A Discord-Theme";
+	white-space: pre;
 }
 
 body::before {
-content: "\A   現在のバージョン: v" var(--version)"\A\A          [File Updates]\A  Latest: " var(--Ccore-version) ", Current: " var(--core-version) "\A\A    Theme by ryuuta0217";
-white-space: pre;
-z-index: 1000000000000000000000000;
-color: #fff;
-background: rgb(53, 180, 85);
-top: 0;
-left: 50%;
-position: absolute;
-border-radius: 5px;
-padding: 2px 15px;
--webkit-transform: translate(-50%, -100%);
-transform: translate(-50%, -100%);
--webkit-animation: version 8s ease;
-animation: version 8s ease;
--webkit-animation-delay: 1s;
-animation-delay: 1s;
-font-family: "メイリオ";
+	content: "\A   現在のバージョン: v" var(--version)"\A\A          [File Updates]\A  Latest: " var(--Ccore-version) ", Current: " var(--core-version) "\A\A    Theme by ryuuta0217";
+	width: 1000px;
+	white-space: pre;
+	z-index: 1000000000000000000000000;
+	color: #fff;
+	background: rgb(53, 180, 85);
+	top: 0;
+	left: 50%;
+	position: absolute;
+	border-radius: 5px;
+	padding: 2px 15px;
+	-webkit-transform: translate(-50%, -100%);
+	transform: translate(-50%, -100%);
+	-webkit-animation: version 8s ease;
+	animation: version 8s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	font-family: "メイリオ";
 }
 
 @-webkit-keyframes version {
@@ -226,11 +217,11 @@ header,
 #clockPluginClock,
 .userPopout-3XzG_A,
 [class*="sidebar-"],
+.contextMenu-HLZMGh,
+.titleWrapper-3Vi_wz,
 .friends-table-header,
 .search-bar-inner>input,
 .search-bar.search-bar-light,
-.contextMenu-HLZMGh,
-.titleWrapper-3Vi_wz,
 .scroller-NXV0-d.scroller-fzNley,
 .tooltip.tooltip-right.tooltip-black,
 .search-bar-inner>input[type="text"],
@@ -322,7 +313,6 @@ div[class*="contentRegion"], /* 設定画面右側透過 */
 [class*="standardSidebarView-"],
 [class*="app-"]>[class*="app-"],
 .chat-3bRxxu>[class*="content-"],
-[class*=""],
 .channel-members-loading .member,
 .channel-members-loading .heading,
 [class*="standardSidebarView-"] .content-region,
@@ -330,13 +320,14 @@ div[class*="contentRegion"], /* 設定画面右側透過 */
 [class*="standardSidebarView-"] [class*="sidebarRegion-"],
 [class*="noShadow-"][class*="popout-"][class*="popoutBottom-"],
 .emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
-[class*="layers-"]>[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"],
 div[class*="membersWrap-"]>div[class*="members-"]>div[class*="content-"], /* チャンネルメンバー一覧透過 */
+[class*="layers-"]>[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"],
 [class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="container-"],
 [class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="container-"]>[class*="container-"],
 [class*="app-"]>[class*="app-"]>[class*="layers-"]>[class*="layer"]>[class*="container-"]>[class*="guilds-"],
 .flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw,
 [class*="scroller-"][class*="firefoxFixScrollFlex-"][class*="scrollerStore-"][class*="systemPad-"]>[class*="table-"]>[class*="stickyHeader-"][class*="header-"][class*="row-"],
+div[class*="appMount-"]>div[class*="app-"]>div[class*="app-"]>div[class*="layers-"]>div[class*="layer-"][class*="baseLayer-"]>div[class*="container-"]>div[class*="base-"]>div[class*="content-"]>div[class*="sidebar-"]>nav[class*="container-"],
 [class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="spacer-"][class*="firefoxFixScrollFlex-"]>[class*="root-"],
 [class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyStart-"][class*="alignStretch-"][class*="noWrap-"][class*="spacer-"][class*="firefoxFixScrollFlex-"]>[class*="container-"] {
 	background: transparent !important;
@@ -371,13 +362,6 @@ div[class*="membersWrap-"]>div[class*="members-"]>div[class*="content-"], /* チ
 
 [class*="channel-"][class*="selected-"]>[class*="layout-"] {
 	background-color: var(--selected-color) !important;
-}
-
-/* 新機能 LFG に関する設定 - 2017/12/19 */
-/* 背景 */
-.lfg-3xoFkI.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR
-{
-background: var(--background-cover) !important;
 }
 
 /* ユーザープロフィールポップアップ(簡易) */
@@ -847,6 +831,7 @@ background:rgba(0,0,0,0.7) !important;
 
 /* スクロールバーの色等 */
 
+/* 動く部分 */
 div[class*="messagesWrapper-"]>
 	div[class*="scroller-"][class*="auto-"][class*="scrollerBase-"][class*="disableScrollAnchor-"]::-webkit-scrollbar-thumb {
 	border: var(--scroll-bar-border) !important;
@@ -854,8 +839,9 @@ div[class*="messagesWrapper-"]>
 	/*background-color: #03A9F4 !important;*/
 }
 
-[class*="messagesWrapper-"]>
-	[class*="scroller-"][class*="auto-"][class*="scrollerBase-"][class*="disableScrollAnchor-"]::-webkit-scrollbar-track-piece {
+/* 軌道 */
+div[class*="messagesWrapper-"]>
+	div[class*="scroller-"][class*="auto-"][class*="scrollerBase-"][class*="disableScrollAnchor-"]::-webkit-scrollbar-track {
 	border: var(--scroll-bar-background-border) !important;
 	background-color: var(--scroll-bar-background-color) !important;
 }
@@ -997,7 +983,7 @@ background-color: var(--input-box-color) !important;
 	float: right;
 	width: 12px;
 	height: 12px;
-	background: transparent url(https://discordapp.com/assets/14f734d6803726c94b970c3ed80c0864.svg);
+	background: transparent url("https://discordapp.com/assets/14f734d6803726c94b970c3ed80c0864.svg");
 	background-size: cover;
 	transition: opacity .1s ease-in-out;
 	cursor: pointer;
@@ -1122,7 +1108,7 @@ background: var(--selected-color) !important;
 	border-bottom-right-radius: var(--text-channel-border-radius) !important;
 }
 
-[class*="app-"]>[class*="app-"]>[class*="layers-"][class*="layers"]>[class*="layer-"][class*="baseLayer-"]>[class*="container-"]>[class*="base-"]>[class*="content-"]>[class*="sidebar-"] {
+div[class*="appMount-"]>div[class*="app-"]>div[class*="app-"]>div[class*="layers-"]>div[class*="layer-"][class*="baseLayer-"]>div[class*="container-"]>div[class*="base-"]>div[class*="content-"]>div[class*="sidebar-"] {
 	width: var(--text-channel-list-width);
 }
 
@@ -1443,573 +1429,27 @@ background:transparent !important;
 font-size: 13.2px;
 }
 
-/* 翻訳系 */
-
-/* 何もないチャンネルの文言修正 */
-
-
-/* h4 タイトル */
-
-[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="title-"] {
-font-size: 0px;
-}
-
-[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="title-"]:before {
-font-size: 17px;
-content: "テキストチャンネルがないようです :(";
-}
-
-
-/* div 説明 */
-
-[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="text-"] {
-font-size: 0px;
-}
-
-[class*="noChannel-"]>[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="wrapper-"]>[class*="flexChild-"]>[class*="text-"]:before {
-font-size: 14px;
-content: "どうやら奇妙な場所に来てしまったようですね。テキストチャンネルを読むための権限がない、または、このサーバーにはテキストチャンネルが存在しません。";
-}
-
-
-/* New Invite UI texts */
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM
-{
- font-size: 0px;
-}
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.content-18hQ5Y>.buttonPrimaryOutlinedDefault--H0hhk.buttonOutlinedDefault-3FNQnZ.buttonDefault-2OLW-v.button-2t3of8.buttonOutlined-38aLSW.smallGrow-2_7ZaC.button-NA7MEa.height20-165WbF>.contents-4L4hQM.contentsOutlined-mJF6nQ.contents-4L4hQM:after
-{
- font-size: 16px;
- content: "参加済み";
-}
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.h5-3KssQU.title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.header-NUC1Kl.marginBottom8-1mABJ4
-{
-font-size:0px;
-}
-
-.wrapper-uAa07y.marginTop8-2gOa2N.marginBottom8-1mABJ4.userSelectNone-Kq5Tpz.cursorDefault-3ZQG0B>.h5-3KssQU.title-1pmpPr.size12-1IGJl9.height16-1qXrGy.weightSemiBold-T8sxWH.header-NUC1Kl.marginBottom8-1mABJ4:after
-{
-font-size:13px;
-content: "サーバーに招待されました";
-}
-
-/* NSFW タイトル日本語化 (NSFW Channel -> 成人向けのチャンネルです！ */
-
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="title-"][class*="marginBottom8-"] {
-font-size: 0px;
-}
-
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="title-"][class*="marginBottom8-"]:before {
-font-size: 24px;
-content: "成人向けのチャンネルです！";
-}
-
-
-/* NSFW コメント日本語化 */
-
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="description-"][class*="marginBottom20-"] {
-font-size: 0px;
-}
-
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="description-"][class*="marginBottom20-"]:before {
-font-size: 16px;
-content: "このチャンネルは成人向けのチャンネルです。性的な画像や会話、過激な内容やグロい内容が含まれている可能性があります。このチャンネルを開きますか？";
-}
-
-
-/* NSFW ボタン日本語化 */
-
-/* 新 */
-
-/* ここから 選択:[はい] */
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookFilled-"][class*="actionRed-"][class*="sizeLarge-"][class*="grow-"]>[class*="contents-"] {
-display: none;
-font-size: 0px;
-}
-
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookFilled-"][class*="actionRed-"][class*="sizeLarge-"][class*="grow-"]::before {
-font-size: 14px;
-content: "開く";
-}
-
-
-/* ここから 選択:[いいえ] */
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookOutlined-"][class*="colorPrimary-"][class*="sizeLarge-"][class*="grow-"]>[class*="contents-"] {
-display: none;
-font-size: 0px;
-}
-
-[class*="flex-"][class*="flex-"][class*="vertical-"][class*="flex-"][class*="directionColumn-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"][class*="gatedContent-"]>[class*="flex-"][class*="flex-"][class*="horizontal-"][class*="horizontal-"][class*="flex-"][class*="directionRow-"][class*="justifyCenter-"][class*="alignCenter-"][class*="noWrap-"]>[class*="action-"][class*="button-"][class*="lookOutlined-"][class*="colorPrimary-"][class*="sizeLarge-"][class*="grow-"]::before {
-font-size: 14px;
-content: "メインチャンネルに戻る";
-}
-
-/* 旧: 
-
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN>.contexts-18-Yxp {
-position: fixed;
-font-size: 0px;
-}
-
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN {
-font-size: 0px;
-width: 50px !important;
-}
-
-
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookFilled-1Gx00P.actionRed-1J19Tx.sizeLarge-1vSeWK.grow-q77ONN:before {
-font-size: 14px;
-content: "はい(開く)";
-}
-
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookOutlined-3sRXeN.colorPrimary-3b3xI6.sizeLarge-1vSeWK.grow-q77ONN {
-font-size: 0px;
-}
-
-.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.nsfw-1jCH4N>.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6>.action-3NgST5.button-38aScr.lookOutlined-3sRXeN.colorPrimary-3b3xI6.sizeLarge-1vSeWK.grow-q77ONN:before {
-font-size: 14px;
-content: "いいえ(開かない)";
-}
-
-*/
-
-/* Loading / 接続失敗 */
-
-.problemsText-3RO4MF
-{
-font-size: 0px;
-}
-
-.problemsText-3RO4MF:before
-{
-font-size: 18px;
-content:"接続に問題が発生しましたか？インターネットにはつながっていますか？( ;⊙´◞౪◟`⊙)";
-}
-
-.twitterLink-235wvR.links-3m0VgL
-{
-font-size: 0px;
-}
-
-.twitterLink-235wvR.links-3m0VgL:after
-{
-font-size: 16px;
-content: "公式Twitterを確認する( ´◉‿ゝ◉`)";
-}
-
-.statusLink-2eJVdK.links-3m0VgL
-{
-font-size: 0px;
-}
-
-.statusLink-2eJVdK.links-3m0VgL:after
-{
-font-size: 16px;
-content: "サーバーステータスを確認する( ´◔‿ゝ◔`)";
-}
-
-/* Activity */
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyEnd-1ceqOU.alignCenter-3VxkQP.noWrap-v6g9vO.actions-2rnqK7>.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.smallGrow-2_7ZaC>.contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM {
-font-size: 0px;
-}
-
-.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyEnd-1ceqOU.alignCenter-3VxkQP.noWrap-v6g9vO.actions-2rnqK7>.buttonBrandFilledDefault-2Rs6u5.buttonFilledDefault-AELjWf.buttonDefault-2OLW-v.button-2t3of8.buttonFilled-29g7b5.buttonBrandFilled-3Mv0Ra.smallGrow-2_7ZaC>.contentsDefault-nt2Ym5.contents-4L4hQM.contentsFilled-3M8HCx.contents-4L4hQM:after {
-font-size: 16px;
-content: "メッセージ" !important;
-}
-
-/* 設定@アイコン */
-.ui-tab-bar-item,
-/* .itemDefault-3Jdr52.item-PXvHYJ.notSelected-1N1G5p */
-/*
-
-未選択
-[class*="itemDefault-"][class*="item-"][class*="notSelected-"]
-
-選択済み
-[class*="itemSelected-"][class*="item-"][class*="selected-"]
-
-*/
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"] {
-font-size: 13px !important;
-}
-
-.ui-tab-bar-item.selected,
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"] {
-font-size: 16px !important;
-}
-
-/* 文字がはみ出る設定項目の文字サイズ変更((選択時)) */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"][class*="selected-"]:nth-child(3) {
-font-size: 14.9px !important;
-}
-
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"][class*="selected-"]:nth-child(4) {
-font-size: 13.1px !important;
-}
-
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"][class*="selected-"]:nth-child(23),
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"][class*="selected-"]:nth-child(22) {
-font-size: 14.34px !important;
-}
-
-/* 設定日本語化 */
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"]:nth-child(12),
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"]:nth-child(12) {
-font-size: 0px !important;
-height: 32px;
-}
-
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"]:nth-child(12)::before {
-font-size: 13px;
-content: "マイク & ビデオ";
-}
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"]:nth-child(12)::before {
-font-size: 16px;
-content: "マイク & ビデオ";
-}
-
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"]:nth-child(16),
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"]:nth-child(16) {
-font-size: 0px !important;
-height: 32px;
-}
-
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"]:nth-child(16)::before {
-font-size: 13px;
-content: "プレイ中のゲーム";
-}
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"]:nth-child(16)::before {
-font-size: 16px;
-content: "プレイ中のゲーム";
-}
-
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"]:nth-child(18),
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"]:nth-child(18) {
-font-size: 0px !important;
-height: 32px;
-}
-
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"]:nth-child(18)::before {
-font-size: 13px;
-content: "ゲームライブラリ";
-}
-[class*="scroller-"]>[class*="sidebar-"]>[class*="side-"][class*="item-"][class*="selected-"]:nth-child(18)::before {
-font-size: 16px;
-content: "ゲームライブラリ";
-}
-
-/* BD 日本語化 */
-
-/* Core */
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(3) {
-font-size: 0px !important;
-height: 32px;
-}
-
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::before {
-font-size: 13px !important;
-content: "BD 基本設定";
-}
-
-#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(3)::before {
-font-size: 16px !important;
-content: "BD 基本設定";
-}
-
-/* Zere's Fork 翻訳まだ */
-
-/* Emotes */
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(4) {
-font-size: 0px !important;
-height: 32px;
-}
-
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(4)::before {
-font-size: 13px !important;
-content: "絵文字";
-}
-
-#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(4)::before {
-font-size: 16px !important;
-content: "絵文字";
-}
-
-/* Plugins child 5 */
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(5) {
-font-size: 0px !important;
-height: 32px;
-}
-
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::before {
-font-size: 13px !important;
-content: "プラグイン";
-}
-
-#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(5)::before {
-font-size: 16px !important;
-content: "プラグイン";
-}
-
-/* Themes 6 */
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(6) {
-font-size: 0px !important;
-height: 32px;
-}
-
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::before {
-font-size: 13px !important;
-content: "テーマ";
-}
-
-#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(6)::before {
-font-size: 16px !important;
-content: "テーマ";
-}
-
-/* Custom CSS 7 */
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(7) {
-	font-size: 0px !important;
-	height: 32px;
-	}
-	
-	#bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::before {
-	font-size: 13px !important;
-	content: "カスタムCSS";
-	}
-	
-	#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(7)::before {
-	font-size: 16px !important;
-	content: "カスタムCSS";
-	}
-
-.bda-settings-button {
-font-size: 0px !important;
-}
-
-.bda-settings-button::before {
-font-size: 12px;
-content: "設定";
-}
-
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(1) {
-font-size: 0px !important;
-}
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(1)::before {
-font-size: 14px;
-content: "更新";
-}
-
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(2) {
-font-size: 0px !important;
-}
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(2)::before {
-font-size: 14px;
-content: "保存";
-}
-
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(3) {
-font-size: 0px !important;
-}
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(3)::before {
-font-size: 14px;
-content: "破棄";
-}
-
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>span {
-font-size: 0px !important;
-}
-
-#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>span::before {
-font-size: 16px;
-content: "保存されてないコードは破棄されます"
-}
-
-#bd-customcss-attach-controls>ul>li>div>span {
-font-size: 0px !important;
-}
-
-#bd-customcss-attach-controls>ul>li>div>span::before {
-font-size: 13px;
-content: "リアルタイム更新を有効にする"
-}
-
-#bd-settingspane-container>div>div>div>ul>li>.plugin-settings {
-color: white;
-}
-
-/* マイアカウント */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(2)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_person_white_24px.svg)
-}
-/* プライバシー・安全 */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(3)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_security_white_24px.svg);
-}
-/* 連携済みアプリケーション */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(4)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_apps_white_24px.svg)
-}
-/* 接続 */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(5)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_link_white_24px.svg)
-}
-/* 請求 */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(6)::after {
-background: url(https://cdn.p1kt.net/discord-theme/round_attach_money_white_24dp.png);
-}
-/* Discord Nitro */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(8)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/speed.svg)
-}
-/* HypeSquad */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(9)::after {
-background: url(https://cdn.p1kt.net/discord-theme/hypesquad-white.png) no-repeat;
-background-position: 0%;
-background-size: 24px;
-}
-
-/* マイク&ビデオ */
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(12)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_mic_white_24px.svg)
-}
-/* オーバーレイ */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(13)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_desktop_windows_white_24px.svg)
-}
-/* 通知 */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(14)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(13)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_notifications_white_24px.svg)
-}
-/* キー割り当て */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(15)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(14)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_keyboard_white_24px.svg)
-}
-/* プレイ中のゲーム */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(16)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(15)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_games_white_24px.svg)
-}
-/* Activity Feed */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(17)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(16)::after {
-	background: url(https://cdn.p1kt.net/material-icons/white/1x/baseline_dashboard_white_24dp.png)
-}
-/* ゲームライブラリ */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(18)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(17)::after {
-	background: url(https://cdn.p1kt.net/material-icons/white/1x/baseline_library_books_white_24dp.png)
-}
-/* テキスト・画像 */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(19)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(18)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_chat_white_24px.svg)
-}
-/* テーマ */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(20)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(19)::after {
-background: url(https://cdn.p1kt.net/material-icons/white/1x/baseline_assistant_white_24dp.png)
-}
-/* 配信モード */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(21)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(20)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_videocam_white_24px.svg)
-}
-/* 言語 */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(22)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(21)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_language_white_24px.svg)
-}
-/* Windows設定 */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(23)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_laptop_windows_white_24px.svg)
-}
-
-/* 変更履歴 */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(25)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(22)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_history_white_24px.svg)
-}
-/* Experiments */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(26)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(23)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_warning_white_24px.svg)
-}
-/* Developer Options */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(27)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(24)::after {
-background: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_developer_mode_white_24px.svg)
-}
-/* ログアウト */
-.platform-win [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(28)::after,
-.platform-osx [aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="sidebar-"]>*>[class*="item-"]:nth-child(24)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/exit.svg)
-}
-
-/* サーバー設定 */
-[aria-label="GUILD_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"]:nth-child(2) {
-padding-left: 48px;
-}
-
-[aria-label="GUILD_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"]:nth-child(2)::after,
-[class="layer-3QrUeG"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"]:nth-child(1)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/info.svg);
-content: "";
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	left: 15px;
-	margin-top: -2px;
-	opacity: .3;
-	-webkit-transition: all .15s ease-in-out;
-transition: all .15s ease-in-out;
-}
-
-[aria-label="GUILD_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"]:nth-child(18) {
-padding-left: 48px;
-}
-
-[aria-label="GUILD_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"]:nth-child(18)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/delete.svg);
-content: "";
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	left: 15px;
-	margin-top: -2px;
-	opacity: .3;
-	-webkit-transition: all .15s ease-in-out;
-transition: all .15s ease-in-out;
-}
-
-/* BetterDiscord Icons */
-
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/betterdiscord.svg)
-}
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(4)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/emote.svg)
-}
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/puzzle.svg)
-}
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::after {
-background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/palette.svg)
-}
-#bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::after {
-	background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/code.svg)
-}
-
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"],
-#bd-settings-sidebar .ui-tab-bar-item {
+/* ユーザー設定 */
+
+/* 設定タブ名の横にアイコンを設置する隙間を作る */
+#bd-settings-sidebar>span>div>div.ui-tab-bar-item,
+div[aria-label="USER_SETTINGS"]>
+	div[class*="standardSidebarView-"]>
+		div[class*="sidebarRegion-"]>div[class*="sidebarRegionScroller-"][class*="thin-"][class*="scrollerBase-"]>
+			nav[class*="sidebar-"]>
+				div[class*="side-"]>
+					div[class*="item-"] {
 	padding-left: 48px
 }
-[aria-label="USER_SETTINGS"] [class*="standardSidebarView-"] [class*="sidebarRegion-"] [class*="sidebarRegionScroller-"] [class*="item-"]::after,
-#bd-settings-sidebar .ui-tab-bar-item::after {
+
+/* 設定タブ名の横にアイコンを設置できるようにする */
+#bd-settings-sidebar>span>div>div.ui-tab-bar-item::after,
+div[aria-label="USER_SETTINGS"]>
+	div[class*="standardSidebarView-"]>
+		div[class*="sidebarRegion-"]>div[class*="sidebarRegionScroller-"][class*="thin-"][class*="scrollerBase-"]>
+			nav[class*="sidebar-"]>
+				div[class*="side-"]>
+					div[class*="item-"]::after {
 	content: "";
 	position: absolute;
 	width: 24px;
@@ -2019,4 +1459,491 @@ background: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/palette.
 	opacity: .3;
 	-webkit-transition: all .60s ease-in-out;
 	transition: all .60s ease-in-out
+}
+
+/* 選択箇所を強調するための文字サイズ変更 (未選択時) */
+[aria-label="USER_SETTINGS"] div[class*="item-"] {
+  font-size: 13px !important;
+}
+
+/* 選択箇所を強調するための文字サイズ変更 (選択時) */
+[aria-label="USER_SETTINGS"] div[class*="item-"][class*="selected-"] {
+  font-size: 16px !important;
+}
+
+
+/* 連携済みアプリケーション の文字サイズ変更 (未選択時) */
+[aria-label="USER_SETTINGS"] [class*="item-"][aria-controls="Authorized Apps-tab"] {
+  font-size: 11px !important;
+}
+
+
+/* (選択時) */
+[aria-label="USER_SETTINGS"] [class*="item-"][class*="selected-"][aria-controls="Authorized Apps-tab"] {
+  font-size: 12px !important;
+}
+
+
+/* プライバシー・安全 の文字サイズ変更 (選択時) */
+[aria-label="USER_SETTINGS"] [class*="item-"][class*="selected-"][aria-controls="Privacy & Safety-tab"] {
+  font-size: 14.85px !important;
+}
+
+
+/* ギフトインベントリ の文字サイズ変更 (選択時) */
+[aria-label="USER_SETTINGS"] [class*="item-"][class*="selected-"][aria-controls="Library Inventory-tab"] {
+  font-size: 14.88px !important;
+}
+
+
+/* ゲームアクティビティ の文字サイズ変更 (選択時) */
+[aria-label="USER_SETTINGS"] [class*="item-"][class*="selected-"][aria-controls="Game Activity-tab"] {
+  font-size: 13.4px !important;
+}
+
+/* 設定タブ名の横にアイコン追加 */
+
+/* マイアカウント */
+[aria-label="USER_SETTINGS"] [aria-controls="My Account-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_person_white_24px.svg")
+}
+
+
+/* プライバシー・安全 */
+[aria-label="USER_SETTINGS"] [aria-controls="Privacy & Safety-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_security_white_24px.svg");
+}
+
+
+/* 連携済みアプリケーション */
+[aria-label="USER_SETTINGS"] [aria-controls="Authorized Apps-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_apps_white_24px.svg")
+}
+
+
+/* 接続 */
+[aria-label="USER_SETTINGS"] [aria-controls="Connections-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_link_white_24px.svg")
+}
+
+
+/* 請求 */
+[aria-label="USER_SETTINGS"] [aria-controls="Billing-tab"]::after {
+  background: url("https://www.ryuuta0217.com/google/material-design-icons/payment-white-24dp.svg");
+}
+
+
+/* 購読 */
+[aria-label="USER_SETTINGS"] [aria-controls="Discord Nitro-tab"]::after {
+  background: url("https://www.ryuuta0217.com/google/material-design-icons/monetization_on-white-24dp.svg")
+}
+
+
+/* ギフトインベントリ */
+[aria-label="USER_SETTINGS"] [aria-controls="Library Inventory-tab"]::after {
+  background: url("https://www.ryuuta0217.com/google/material-design-icons/redeem-white-24dp.svg")
+}
+
+
+/* サーバーブースト */
+[aria-label="USER_SETTINGS"] [aria-controls="Nitro Server Boost-tab"]::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/speed.svg")
+}
+
+
+/* HypeSquad */
+[aria-label="USER_SETTINGS"] [aria-controls="Hypesquad Online-tab"]::after {
+  background: url(https://www.ryuuta0217.com/discord-theme/icons/hypesquad-logo-white.png) no-repeat;
+  background-position: 0%;
+  background-size: 24px;
+}
+
+
+/* マイク&ビデオ */
+[aria-label="USER_SETTINGS"] [aria-controls="Voice & Video-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_mic_white_24px.svg")
+}
+
+
+/* オーバーレイ */
+[aria-label="USER_SETTINGS"] [aria-controls="Overlay-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_desktop_windows_white_24px.svg")
+}
+
+
+/* 通知 */
+[aria-label="USER_SETTINGS"] [aria-controls="Notifications-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_notifications_white_24px.svg")
+}
+
+
+/* キー割り当て */
+[aria-label="USER_SETTINGS"] [aria-controls="Keybinds-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_keyboard_white_24px.svg")
+}
+
+
+/* プレイ中のゲーム */
+[aria-label="USER_SETTINGS"] [aria-controls="Game Activity-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_games_white_24px.svg")
+}
+
+
+/* テキスト・画像 */
+[aria-label="USER_SETTINGS"] [aria-controls="Text & Images-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_chat_white_24px.svg")
+}
+
+
+/* テーマ */
+[aria-label="USER_SETTINGS"] [aria-controls="Appearance-tab"]::after {
+  background: url("https://www.ryuuta0217.com/google/material-design-icons/assistant-white-24dp.svg")
+}
+
+
+/* 配信モード */
+[aria-label="USER_SETTINGS"] [aria-controls="Streamer Mode-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_videocam_white_24px.svg")
+}
+
+
+/* 言語 */
+[aria-label="USER_SETTINGS"] [aria-controls="Language-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_language_white_24px.svg")
+}
+
+
+/* Windows設定 */
+[aria-label="USER_SETTINGS"] [aria-controls="Windows-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_laptop_windows_white_24px.svg")
+}
+
+
+/* 変更履歴 */
+[aria-label="USER_SETTINGS"] [aria-controls="changelog-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_history_white_24px.svg")
+}
+
+
+/* Experiments */
+[aria-label="USER_SETTINGS"] [aria-controls="Experiments-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_warning_white_24px.svg")
+}
+
+
+/* Developer Options */
+[aria-label="USER_SETTINGS"] [aria-controls="Developer Options-tab"]::after {
+  background: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_developer_mode_white_24px.svg")
+}
+
+
+/* BD 日本語化 */
+
+/* Core */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(3) {
+  font-size: 0px !important;
+  height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::before {
+  font-size: 13px !important;
+  content: "BD 基本設定";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(3)::before {
+  font-size: 16px !important;
+  content: "BD 基本設定";
+}
+
+/* Emotes */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(4) {
+  font-size: 0px !important;
+  height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(4)::before {
+  font-size: 13px !important;
+  content: "絵文字";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(4)::before {
+  font-size: 16px !important;
+  content: "絵文字";
+}
+
+
+/* Plugins child 5 */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(5) {
+  font-size: 0px !important;
+  height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::before {
+  font-size: 13px !important;
+  content: "プラグイン";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(5)::before {
+  font-size: 16px !important;
+  content: "プラグイン";
+}
+
+
+/* Themes 6 */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(6) {
+  font-size: 0px !important;
+  height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::before {
+  font-size: 13px !important;
+  content: "テーマ";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(6)::before {
+  font-size: 16px !important;
+  content: "テーマ";
+}
+
+
+/* Custom CSS 7 */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(7) {
+  font-size: 0px !important;
+  height: 32px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::before {
+  font-size: 13px !important;
+  content: "カスタムCSS";
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected:nth-child(7)::before {
+  font-size: 16px !important;
+  content: "カスタムCSS";
+}
+
+.bda-settings-button {
+  font-size: 0px !important;
+}
+
+.bda-settings-button::before {
+  font-size: 12px;
+  content: "設定";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(1) {
+  font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(1)::before {
+  font-size: 14px;
+  content: "更新";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(2) {
+  font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(2)::before {
+  font-size: 14px;
+  content: "保存";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(3) {
+  font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>button:nth-child(3)::before {
+  font-size: 14px;
+  content: "破棄";
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>span {
+  font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>#bd-customcss-detach-controls-button>span::before {
+  font-size: 16px;
+  content: "保存されてないコードは破棄されます"
+}
+
+#bd-customcss-attach-controls>ul>li>div>span {
+  font-size: 0px !important;
+}
+
+#bd-customcss-attach-controls>ul>li>div>span::before {
+  font-size: 13px;
+  content: "リアルタイム更新を有効にする"
+}
+
+#bd-settingspane-container>div>div>div>ul>li>.plugin-settings {
+  color: white;
+}
+
+
+/* BetterDiscord Icons */
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/betterdiscord.svg")
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(4)::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/emote.svg")
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/puzzle.svg")
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/palette.svg")
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/code.svg")
+}
+
+
+/* ログアウト */
+[aria-label="USER_SETTINGS"] [aria-controls="logout-tab"]::after {
+  background: url("https://www.ryuuta0217.com/discord-theme/icons/exit.svg")
+}
+
+/* サーバー設定 */
+/* サーバー設定タブ名の横にアイコンを設置する隙間を作る */
+div[aria-label="GUILD_SETTINGS"]>
+	div>
+		div[class*="standardSidebarView-"]>
+			div[class*="sidebarRegion-"]>
+				div[class*="sidebarRegionScroller-"][class*="thin-"][class*="scrollerBase-"]>
+					nav[class*="sidebar-"]>
+						div[class*="side-"]>
+							div[class*="item-"] {
+	padding-left: 48px
+}
+
+/* サーバー設定タブ名の横にアイコンを設置できるようにする */
+div[aria-label="GUILD_SETTINGS"]>
+	div>
+		div[class*="standardSidebarView-"]>
+			div[class*="sidebarRegion-"]>
+				div[class*="sidebarRegionScroller-"][class*="thin-"][class*="scrollerBase-"]>
+					nav[class*="sidebar-"]>
+						div[class*="side-"]>
+							div[class*="item-"]::after {
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 15px;
+	margin-top: -2px;
+	opacity: .3;
+	-webkit-transition: all .60s ease-in-out;
+	transition: all .60s ease-in-out
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="OVERVIEW-tab"]::after {
+	background: url("https://www.ryuuta0217.com/discord-theme/icons/info.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="ROLES-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/mood-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="EMOJI-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/group-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="MODERATION-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/security-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="AUDIT_LOG-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/assignment-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="INTEGRATIONS-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/integration_instructions-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="WIDGET-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/widgets-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="GUILD_TEMPLATES-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/content_copy-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="COMMUNITY-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/forum-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="GUILD_PREMIUM-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/speed-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="MEMBERS-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/groups-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="INSTANT_INVITES-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/person_add-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="BANS-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/person_add_disabled-white-24dp.svg");
+}
+
+[aria-label="GUILD_SETTINGS"] [aria-controls="DELETE-tab"]::after {
+	background: url("https://www.ryuuta0217.com/discord-theme/icons/delete.svg");
+}
+
+/* チャンネル設定 */
+/* サーバー設定タブ名の横にアイコンを設置する隙間を作る */
+div[aria-label="CHANNEL_SETTINGS"]>
+	div[class*="standardSidebarView-"]>
+		div[class*="sidebarRegion-"]>
+			div[class*="sidebarRegionScroller-"][class*="thin-"][class*="scrollerBase-"]>
+				nav[class*="sidebar-"]>
+					div[class*="side-"]>
+						div[class*="item-"] {
+	padding-left: 48px
+}
+
+/* サーバー設定タブ名の横にアイコンを設置できるようにする */
+div[aria-label="CHANNEL_SETTINGS"]>
+	div[class*="standardSidebarView-"]>
+		div[class*="sidebarRegion-"]>
+			div[class*="sidebarRegionScroller-"][class*="thin-"][class*="scrollerBase-"]>
+				nav[class*="sidebar-"]>
+					div[class*="side-"]>
+						div[class*="item-"]::after {
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 15px;
+	margin-top: -2px;
+	opacity: .3;
+	-webkit-transition: all .60s ease-in-out;
+	transition: all .60s ease-in-out
+}
+
+[aria-label="CHANNEL_SETTINGS"] [aria-controls="OVERVIEW-tab"]::after {
+	background: url("https://www.ryuuta0217.com/discord-theme/icons/info.svg")
+}
+
+[aria-label="CHANNEL_SETTINGS"] [aria-controls="PERMISSIONS-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/admin_panel_settings-white-24dp.svg")
+}
+
+[aria-label="CHANNEL_SETTINGS"] [aria-controls="INSTANT_INVITES-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/person_add-white-24dp.svg")
+}
+
+[aria-label="CHANNEL_SETTINGS"] [aria-controls="INTEGRATIONS-tab"]::after {
+	background: url("https://www.ryuuta0217.com/google/material-design-icons/integration_instructions-white-24dp.svg")
+}
+
+[aria-label="CHANNEL_SETTINGS"] [aria-controls="DELETE-tab"]::after {
+	background: url("https://www.ryuuta0217.com/discord-theme/icons/delete.svg")
 }

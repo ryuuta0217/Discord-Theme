@@ -1,5 +1,5 @@
-/*//META{"name":"Discord-Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://p1kt.net/discord-theme/src.css"}*//**/
-@import url("https://p1kt.net/discord-theme/src.css");
+/*//META{"name":"Discord-Theme","description":"高度にカスタマイズ可能なテーマ","author":"ryuuta0217","version":"最新","source":"https://www.ryuuta0217.com/discord-theme/src.css"}*//**/
+@import url("https://www.ryuuta0217.com/discord-theme/src.css");
 /*
  * 色とかの設定 - まだ開発段階です! 追加して欲しい色の設定があったらTwitterかDiscordまで!
  * Twitter: twitter.com/machingun_814
@@ -31,7 +31,7 @@
 	/* [CS] 設定画面: 背景画像URL */
 	--Sbackground-image-url: url("ここにURLを入力");
 		/* [CS] 設定画面: 背景カバー */
-		--Sbackground-cover: rgba(0, 0, 0, 0.75);
+		--Sbackground-cover: rgba(0, 0, 0, 0.7);
 	
 		/* [CS] 設定画面: 表示サイズ */
 		--Sbackground-size: cover;
@@ -42,7 +42,7 @@
 	/* [CS] サーバー設定画面: 背景画像URL */
 	--GSbackground-image-url: url("ここにURLを入力");
 		/* [CS] サーバー設定画面: 背景カバー */
-		--GSbackground-cover: rgba(0, 0, 0, 0.6);
+		--GSbackground-cover: rgba(0, 0, 0, 0.7);
 
 		/* [CS] サーバー設定画面: 表示サイズ */
 		--GSbackground-size: cover;
@@ -50,13 +50,24 @@
 		/* [CS] サーバー設定画面: 表示位置 */
 		--GSbackground-position: center;
 
+	/* [CS] チャンネル設定画面: 背景画像URL */
+	--CSbackground-image-url: var(--GSbackground-image-url);
+		/* [CS] チャンネル設定画面: 背景カバー */
+		--CSbackground-cover: var(--GSbackground-cover);
+
+		/* [CS] チャンネル設定画面: 表示サイズ */
+		--CSbackground-size: var(--GSbackground-size);
+
+		/* [CS] チャンネル設定画面: 表示位置 */
+		--CSbackground-position: var(--GSbackground-position);
+
 	/* [CS] アップロード画面など: 背景画像URL */
 	--Ubackground-image-url: url("ここにURLを入力");
 		/* [CS] アップロード画面など: 背景画像透過度 */
 		--Ubackground-opacity: 1;
 
 		/* [CS] アップロード画面など: 背景カバー */
-		--Ubackground-cover: rgba(0, 0, 0, 0.4);
+		--Ubackground-cover: rgba(0, 0, 0, 0.7);
 
 		/* [CS] アップロード画面など: 表示サイズ */
 		--Ubackground-size: cover;
@@ -81,6 +92,7 @@
 	/* これを のvar(--accent-color)というところで、赤、緑、青の三色を下から呼び出しています。 */
 	/* ここを任意に変更すれば個々に変更することができます。 */
 	/* 例: --my-account-background: rgba(92, 220, 252, 0.5); */
+	--accent-color-palette: rgb(100, 197, 100); /* VSCodeを使用してる場合、ここにカーソルを合わせてrgb数値を入手できます。入手したrgb数値は↓に貼り付けましょう */
 	--accent-color: 100, 197, 100;
 
 	/* [CS] スクロールバーの色 */
@@ -283,4 +295,4 @@
 
 /* これより下は消さないでください */
 [class*="typeWindows-"][class*="titleBar-"][class*="horizontalReverse-"][class*="flex-"][class*="directionRowReverse-"][class*="justifyStart-"][class*="alignStretch-"]::after{content: "" !important;}
-:root {--core-version: "4.1";}
+:root {--core-version: "4.2";}
